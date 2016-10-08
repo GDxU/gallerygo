@@ -34,9 +34,9 @@
       "key": 4,
       "label": {
         "cn": "书法",
-        "zh": "書法",
-        "kr": "달필",
+        "zh": "書法",  
         "jp": "書道",
+        "kr": "달필",
         "fr": "calligraphie",
         "en": "Calligraphy"
       }
@@ -81,7 +81,7 @@
       "key": 0,
       "label": {
         "cn": "人物",
-        "jp": "文字",
+        "jp": "肖像画",
         "kr": "문자",
         "fr": "caractère",
         "en": "Portrait"
@@ -151,7 +151,7 @@
       "key": 4,
       "label": {
         "cn": "山水",
-        "jp": "景色",
+        "jp": "山水",
         "kr": "경치",
         "fr": "paysage",
         "en": "Eastern Landscape"
@@ -166,7 +166,7 @@
       "key": 5,
       "label": {
         "cn": "花鸟",
-        "jp": "フラワーズ",
+        "jp": "花鳥風月",
         "kr": "꽃",
         "fr": "Fleurs",
         "en": "Eastern Flowers"
@@ -915,7 +915,6 @@
     "fr": "Venez découvrir ce %1$s.",
     "en": "Come check out this %1$s."
   },
-  "share_article_link": "http://farm.heskeyo.com/article/{shared_article_id}/{preview_mode}/{language}",
   "share_keywords": [
     {
       "cn": "工笔画",
@@ -924,5 +923,7 @@
       "fr": "Méticuleux.",
       "en": "Come check out this %1$s."
     }
-  ]
+  ],
+  "flag_format":"https://cdn.rawgit.com/NLPPort/FlagKit/master/Images/{country_code}%403x.png",
+  "share_article_link": "http://farm.heskeyo.com/article/{shared_article_id}/{preview_mode}/{language}"
 }
