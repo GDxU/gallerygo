@@ -861,7 +861,7 @@
     {
       "name": {
         "cn": "国画",
-        "jp": "中国の伝統的な絵画",
+        "jp": "中国画",
         "kr": "중국의 전통 회화",
         "fr": "La peinture traditionnelle chinoise",
         "en": "Chinese Art"
@@ -875,27 +875,27 @@
     {
       "feature": "_title",
       "name":{
-        "cn": "最近",
+        "cn": "最近的页面",
         "jp": "ごく最近",
         "kr": "가장 최근에",
         "fr": "Plus récemment",
-        "en": "Most Recently"
+        "en": "History"
       }
     },
     {
       "feature": "_events",
       "name":{
-        "cn": "最近發生的事件",
+        "cn": "画廊最新动态",
         "jp": "最近の出来事",
         "kr": "최근 이벤트",
         "fr": "Événements récents",
-        "en": "Recent Events"
+        "en": "Recent Activities"
       }
     },
     {
       "feature": "_personalcats",
       "name":{
-        "cn": "推薦",
+        "cn": "猜你喜欢",
         "jp": "推薦する",
         "kr": "추천",
         "fr": "conseillé",
