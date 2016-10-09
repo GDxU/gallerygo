@@ -871,6 +871,48 @@
       }
     }
   ],
+  "front_page_config":[
+    {
+      "feature": "_title",
+      "name":{
+        "cn": "最近",
+        "jp": "ごく最近",
+        "kr": "가장 최근에",
+        "fr": "Plus récemment",
+        "en": "Most Recently"
+      }
+    },
+    {
+      "feature": "_events",
+      "name":{
+        "cn": "最近發生的事件",
+        "jp": "最近の出来事",
+        "kr": "최근 이벤트",
+        "fr": "Événements récents",
+        "en": "Recent Events"
+      }
+    },
+    {
+      "feature": "_personalcats",
+      "name":{
+        "cn": "推薦",
+        "jp": "推薦する",
+        "kr": "추천",
+        "fr": "conseillé",
+        "en": "Recommended"
+      }
+    },
+    {
+      "feature": "_profiles",
+      "name":{
+        "cn": "當紅畫家",
+        "jp": "人気のあります画家",
+        "kr": "인기 화가",
+        "fr": "Peintres populaires",
+        "en": "Popular Painters"
+      }
+    }
+  ],
   "login_config": [
     {
       "area": "hong kong",
