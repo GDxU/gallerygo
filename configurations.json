@@ -911,6 +911,16 @@
         "fr": "Peintres populaires",
         "en": "Popular Painters"
       }
+    },
+    {
+      "feature": "_justposted",
+      "name":{
+        "cn": "剛剛發布的画",
+        "jp": "ちょうど公開絵画",
+        "kr": "그냥 게시 된 그림",
+        "fr": "Peintres populaires",
+        "en": "Just Published Paintings"
+      }
     }
   ],
   "login_config": [
