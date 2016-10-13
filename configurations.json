@@ -977,5 +977,5 @@
     }
   ],
   "flag_format":"https://cdn.rawgit.com/NLPPort/FlagKit/master/Images/{country_code}%403x.png",
-  "share_article_link": "http://farm.heskeyo.com/#/preview-article/{shared_article_id}/{preview_mode}/{language}"
+  "share_article_link": "http://farm.heskeyo.com/#/preview/{shared_article_id}/{preview_mode}/{language}"
 }
