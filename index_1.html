@@ -1,0 +1,696 @@
+<html class="mti-museosansw01300-n4-active mti-museosansw01700-n4-active mti-active">
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://bam.nr-data.net/1/a2d6172b61?a=4138587&amp;v=974.7d740e1&amp;to=MVYGYRFRChBZVkxfDAgcJVYXWQsNF0VZUQYVHABcEEAIAkE%3D&amp;rst=3026&amp;ref=https://citipark.co.uk/citipark/braking-badly/&amp;ap=118&amp;be=1303&amp;fe=1573&amp;dc=1214&amp;perf=%7B%22timing%22:%7B%22of%22:1477201386825,%22n%22:0,%22f%22:49,%22dn%22:50,%22dne%22:50,%22c%22:50,%22s%22:61,%22ce%22:454,%22rq%22:456,%22rp%22:1240,%22rpe%22:1242,%22dl%22:1244,%22di%22:2517,%22ds%22:2517,%22de%22:2521,%22dc%22:2876,%22l%22:2876,%22le%22:2881%7D,%22navigation%22:%7B%7D%7D&amp;at=HREFF1lLGR4%3D&amp;jsonp=NREUM.setToken"></script>
+    <script src="https://js-agent.newrelic.com/nr-974.min.js"></script>
+    <script id="facebook-jssdk" src="//connect.facebook.net/en_GB/sdk.js#xfbml=1&amp;version=v2.3"></script>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script>
+    <script type="text/javascript">window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) {
+        function r(n) {
+            if (!e[n]) {
+                var o = e[n] = {exports: {}};
+                t[n][0].call(o.exports, function (e) {
+                    var o = t[n][1][e];
+                    return r(o || e)
+                }, o, o.exports)
+            }
+            return e[n].exports
+        }
+
+        if ("function" == typeof __nr_require)return __nr_require;
+        for (var o = 0; o < n.length; o++)r(n[o]);
+        return r
+    }({
+        1: [function (t, e, n) {
+            function r() {
+            }
+
+            function o(t, e, n) {
+                return function () {
+                    return i(t, [(new Date).getTime()].concat(u(arguments)), e ? null : this, n), e ? void 0 : this
+                }
+            }
+
+            var i = t("handle"), a = t(2), u = t(3), c = t("ee").get("tracer"), f = NREUM;
+            "undefined" == typeof window.newrelic && (newrelic = f);
+            var s = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit"], p = "api-", l = p + "ixn-";
+            a(s, function (t, e) {
+                f[e] = o(p + e, !0, "api")
+            }), f.addPageAction = o(p + "addPageAction", !0), e.exports = newrelic, f.interaction = function () {
+                return (new r).get()
+            };
+            var d = r.prototype = {
+                createTracer: function (t, e) {
+                    var n = {}, r = this, o = "function" == typeof e;
+                    return i(l + "tracer", [Date.now(), t, n], r), function () {
+                        if (c.emit((o ? "" : "no-") + "fn-start", [Date.now(), r, o], n), o)try {
+                            return e.apply(this, arguments)
+                        } finally {
+                            c.emit("fn-end", [Date.now()], n)
+                        }
+                    }
+                }
+            };
+            a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (t, e) {
+                d[e] = o(l + e)
+            }), newrelic.noticeError = function (t) {
+                "string" == typeof t && (t = new Error(t)), i("err", [t, (new Date).getTime()])
+            }
+        }, {}], 2: [function (t, e, n) {
+            function r(t, e) {
+                var n = [], r = "", i = 0;
+                for (r in t)o.call(t, r) && (n[i] = e(r, t[r]), i += 1);
+                return n
+            }
+
+            var o = Object.prototype.hasOwnProperty;
+            e.exports = r
+        }, {}], 3: [function (t, e, n) {
+            function r(t, e, n) {
+                e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0);
+                for (var r = -1, o = n - e || 0, i = Array(o < 0 ? 0 : o); ++r < o;)i[r] = t[e + r];
+                return i
+            }
+
+            e.exports = r
+        }, {}], ee: [function (t, e, n) {
+            function r() {
+            }
+
+            function o(t) {
+                function e(t) {
+                    return t && t instanceof r ? t : t ? u(t, a, i) : i()
+                }
+
+                function n(n, r, o) {
+                    t && t(n, r, o);
+                    for (var i = e(o), a = l(n), u = a.length, c = 0; c < u; c++)a[c].apply(i, r);
+                    var s = f[m[n]];
+                    return s && s.push([w, n, r, i]), i
+                }
+
+                function p(t, e) {
+                    g[t] = l(t).concat(e)
+                }
+
+                function l(t) {
+                    return g[t] || []
+                }
+
+                function d(t) {
+                    return s[t] = s[t] || o(n)
+                }
+
+                function v(t, e) {
+                    c(t, function (t, n) {
+                        e = e || "feature", m[n] = e, e in f || (f[e] = [])
+                    })
+                }
+
+                var g = {}, m = {}, w = {on: p, emit: n, get: d, listeners: l, context: e, buffer: v};
+                return w
+            }
+
+            function i() {
+                return new r
+            }
+
+            var a = "nr@context", u = t("gos"), c = t(2), f = {}, s = {}, p = e.exports = o();
+            p.backlog = f
+        }, {}], gos: [function (t, e, n) {
+            function r(t, e, n) {
+                if (o.call(t, e))return t[e];
+                var r = n();
+                if (Object.defineProperty && Object.keys)try {
+                    return Object.defineProperty(t, e, {value: r, writable: !0, enumerable: !1}), r
+                } catch (i) {
+                }
+                return t[e] = r, r
+            }
+
+            var o = Object.prototype.hasOwnProperty;
+            e.exports = r
+        }, {}], handle: [function (t, e, n) {
+            function r(t, e, n, r) {
+                o.buffer([t], r), o.emit(t, e, n)
+            }
+
+            var o = t("ee").get("handle");
+            e.exports = r, r.ee = o
+        }, {}], id: [function (t, e, n) {
+            function r(t) {
+                var e = typeof t;
+                return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : a(t, i, function () {
+                    return o++
+                })
+            }
+
+            var o = 1, i = "nr@id", a = t("gos");
+            e.exports = r
+        }, {}], loader: [function (t, e, n) {
+            function r() {
+                if (!h++) {
+                    var t = y.info = NREUM.info, e = s.getElementsByTagName("script")[0];
+                    if (t && t.licenseKey && t.applicationID && e) {
+                        c(m, function (e, n) {
+                            t[e] || (t[e] = n)
+                        });
+                        var n = "https" === g.split(":")[0] || t.sslForHttp;
+                        y.proto = n ? "https://" : "http://", u("mark", ["onload", a()], null, "api");
+                        var r = s.createElement("script");
+                        r.src = y.proto + t.agent, e.parentNode.insertBefore(r, e)
+                    }
+                }
+            }
+
+            function o() {
+                "complete" === s.readyState && i()
+            }
+
+            function i() {
+                u("mark", ["domContent", a()], null, "api")
+            }
+
+            function a() {
+                return (new Date).getTime()
+            }
+
+            var u = t("handle"), c = t(2), f = window, s = f.document, p = "addEventListener", l = "attachEvent", d = f.XMLHttpRequest, v = d && d.prototype;
+            NREUM.o = {
+                ST: setTimeout,
+                CT: clearTimeout,
+                XHR: d,
+                REQ: f.Request,
+                EV: f.Event,
+                PR: f.Promise,
+                MO: f.MutationObserver
+            }, t(1);
+            var g = "" + location, m = {
+                beacon: "bam.nr-data.net",
+                errorBeacon: "bam.nr-data.net",
+                agent: "js-agent.newrelic.com/nr-974.min.js"
+            }, w = d && v && v[p] && !/CriOS/.test(navigator.userAgent), y = e.exports = {
+                offset: a(),
+                origin: g,
+                features: {},
+                xhrWrappable: w
+            };
+            s[p] ? (s[p]("DOMContentLoaded", i, !1), f[p]("load", r, !1)) : (s[l]("onreadystatechange", o), f[l]("onload", r)), u("mark", ["firstbyte", a()], null, "api");
+            var h = 0
+        }, {}]
+    }, {}, ["loader"]);</script>
+    <title>Braking Badly - CitiPark</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/infographic.css">
+    <meta property="og:title" content="Braking Badly">
+    <meta property="og:site_name" content="CitiPark">
+    <meta property="og:url" content="https://citipark.co.uk/citipark/braking-badly/">
+    <meta property="og:description" content="Put your skills to the test and play Braking Badly!">
+    <meta property="og:image" content="https://citipark.co.uk/citipark/braking-badly/og-image.png">
+    <meta property="fb:app_id" content="575928979216116">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css">
+   <!-- <link type="text/css" media="screen" rel="stylesheet" href="awwwards.css">-->
+    <script type="text/javascript" src="https://fast.fonts.net/jsapi/1c33cdff-5f3c-4b54-96c5-10e1a15f35c2.js"></script>
+    <script type="text/javascript" charset="utf-8" async=""
+            src="https://platform.twitter.com/js/button.4e56ff84e57afaf5af2506ef73ab8a88.js"></script>
+    <link id="MonoTypeFontApiFontTracker" type="text/css" rel="stylesheet"
+          href="https://fast.fonts.net/t/1.css?apiType=js&amp;projectid=1c33cdff-5f3c-4b54-96c5-10e1a15f35c2">
+    <style type="text/css" id="mti_fontface_1c33cdff-5f3c-4b54-96c5-10e1a15f35c2">
+        @font-face {
+        font-family: "Museo Sans W01_300";
+        src: url("https://fast.fonts.net/dv2/14/1d3191cd-ae8c-45e2-bb04-11e96d8fa974.woff2?d44f19a684109620e484157aa290e818dbbbc62e466067e5142b7c0a6219e21a4115cdcf5b5c6fa41ac1fdfea174dc604d65047a7d22adfc06bd9e6fc489a03802fca469bb85e191f2016d1dda8d79e37cf377ae4b6e8dcc84840057690657011cf0e505126021b9856c6e3b47cb2bb8cf2cd3c441adc1f46ffa6c8a39ba4ef27b2c52f3da4343&projectId=1c33cdff-5f3c-4b54-96c5-10e1a15f35c2") format('woff2');
+    }
+
+    @font-face {
+        font-family: "Museo Sans W01_700";
+        src: url("https://fast.fonts.net/dv2/14/e2d37f34-6bca-473c-b64d-93811f4dc046.woff2?d44f19a684109620e484157aa290e818dbbbc62e466067e5142b7c0a6219e21a4115cdcf5b5c6fa41ac1fdfea174dc604d65047a7d22adfc06bd9e6fc489a03802fca469bb85e191f2016d1dda8d79e37cf377ae4b6e8dcc84840057690657011cf0e505126021b9856c6e3b47cb2bb8cf2cd3c441adc1f46ffa6c8a39ba4ef27b2c52f3da4343&projectId=1c33cdff-5f3c-4b54-96c5-10e1a15f35c2") format('woff2');
+    }
+    </style>
+</head>
+<body>
+
+<div class="header full-width">
+
+    <div class="button game-shortcut">PLAY THE GAME</div>
+
+    <div class="fixed-width">
+
+        <svg class="logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1276px" height="460px" viewBox="0 500 1276 460" enable-background="new 0 500 1276 460" xml:space="preserve">
+					<g opacity="0.23">
+						<path d="M686.1,707.7l2.1,0.7l7.6-23.6l-2.1-0.7l0.2-0.5c1.9-5.8-1.3-12.1-7.1-13.9L644.3,656c-5.8-1.9-12.1,1.3-13.9,7.1
+							l-11.1,34.5l-14.9-0.5l-0.3,8.6l11,0.4l2-1.8l-21.7,67.4c-1.9,5.8,1.3,12.1,7.1,13.9l42.4,13.7c5.8,1.9,12.1-1.3,13.9-7.1l-0.1,0.4
+							l2.1,0.7l7.6-23.6l-2.1-0.7l13.6-42.3l0.1,0.3l9.2,6.2l4.8-7.1l-11.3-7.6L686.1,707.7z"></path>
+						<rect x="596.9" y="747.7" transform="matrix(0.9518 0.3068 -0.3068 0.9518 261.9999 -146.7933)" width="2.2" height="24.8"></rect>
+						<rect x="624.3" y="662.7" transform="matrix(0.9518 0.3067 -0.3067 0.9518 237.2275 -159.2811)" width="2.2" height="24.8"></rect>
+					</g>
+					<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1715.3323" y1="394.4843" x2="1715.3323" y2="339.7111" gradientTransform="matrix(0.938 0.3466 -0.3466 0.938 -860.9308 -151.32)">
+						<stop offset="0" style="stop-color:#EB212E;stop-opacity:0"></stop>
+						<stop offset="1" style="stop-color:#EB212E"></stop>
+					</linearGradient>
+					<g class="logo-car-headlight">
+						<polygon opacity="0.38" fill="url(#SVGID_1_)" points="594.7,755.9 537.4,805.1 607.4,831 	"></polygon>
+						<path fill="#E53C3C" d="M596.4,765.4c-0.8,2.5-3.5,3.8-6,2.9c-2.5-0.8-3.8-3.5-2.9-6"></path>
+						<path opacity="0.23" fill="#E53C3C" d="M602.2,767.4c-1.9,5.7-8.1,8.7-13.8,6.7s-8.7-8.1-6.7-13.8"></path>
+						<path opacity="0.23" fill="#E53C3C" d="M599.3,766.4c-1.4,4.1-5.9,6.3-9.9,4.8s-6.3-5.9-4.8-9.9"></path>
+					</g>
+					<g class="logo-car-headlight">
+						<polygon opacity="0.38" fill="url(#SVGID_1_)" points="628.8,764 571.6,813.2 641.6,839 "></polygon>
+						<path fill="#E53C3C" d="M627.9,775.4c-0.8,2.5-3.5,3.8-6,2.9c-2.5-0.8-3.8-3.5-2.9-6"></path>
+						<path opacity="0.23" fill="#E53C3C" d="M633.7,777.4c-1.9,5.7-8.1,8.7-13.8,6.7s-8.7-8.1-6.7-13.8"></path>
+						<path opacity="0.23" fill="#E53C3C" d="M630.8,776.4c-1.4,4.1-5.9,6.3-9.9,4.8c-4.1-1.4-6.3-5.9-4.8-9.9"></path>
+					</g>
+					<g>
+						<g>
+							<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-2.1864" y1="820.3847" x2="582.6917" y2="820.3847">
+								<stop offset="0" style="stop-color:#606278;stop-opacity:0"></stop>
+								<stop offset="1" style="stop-color:#646780"></stop>
+							</linearGradient>
+							<path fill="none" stroke="url(#SVGID_3_)" stroke-width="5" stroke-miterlimit="10" d="M580.4,813.6c-2.1,4.6-4.2,9.1-6.5,13.5"></path>
+							<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="-2.1864" y1="879.4982" x2="582.6917" y2="879.4982">
+								<stop offset="0" style="stop-color:#606278;stop-opacity:0"></stop>
+								<stop offset="1" style="stop-color:#646780"></stop>
+							</linearGradient>
+
+								<path fill="none" stroke="url(#SVGID_4_)" stroke-width="5" stroke-miterlimit="10" stroke-dasharray="31.5748,21.0499,10.5249,5.2625" d="
+								M558,854.3c-12.5,18.9-26.9,35.9-42.7,49.8"></path>
+							<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="-2.1864" y1="842.6658" x2="582.6917" y2="842.6658">
+								<stop offset="0" style="stop-color:#606278;stop-opacity:0"></stop>
+								<stop offset="1" style="stop-color:#646780"></stop>
+							</linearGradient>
+
+								<path fill="none" stroke="url(#SVGID_5_)" stroke-width="5" stroke-miterlimit="10" stroke-dasharray="31.5748,31.5748,31.5748,21.0499,10.5249,5.2625" d="
+								M513.3,905.9C453.8,957.4,377,965.4,322,868.8c-78.4-137.4-193.2-200-313.2,3.9"></path>
+							<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="-2.1864" y1="881.4947" x2="582.6917" y2="881.4947">
+								<stop offset="0" style="stop-color:#606278;stop-opacity:0"></stop>
+								<stop offset="1" style="stop-color:#646780"></stop>
+							</linearGradient>
+							<path fill="none" stroke="url(#SVGID_6_)" stroke-width="5" stroke-miterlimit="10" d="M7.4,875c-2.5,4.2-4.9,8.6-7.4,13"></path>
+						</g>
+					</g>
+					<g>
+						<g>
+							<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="18.4894" y1="832.5269" x2="614.6269" y2="832.5269">
+								<stop offset="0" style="stop-color:#606278;stop-opacity:0"></stop>
+								<stop offset="1" style="stop-color:#646780"></stop>
+							</linearGradient>
+							<path fill="none" stroke="url(#SVGID_7_)" stroke-width="5" stroke-miterlimit="10" d="M612.3,821.3c-3.4,7.6-7.2,15.1-11.2,22.3"></path>
+							<linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="18.4894" y1="904.4874" x2="614.6269" y2="904.4874">
+								<stop offset="0" style="stop-color:#606278;stop-opacity:0"></stop>
+								<stop offset="1" style="stop-color:#646780"></stop>
+							</linearGradient>
+
+								<path fill="none" stroke="url(#SVGID_8_)" stroke-width="5" stroke-miterlimit="10" stroke-dasharray="28.9107,19.2738,9.6369,4.8185" d="
+								M574.2,883.5c-13.2,16.2-27.8,30.4-43.4,41.5"></path>
+							<linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="18.4894" y1="852.8755" x2="614.6269" y2="852.8755">
+								<stop offset="0" style="stop-color:#606278;stop-opacity:0"></stop>
+								<stop offset="1" style="stop-color:#646780"></stop>
+							</linearGradient>
+
+								<path fill="none" stroke="url(#SVGID_9_)" stroke-width="5" stroke-miterlimit="10" stroke-dasharray="48.1845,48.1845,28.9107,19.2738,9.6369,4.8185" d="
+								M528.8,926.4c-56.7,39.3-124.8,38-174.9-49.9C276.6,741,153.4,687,34.5,881.5"></path>
+							<linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="18.4894" y1="894.2822" x2="614.6269" y2="894.2822">
+								<stop offset="0" style="stop-color:#606278;stop-opacity:0"></stop>
+								<stop offset="1" style="stop-color:#646780"></stop>
+							</linearGradient>
+							<path fill="none" stroke="url(#SVGID_10_)" stroke-width="5" stroke-miterlimit="10" d="M33.2,883.5c-4.2,6.9-8.4,14.1-12.5,21.6"></path>
+						</g>
+					</g>
+					<polygon fill="#FFFFFF" points="607.6,649.3 613.3,638.1 613.3,638.1 599.9,644.9 "></polygon>
+					<polygon fill="#FFFFFF" points="685.7,664 695.5,667.9 695.5,667.9 688.8,657.3 "></polygon>
+					<polygon fill="#FFFFFF" points="587.8,655.8 596.4,655.5 596.4,655.5 587.9,649.7 "></polygon>
+					<g>
+						<path fill="#FFFFFF" d="M608.2,569.1c6.2,3.7,8.3,9.6,6.1,17.8l-6.2,23.9c-3.8,14.6-13,20-27.6,16.1l-35-9.2L576.3,500l34.7,9.1
+							c14.6,3.8,20,13,16.1,27.6l-4.6,17.5C620.1,563.4,615.3,568.3,608.2,569.1z M581.9,573.9l-7.8,29.8l5.9,1.5
+							c2.8,0.7,4.6-0.3,5.3-3.1l5.6-21.4c0.7-2.8-0.3-4.6-3.1-5.3L581.9,573.9z M603,533.1c0.7-2.8-0.3-4.6-3.1-5.3l-5.6-1.5l-7.3,27.9
+							l5.6,1.5c2.8,0.7,4.6-0.3,5.3-3.1L603,533.1z"></path>
+						<path fill="#FFFFFF" d="M671.4,591.2c6.3,3.7,8.4,9.6,6.3,17.8l-6.7,30.2l-24.6-7.7l7.7-28.4c0.7-2.8-0.3-4.6-3.1-5.3l-5.9-1.5
+							l-11.7,33.6l-23.6,4.8l30.8-117.8l35.2,9.2c14.6,3.8,20,13,16.1,27.6l-5.9,22.7C683.7,585.6,678.8,590.5,671.4,591.2z M667.7,550.3
+							c0.7-2.8-0.3-4.6-3.1-5.3l-5.7-1.5l-8.5,32.6l5.7,1.5c2.8,0.7,4.6-0.3,5.3-3.1L667.7,550.3z"></path>
+						<path fill="#FFFFFF" d="M750.1,545.5l-15.3,121.8l-23.4-6.1l2.6-17.6l-14.8-3.9l-6.2,16.7l-18.1-13.7l43-105.6L750.1,545.5z
+							 M725.4,569.6l-18.7,50.1l10.6,2.8L725.4,569.6z"></path>
+						<path fill="#FFFFFF" d="M800.2,684.4l-24.9-6.5l2.6-58.8l-14.6,55.7l-23.6-6.2l30.8-117.8l23.6,6.2l-14.5,55.3l27.6-51.9l24.4,6.4
+							L801,620.6L800.2,684.4z"></path>
+						<path fill="#FFFFFF" d="M859.2,574l-30.8,117.8l-23.6-6.2l30.8-117.8L859.2,574z"></path>
+						<path fill="#FFFFFF" d="M890.2,644.7L905,586l20.4,5.3l-30.8,117.8l-22.9-6l1.9-67.8l-16.2,64.1L837,694l30.8-117.8l24.1,6.3
+							L890.2,644.7z"></path>
+						<path fill="#FFFFFF" d="M950.7,673.8l-7.4-1.9l5.1-19.7l30.4,8l-11.9,45.6c-3.8,14.6-13,20-27.6,16.1l-15.1-4
+							c-14.6-3.8-20-13-16.1-27.6l19.9-76c3.8-14.6,13-20,27.6-16.1l14.8,3.9c14.6,3.8,20,13,16.1,27.6l-5.9,22.5l-23.2-6.1l5.2-20
+							c0.7-2.8-0.3-4.6-3.1-5.3l-3.4-0.9c-2.8-0.7-4.6,0.3-5.3,3.1l-18.6,71c-0.7,2.8,0.3,4.6,3.1,5.3l3.9,1c2.8,0.7,4.6-0.3,5.3-3.1
+							L950.7,673.8z"></path>
+					</g>
+					<g>
+						<path fill="#17A5D6" d="M1041.1,665.2c6.4,1.8,9.7,6.7,9.7,14.5l0,22.9c0,14-7,21-20.9,21l-33.5,0l-0.1-112.8l33.2,0
+							c14,0,21,7,21,20.9l0,16.8C1050.4,657.2,1047.3,662.8,1041.1,665.2z M1028,634.1c0-2.7-1.3-4-4-4l-5.3,0l0,26.7l5.3,0
+							c2.7,0,4-1.3,4-4L1028,634.1z M1018.7,675.7l0,28.5l5.6,0c2.7,0,4-1.3,4-4l0-20.5c0-2.7-1.3-4-4-4L1018.7,675.7z"></path>
+						<path fill="#17A5D6" d="M1100.4,610.7l14.9,112.8l-22.4,0l-1.8-16.4l-14.2,0l-1.6,16.4l-20.5,0l14.7-112.8L1100.4,610.7z
+							 M1083.9,638.1l-5,49.3l10.2,0L1083.9,638.1z"></path>
+						<path fill="#17A5D6" d="M1120.1,723.4l-0.1-112.8l31.7,0c16.1,0,24.2,8,24.2,24.2l0,64.5c0,16.1-8,24.2-24.2,24.2L1120.1,723.4z
+							 M1142.6,630l0.1,74.1l4.5,0c4.2,0,6.3-2.1,6.3-6.3l0-61.6c0-4.2-2.1-6.3-6.3-6.3L1142.6,630z"></path>
+						<path fill="#17A5D6" d="M1183.7,610.6l22.6,0l0.1,92.6l16.3,0l0,20.1l-38.8,0L1183.7,610.6z"></path>
+						<path fill="#17A5D6" d="M1247,648.8l8-38.2l21.4,0l-19,72.7l0,40.1l-22.6,0l0-38.5l-19.1-74.3l23.5,0L1247,648.8z"></path>
+					</g>
+					<g>
+						<path fill="#17A5D6" d="M679.9,660.3l-35.6,110.5c-1.7,5.3-7.4,8.2-12.7,6.5L587.3,763c-5.3-1.7-8.2-7.4-6.5-12.7l35.6-110.5
+							c1.7-5.3,7.4-8.2,12.7-6.5l44.3,14.3C678.7,649.4,681.6,655,679.9,660.3z"></path>
+
+							<rect x="603.9" y="699.7" transform="matrix(0.3068 -0.9518 0.9518 0.3068 -260.6254 1097.5913)" fill="#F2F4FF" width="38.5" height="56"></rect>
+							<rect x="615.8" y="664.8" transform="matrix(0.3068 -0.9518 0.9518 0.3068 -219.6259 1084.1083)" fill="#FFFFFF" width="37.3" height="56"></rect>
+							<rect x="601.4" y="682.1" transform="matrix(0.3068 -0.9518 0.9518 0.3068 -240.4628 1090.9607)" fill="#62B9DF" width="54.5" height="56.9"></rect>
+							<rect x="636.9" y="757.8" transform="matrix(0.3068 -0.9518 0.9518 0.3068 -272.1304 1144.088)" fill="#191E3B" width="24.8" height="2.2"></rect>
+							<rect x="664.3" y="672.8" transform="matrix(0.3068 -0.9518 0.9518 0.3068 -172.2608 1111.245)" fill="#191E3B" width="24.8" height="2.2"></rect>
+							<rect x="571.3" y="736.6" transform="matrix(0.3068 -0.9518 0.9518 0.3068 -297.4819 1066.9989)" fill="#191E3B" width="24.8" height="2.2"></rect>
+							<rect x="598.7" y="651.6" transform="matrix(0.3068 -0.9518 0.9518 0.3068 -197.6124 1034.1558)" fill="#191E3B" width="24.8" height="2.2"></rect>
+						<polygon fill="#62B9DF" points="589.8,683.4 600.8,683.8 610.1,675.5 607.6,675.4 590.1,674.9 	"></polygon>
+						<polygon fill="#62B9DF" points="674.9,710.9 665.8,704.7 663.1,692.6 665.1,694 679.7,703.8 	"></polygon>
+					</g>
+				</svg>
+
+        <p class="subtitle">Over <b>35.6 million cars</b> were registered for the road in the UK last year, making
+            driving one of the most popular means of transport today. Countries all over the world have also made car
+            transit a commonality, but safety regulations can be a slippery slope depending on where and when you ride.
+        </p>
+        <p class="into-cta">Take a road trip down the interesting encounters motorists have had across the globe - and
+            play the game at the end to see how prone you are to Braking Badly!</p>
+        <div class="scroll-cta">Scroll Down</div>
+        <img class="scroll-down-icon" src="svg/scroll-down.svg" width="49px" height="197px">
+
+    </div>
+
+</div>
+
+<div class="infographic full-width">
+
+    <div class="stripes">
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+    </div>
+
+    <img class="tunnel" src="svg/tunnel.svg" width="107px" height="172px">
+
+    <div class="fixed-width">
+
+        <img class="road-extender" src="svg/road-extender.svg" width="1800px" height="110px">
+        <img class="windy-road" src="svg/windy-road.svg" width="977px" height="4231px">
+        <img class="scroll-car" src="svg/scroll-car.svg" width="131px" height="102px"
+             style="transform: matrix(0.842379, -0.538885, 0.538885, 0.842379, -467.427, 89.1807);">
+
+        <svg xmlns="http://www.w3.org/2000/svg" id="road-path" version="1.1" x="0px" y="0px" width="954.7px" height="4147.8px" viewBox="0 0 954.7 4147.8" enable-background="new 0 0 954.7 4147.8" xml:space="preserve">
+
+					<path id="road-path-target" fill="none" d="M954.7,2H697.4c0,0-206.4,8.8-340.2,142.6
+						c-158.9,158.9-146.1,323.2-5.6,463.7c171.5,171.5,139,257.7,0,454.4c-141.5,200.1-140.1,258.6,0,456.7
+						c141.4,200,140.4,256.7-2.6,458.9c-137.6,194.6-136.4,255.7,1.7,451.1c140.7,199,139.4,259.9,0.8,455.9
+						c-140.3,198.5-141.1,255.5,0,455c134.3,190,171.1,284.6,0,455.7L1.4,4146.4"></path>
+				</svg>
+
+
+        <div class="info-rows">
+            <div class="info-row right">
+                <div class="info-point">
+                    <img class="info-icon safety-first" src="svg/safety-first.svg" width="308px" height="300px"
+                         style="opacity: 0.552717; transform: scale(0.552717, 0.552717);">
+
+                    <div class="info-text">
+                        <h3 style="opacity: 0.373818;">SAFETY FIRST</h3>
+                        <p style="opacity: 0.168853;">The UK is one of the safest places to drive in the world,
+                            averaging <b>7</b> fatalities a year for every <b>100,000</b> motor vehicles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-row left">
+                <div class="info-point">
+                    <img class="info-icon speeding-ticket" src="svg/speeding-ticket.svg" width="336px" height="300px"
+                         style="opacity: 0.063587; transform: scale(0.063587, 0.063587);">
+
+                    <div class="info-text">
+                        <h3 style="opacity: 0.0059364;">SPEED DEMON</h3>
+                        <p style="opacity: 0.000257101;">The first speeding ticket was issued in <b>1902</b>, when a
+                            car's top speed was only <b>45mph</b>.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="info-row right">
+                <div class="info-point">
+                    <img class="info-icon drink-driving" src="svg/drink-driving.svg" width="342px" height="280px"
+                         style="opacity: 0; transform: scale(0, 0);">
+
+                    <div class="info-text">
+                        <h3 style="opacity: 0;">SOBERING UP</h3>
+                        <p style="opacity: 0;">Drink driving offences fell by <b>17%</b> in Scotland since the
+                            introduction of a lower alcohol driving limit in <b>December 2014</b>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-row left">
+                <div class="info-point">
+                    <img class="info-icon driving-test" src="svg/driving-test.svg" width="313px" height="280px"
+                         style="opacity: 0; transform: scale(0, 0);">
+
+                    <div class="info-text">
+                        <h3 style="opacity: 0;">DID YOU PASS?</h3>
+                        <p style="opacity: 0;">The Isle of Mull has the highest pass rate in the UK, standing at
+                            <b>80%</b>. Belvedere in London has the lowest rate at <b>32.2%</b>. The current overall
+                            pass rate in the UK is <b>45.95%</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-row right">
+                <div class="info-point">
+                    <img class="info-icon romanian-car-law" src="svg/romanian-car-law.svg" width="307px" height="320px"
+                         style="opacity: 0; transform: scale(0, 0);">
+
+                    <div class="info-text">
+                        <h3 style="opacity: 0;">KEEP IT CLEAN!</h3>
+                        <p style="opacity: 0;">It is against the law in Romania to drive a <b>dirty car</b>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-row left">
+                <div class="info-point">
+                    <img class="info-icon traffic-lights" src="svg/traffic-lights.svg" width="298px" height="280px"
+                         style="opacity: 0; transform: scale(0, 0);">
+
+                    <div class="info-text">
+                        <h3 style="opacity: 0;">SEEING RED</h3>
+                        <p style="opacity: 0;">The average person spends <b>two weeks</b> of their entire life waiting
+                            at red lights.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-row right">
+                <div class="info-point">
+                    <img class="info-icon german-car-law" src="svg/german-car-law.svg" width="342px" height="293px"
+                         style="opacity: 0; transform: scale(0, 0);">
+
+                    <div class="info-text">
+                        <h3 style="opacity: 0;">ROAD RAGE</h3>
+                        <p style="opacity: 0;">In Germany, motorists can be fined for using <b>abusive language</b> and
+                            making derogatory signs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-row left">
+                <div class="info-point">
+                    <img class="info-icon sweedish-roads" src="svg/sweedish-roads.svg" width="319px" height="289px"
+                         style="opacity: 0; transform: scale(0, 0);">
+
+                    <div class="info-text">
+                        <h3 style="opacity: 0;">EASY DOES IT</h3>
+                        <p style="opacity: 0;">Speed limits outside built-up areas in Sweden were enforced in <b>September
+                            1967</b>, before this Swedes could drive at unlimited speeds on open roads.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="game-entry full-width">
+
+    <img class="blue-road visible" src="svg/blue-road.svg">
+
+    <div class="sharing visible">
+        <div class="share-button fb-share">
+            <div class="share-bg"></div>
+            <div class="fb-share-button fb_iframe_widget" data-href="https://citipark.co.uk/citipark/braking-badly/"
+                 data-layout="button_count" fb-xfbml-state="rendered"
+                 fb-iframe-plugin-query="app_id=&amp;container_width=115&amp;href=https%3A%2F%2Fcitipark.co.uk%2Fcitipark%2Fbraking-badly%2F&amp;layout=button_count&amp;locale=en_GB&amp;sdk=joey">
+                <span style="vertical-align: bottom; width: 81px; height: 20px;"><iframe name="f2e71f7f07b1ed4"
+                                                                                         width="1000px" height="1000px"
+                                                                                         frameborder="0"
+                                                                                         allowtransparency="true"
+                                                                                         allowfullscreen="true"
+                                                                                         scrolling="no"
+                                                                                         title="fb:share_button Facebook Social Plugin"
+                                                                                         src="https://www.facebook.com/v2.3/plugins/share_button.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FfTmIQU3LxvB.js%3Fversion%3D42%23cb%3Df77643740c324%26domain%3Dcitipark.co.uk%26origin%3Dhttps%253A%252F%252Fcitipark.co.uk%252Ff38eb79fea00988%26relation%3Dparent.parent&amp;container_width=115&amp;href=https%3A%2F%2Fcitipark.co.uk%2Fcitipark%2Fbraking-badly%2F&amp;layout=button_count&amp;locale=en_GB&amp;sdk=joey"
+                                                                                         style="border: none; visibility: visible; width: 81px; height: 20px;"
+                                                                                         class=""></iframe></span></div>
+            <div class="share-cover">
+                <img src="svg/facebook-icon.svg" width="115px" height="32px">
+            </div>
+        </div>
+        <div class="share-button twitter-share">
+            <div class="share-bg"></div>
+
+            <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true"
+                    class="twitter-share-button twitter-share-button-rendered twitter-tweet-button"
+                    title="Twitter Tweet Button"
+                    src="https://platform.twitter.com/widgets/tweet_button.39f7ee9fffbd122b7a37a520dbdaebc6.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=https%3A%2F%2Fcitipark.co.uk%2Fcitipark%2Fbraking-badly%2F&amp;size=m&amp;text=I%27ve%20just%20played%20the%20%23BrakingBadly%20game.%20It%27s%20awesome!%20Check%20it%20out&amp;time=1477201391031&amp;type=share&amp;url=https%3A%2F%2Fcitipark.co.uk%2Fcitipark%2Fbraking-badly%2F"
+                    style="position: static; visibility: visible; width: 60px; height: 20px;"
+                    data-url="https://citipark.co.uk/citipark/braking-badly/"></iframe>
+            <script>!function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');</script>
+
+            <div class="share-cover">
+                <img src="svg/twitter-icon.svg" width="115px" height="32px">
+            </div>
+        </div>
+    </div>
+
+    <div class="game">
+        <div class="onyx">
+            <canvas class="glcanvas" width="1336" height="848"></canvas>
+        </div>
+        <div class="game-score game-score-positive" style="left: 672.323px; top: 368.921px; opacity: 0;">+100</div>
+        <div class="hud">
+            <div class="hud-text hud-score">SCORE:700</div>
+            <div class="hud-text hud-rank">RANK: 10000/10000</div>
+            <div class="hud-text hud-instructions">USE ARROW KEYS TO STEER</div>
+        </div>
+    </div>
+
+    <div class="fixed-width">
+
+        <div class="game-preloader">
+            <div class="preload-bar">
+                <div class="preload-marker" style="width: 100%;"></div>
+            </div>
+        </div>
+
+        <div class="game-form">
+            <h3>TEST YOUR SKILLS</h3>
+            <p>Changes in weather often require higher levels of caution when driving a car. If you’re a regular
+                motorist you should know how to stay safe in all types of weather. Put your skills behind the wheel to
+                the test and see how you rate against your fellow drivers!</p>
+            <input type="text" id="game-player-name" placeholder="Enter Your Name">
+            <div class="game-start-button">PLAY</div>
+        </div>
+
+        <div class="game-over-screen visible">
+
+            <h3>GAME OVER</h3>
+            <div class="scoring">
+                <div class="score">
+                    <div class="score-title">SCORE</div>
+                    <div class="score-val">700</div>
+                </div>
+                <div class="rank">
+                    <div class="rank-title">RANKING</div>
+                    <div class="rank-val">LAST</div>
+                </div>
+            </div>
+            <p class="score-table">Not bad! Hope you’re a bit more cautious out in the real world. Take our tip with you
+                next time you hit the road.</p>
+            <div class="play-again-button">PLAY AGAIN</div>
+            <div class="driving-tips"><p>Heavy rain is one of the toughest weather conditions to drive in. Rain not only
+                reduces visibility, but also reduces the amount of grip your car has, increasing stopping distances.</p>
+                <p>Plan your journey in advance and avoid any areas that are prone to flooding when it’s pouring
+                    down.</p>
+                <p>Remember the two-second rule and make sure you have enough space both in front and behind your car at
+                    all times.</p></div>
+
+        </div>
+    </div>
+</div>
+
+<script src="javascripts/xy.js"></script>
+<script src="javascripts/game.js"></script>
+<script src="javascripts/info.js"></script>
+
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-32767308-11', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+<div id="fb-root" class=" fb_reset">
+    <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+        <div></div>
+    </div>
+    <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+        <div>
+            <iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true"
+                    scrolling="no" id="fb_xdm_frame_https" aria-hidden="true"
+                    title="Facebook Cross Domain Communication Frame" tabindex="-1"
+                    src="https://staticxx.facebook.com/connect/xd_arbiter/r/fTmIQU3LxvB.js?version=42#channel=f38eb79fea00988&amp;origin=https%3A%2F%2Fcitipark.co.uk"
+                    style="border: none;"></iframe>
+        </div>
+    </div>
+</div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<!--
+<div id="awwwards" class="sotd white left">
+    <a href="http://www.awwwards.com" target="_blank">Awwwards</a>
+</div>-->
+
+<script type="text/javascript">window.NREUM || (NREUM = {});
+NREUM.info = {
+    "beacon": "bam.nr-data.net",
+    "licenseKey": "a2d6172b61",
+    "applicationID": "4138587",
+    "transactionName": "MVYGYRFRChBZVkxfDAgcJVYXWQsNF0VZUQYVHABcEEAIAkE=",
+    "queueTime": 0,
+    "applicationTime": 118,
+    "atts": "HREFF1lLGR4=",
+    "errorBeacon": "bam.nr-data.net",
+    "agent": ""
+}</script>
+<iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true"
+        style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;"></iframe>
+</body>
+</html>
