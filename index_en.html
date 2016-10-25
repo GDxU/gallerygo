@@ -6,19 +6,57 @@
     <!-- <script src="https://js-agent.newrelic.com/nr-974.min.js"></script>-->
     <script id="facebook-jssdk" src="//connect.facebook.net/en_GB/sdk.js#xfbml=1&amp;version=v2.3"></script>
     <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
     <script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script>
     <title>Gallery Go!</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/infographic.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/cloudmov.css">
-    <meta property="og:title" content="Gallery Go">
-    <meta property="og:site_name" content="Zyntauri">
+    <meta property="og:title" content="GalleryGo">
+    <meta property="og:site_name" content="GalleryGo">
     <meta property="og:url" content="https://www.heskeyo.com">
-    <meta property="og:description" content="Share your arts!">
+    <meta property="og:description" content="Declare your artworks to the world!">
     <meta property="og:image" content="https://www.heskeyo.com/images/logo-coo.png">
-    <meta property="fb:app_id" content="575928979216116">
+    <meta property="fb:app_id" content="135624513168400">
     <meta property="og:type" content="website">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css">
-    <!-- <link type="text/css" media="screen" rel="stylesheet" href="awwwards.css">-->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '135624513168400',
+                xfbml: true,
+                version: 'v2.8'
+            });
+        };
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>window.twttr = (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function (f) {
+            t._e.push(f);
+        };
+
+        return t;
+    }(document, "script", "twitter-wjs"));</script>
+
+
     <script type="text/javascript" src="https://fast.fonts.net/jsapi/1c33cdff-5f3c-4b54-96c5-10e1a15f35c2.js"></script>
     <script type="text/javascript" charset="utf-8" async=""
             src="https://platform.twitter.com/js/button.4e56ff84e57afaf5af2506ef73ab8a88.js"></script>
@@ -26,7 +64,7 @@
 <body>
 
 <div class="header full-width skybg">
-    <img  class="wallpaper" src="images/wall_2.jpg"/>
+    <img class="wallpaper" src="images/wall_2.jpg"/>
     <div class="button game-shortcut">Download Now</div>
     <div class="fixed-width sky">
         <div class="moon"></div>
@@ -168,16 +206,10 @@
                  data-layout="button_count" fb-xfbml-state="rendered"
                  fb-iframe-plugin-query="app_id=&amp;container_width=115&amp;href=https%3A%2F%2Fcitipark.co.uk%2Fcitipark%2Fbraking-badly%2F&amp;layout=button_count&amp;locale=en_GB&amp;sdk=joey">
                 <span style="vertical-align: bottom; width: 81px; height: 20px;">
-				<iframe name="f2e71f7f07b1ed4"
-                        width="1000px" height="1000px"
-                        frameborder="0"
-                        allowtransparency="true"
-                        allowfullscreen="true"
-                        scrolling="no"
-                        title="fb:share_button Facebook Social Plugin"
-                        src="https://www.facebook.com/v2.3/plugins/share_button.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FfTmIQU3LxvB.js%3Fversion%3D42%23cb%3Df77643740c324%26domain%3Dcitipark.co.uk%26origin%3Dhttps%253A%252F%252Fcitipark.co.uk%252Ff38eb79fea00988%26relation%3Dparent.parent&amp;container_width=115&amp;href=https%3A%2F%2Fcitipark.co.uk%2Fcitipark%2Fbraking-badly%2F&amp;layout=button_count&amp;locale=en_GB&amp;sdk=joey"
-                        style="border: none; visibility: visible; width: 81px; height: 20px;"
-                        class=""></iframe></span></div>
+                <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.heskeyo.com%2F&width=96&layout=button&action=like&size=small&show_faces=true&share=true&height=65&appId=135624513168400"
+                        width="96" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        allowTransparency="true"></iframe>
+                </span></div>
             <div class="share-cover">
                 <img src="svg/facebook-icon.svg" width="115px" height="32px">
             </div>
@@ -188,23 +220,53 @@
             <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true"
                     class="twitter-share-button twitter-share-button-rendered twitter-tweet-button"
                     title="Twitter Tweet Button"
-                    src="https://platform.twitter.com/widgets/tweet_button.39f7ee9fffbd122b7a37a520dbdaebc6.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=https%3A%2F%2Fcitipark.co.uk%2Fcitipark%2Fbraking-badly%2F&amp;size=m&amp;text=I%27ve%20just%20played%20the%20%23BrakingBadly%20game.%20It%27s%20awesome!%20Check%20it%20out&amp;time=1477201391031&amp;type=share&amp;url=https%3A%2F%2Fcitipark.co.uk%2Fcitipark%2Fbraking-badly%2F"
+                    src="https://platform.twitter.com/widgets/tweet_button.39f7ee9fffbd122b7a37a520dbdaebc6.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=https%3A%2F%2Fheskeyo.com&amp;size=m&amp;text=I%20just%20discovery%20a%20new%20master%20piece%20from%20my%20friend.%20%40Gallery_Go%20%20app.%20Come%20check%20it%20out.%20http%3A//www.heskeyo.com%20&amp;time=1477201391031&amp;type=share&amp;url=https%3A%2F%2Fheskeyo.com"
                     style="position: static; visibility: visible; width: 60px; height: 20px;"
-                    data-url="https://citipark.co.uk/citipark/braking-badly/"></iframe>
-            <script>!function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = p + '://platform.twitter.com/widgets.js';
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-            }(document, 'script', 'twitter-wjs');</script>
+                    data-url="https://www.heskeyo.com/"></iframe>
 
             <div class="share-cover">
                 <img src="svg/twitter-icon.svg" width="115px" height="32px">
             </div>
         </div>
+        <div class="share-button weixin-share">
+            <div class="share-bg"></div>
+            <!-- JiaThis Button BEGIN -->
+            <div id="ckepop">
+                <a class="jiathis_button_weixin">微信</a>
+                <a class="jiathis_counter_style"></a>
+            </div>
+            <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1" charset="utf-8"></script>
+            <!-- JiaThis Button END -->
+
+            <div class="share-cover">
+                <img src="svg/weixin-logo.svg" width="115px" height="30px">
+            </div>
+
+        </div>
+        <div class="share-button line-share">
+
+            <div class="share-bg"></div>
+
+            <span>
+<script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411"></script>
+<script type="text/javascript">
+new media_line_me.LineButton({
+    "pc": false,
+    "lang": "en",
+    "type": "a",
+    "text": "http://www.heskeyo.com",
+    "withUrl": true
+});
+</script>
+</span>
+
+
+            <div class="share-cover">
+                <img src="svg/weixin-logo.svg" width="115px" height="30px">
+            </div>
+
+        </div>
+
     </div>
 
     <div class="game">
@@ -212,6 +274,10 @@
             <canvas class="glcanvas" width="1336" height="848"></canvas>
         </div>
     </div>
+
+
+    <div class="clip-art-left"></div>
+    <div class="clip-art-right"></div>
 
     <div class="fixed-width">
 
@@ -222,9 +288,10 @@
         </div>
 
         <div class="game-form visible">
+
             <h3>GET YOURS NOW</h3>
             <p>Get ready for this exciting journey!</p>
-           <!-- <input type="text" id="game-player-name" placeholder="Enter Your Name">-->
+            <!-- <input type="text" id="game-player-name" placeholder="Enter Your Name">-->
             <div class="game-start-button">GO!</div>
         </div>
 
@@ -255,8 +322,8 @@
 </div>
 
 <script src="javascripts/xy.js"></script>
-<script src="javascripts/game.js"></script>
 <script src="javascripts/info.js"></script>
+<script src="javascripts/installation.js"></script>
 
 
 <script>
@@ -275,8 +342,6 @@
     ga('create', 'UA-32767308-11', 'auto');
     ga('send', 'pageview');
 </script>
-
-
 <div id="fb-root" class=" fb_reset">
     <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
         <div></div>

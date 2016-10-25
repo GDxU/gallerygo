@@ -49,6 +49,14 @@ html, body {
     z-index: 10;
 }
 
+.share-button.weixin-share .share-cover {
+    background: rgb(73, 167, 77);
+}
+
+.share-button.line-share .share-cover {
+    background: rgb(73, 167, 77);
+}
+
 .share-button.fb-share .share-cover {
     background: rgb(53, 98, 167);
 }
@@ -91,6 +99,26 @@ html, body {
     border-radius: 5px;
 }
 
+.line-share {
+    position: absolute;
+    width: 115px;
+    height: 32px;
+    right: 390px;
+    border-radius: 5px;
+}
+
+.jiathis_button_weixin {
+    color: white;
+}
+
+.weixin-share {
+    position: absolute;
+    width: 115px;
+    height: 32px;
+    right: 260px;
+    border-radius: 5px;
+}
+
 .fb_iframe_widget {
     position: absolute !important;
     top: 6px;
@@ -103,6 +131,13 @@ html, body {
     z-index: 8;
     top: 6px;
     left: 18px;
+}
+
+#ckepop {
+    position: absolute !important;
+    z-index: 8;
+    top: 9px;
+    left: 11px;
 }
 
 @-webkit-keyframes head_light_flicker {

@@ -1,3 +1,25 @@
+.clip-art-left{
+    display: block;
+    position: absolute;
+    top: 190px;
+    left: -30px;
+    width: 590px;
+    background-size: cover;
+    height: 570px;
+    background-image: url(../images/life_on_the_water_by_job3hesk.png);
+    background-repeat: no-repeat;
+}
+.clip-art-right{
+    display: block;
+    position: absolute;
+    top: 190px;
+    width: 750px;
+    height: 860px;
+    right: -110px;
+    background-image: url(../images/bonsai_by_dragovich-d4mdhs2.png);
+    background-repeat: no-repeat;
+}
+
 .header img.main {
     right: 410px;
     top: 220px;

@@ -23,53 +23,53 @@ var road_top;
 var road_start;
 var road_end;
 var info_points = [];
-var lerps = [0,0,0,0,0,0,0,0];
+var lerps = [0, 0, 0, 0, 0, 0, 0, 0];
 var sharing;
 
 window.addEventListener("load", info_graphic_init, false);
 
 // requestAnimationFrame fix for IE9
-(function() {
+(function () {
   var lastTime = 0;
   var vendors = ['webkit', 'moz'];
-  for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-    window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+  for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+    window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
     window.cancelAnimationFrame =
-      window[vendors[x]+'CancelAnimationFrame'] || window[vendors[x]+'CancelRequestAnimationFrame'];
+      window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
   }
 
   if (!window.requestAnimationFrame)
-    window.requestAnimationFrame = function(callback, element) {
+    window.requestAnimationFrame = function (callback, element) {
       var currTime = new Date().getTime();
       var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-      var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+      var id = window.setTimeout(function () {
+          callback(currTime + timeToCall);
+        },
         timeToCall);
       lastTime = currTime + timeToCall;
       return id;
     };
 
   if (!window.cancelAnimationFrame)
-    window.cancelAnimationFrame = function(id) {
+    window.cancelAnimationFrame = function (id) {
       clearTimeout(id);
     };
 }());
 
-var InfoIcon = function()
-{
+var InfoIcon = function () {
   this.icon;
   this.header;
   this.text;
 }
 
-function info_graphic_init()
-{
+function info_graphic_init() {
   game_entry = document.querySelector('.game-entry');
   game_shortcut = document.querySelector('.game-shortcut');
   game_shortcut.addEventListener('click', on_game_shortcut);
   game_player_name = document.querySelector('#game-player-name');
 
   if (game_player_name !== null) {
-    game_player_name.addEventListener('keypress', function(e){
+    game_player_name.addEventListener('keypress', function (e) {
       if (e.keyCode == 13) {
         on_game_start_press();
       }
@@ -98,8 +98,7 @@ function info_graphic_init()
   var info_elements = document.querySelectorAll('.info-point');
 
   var n = info_elements.length;
-  for(var i = 0; i < n; ++i)
-  {
+  for (var i = 0; i < n; ++i) {
     var element = info_elements[i];
     var icon = new InfoIcon();
     icon.icon = element.querySelector('.info-icon');
@@ -123,8 +122,7 @@ function info_graphic_init()
   game_over_screen = document.querySelector('.game-over-screen');
 
   var win_width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  if(win_width < 1000)
-  {
+  if (win_width < 1000) {
     game_entry.classList.add('inactive');
   }
 
@@ -132,29 +130,28 @@ function info_graphic_init()
   requestAnimationFrame(info_upA);
 }
 
-function on_game_start_press()
-{
-  game_start_button.removeEventListener('click', on_game_start_press);
-  game_form.classList.remove('visible');
-  game_preloader.classList.add('visible');
+function on_game_start_press() {
+  //game_start_button.removeEventListener('click', on_game_start_press);
+  /* game_form.classList.remove('visible');
+   game_preloader.classList.add('visible');
 
-  blue_road.classList.remove('visible');
+   blue_road.classList.remove('visible');
 
-  var onyx_container = document.querySelector('.onyx');
-  onyx = new Onyx(onyx_container);
-  if(onyx.success)
-  {
-    onyx.resources.preload('resources.json', load_complete, load_progress);
+   var onyx_container = document.querySelector('.onyx');
+   onyx = new Onyx(onyx_container);
+   if (onyx.success) {
+   onyx.resources.preload('resources.json', load_complete, load_progress);
+   }*/
+  if (installation != undefined) {
+    location.href = installation.android;
   }
 }
 
-function load_progress(percent)
-{
+function load_progress(percent) {
   preload_marker.style.width = percent + '%';
 }
 
-function load_complete()
-{
+function load_complete() {
   preload_marker.style.width = 100 + '%';
   game_preloader.classList.remove('visible');
   onyx_bg.classList.add('active');
@@ -165,13 +162,11 @@ function load_complete()
   game_init();
 }
 
-function on_game_shortcut()
-{
+function on_game_shortcut() {
   window.scrollTo(0, 5000);
 }
 
-function on_replay()
-{
+function on_replay() {
   onyx_bg.classList.add('active');
   game_entry.classList.add('playing');
   gl_canvas.classList.add('active');
@@ -182,8 +177,7 @@ function on_replay()
   game_retry();
 }
 
-function on_scroll(e)
-{
+function on_scroll(e) {
   if (typeof window.scrollY !== 'undefined') {
     scroll_position = window.scrollY;
   } else {
@@ -191,30 +185,26 @@ function on_scroll(e)
   }
 }
 
-function info_upA(t)
-{
+function info_upA(t) {
   info_update();
   requestAnimationFrame(info_upB);
 }
 
-function info_upB(t)
-{
+function info_upB(t) {
   info_update();
   requestAnimationFrame(info_upA);
 }
 
 
-function info_update()
-{
-  if (scroll_position > 300)
-  {
+function info_update() {
+  if (scroll_position > 300) {
     var t = 0.5;
-    var scroll = (1-t) * last_scroll_position + t * scroll_position;
+    var scroll = (1 - t) * last_scroll_position + t * scroll_position;
     last_scroll_position = scroll_position;
 
-    if(scroll < 0) scroll = 0;
+    if (scroll < 0) scroll = 0;
 
-    if(scroll > road_end)
+    if (scroll > road_end)
       scroll = road_end;
     var start = road_start;
 
@@ -228,13 +218,12 @@ function info_update()
     var dx = (pb.x - start.x) + 64;
     var dy = (pb.y - start.y);
 
-    update_transform(scroll_car, 1,1, dx, dy, -angle - 180);
+    update_transform(scroll_car, 1, 1, dx, dy, -angle - 180);
 
     var start = 30;
     var end = 950;
-    for(var i = 0; i < 8; ++i)
-    {
-      var t = clamp((scroll - start)/(end-start),0,1);
+    for (var i = 0; i < 8; ++i) {
+      var t = clamp((scroll - start) / (end - start), 0, 1);
       start += 450;
       end += 450;
 
@@ -248,15 +237,13 @@ function info_update()
 }
 
 
-function clamp(val, min, max)
-{
-  if(val < min) return min;
-  else if(val > max) return max;
+function clamp(val, min, max) {
+  if (val < min) return min;
+  else if (val > max) return max;
   return val;
 }
 
-function cubic_bezier(a,b,c,d, t)
-{
+function cubic_bezier(a, b, c, d, t) {
   var cy = 3 * (b - a);
   var by = 3 * (c - b) - cy;
   var ay = d - a - cy - by;
@@ -266,8 +253,7 @@ function cubic_bezier(a,b,c,d, t)
   return r;
 }
 
-function update_transform(ent, sx, sy, tx, ty, r)
-{
+function update_transform(ent, sx, sy, tx, ty, r) {
   var ang = r * Consts.DEG2RAD;
   var a = Math.cos(ang);// * sx;
   var b = -Math.sin(ang);
@@ -276,7 +262,7 @@ function update_transform(ent, sx, sy, tx, ty, r)
   var e = Math.cos(ang);// * sy;
   var f = ty;
 
-  var matrix = "matrix("+a+","+b+","+d+","+e+","+c+","+f+")";
+  var matrix = "matrix(" + a + "," + b + "," + d + "," + e + "," + c + "," + f + ")";
 
   ent.style["webkitTransform"] = matrix;
   ent.style.MozTransform = matrix;
