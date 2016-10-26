@@ -1,14 +1,6 @@
 <html class="mti-museosansw01300-n4-active mti-museosansw01700-n4-active mti-active">
 <head>
     <meta charset="utf-8">
-    <!-- <script type="text/javascript"
-             src="https://bam.nr-data.net/1/a2d6172b61?a=4138587&amp;v=974.7d740e1&amp;to=MVYGYRFRChBZVkxfDAgcJVYXWQsNF0VZUQYVHABcEEAIAkE%3D&amp;rst=3026&amp;ref=https://citipark.co.uk/citipark/braking-badly/&amp;ap=118&amp;be=1303&amp;fe=1573&amp;dc=1214&amp;perf=%7B%22timing%22:%7B%22of%22:1477201386825,%22n%22:0,%22f%22:49,%22dn%22:50,%22dne%22:50,%22c%22:50,%22s%22:61,%22ce%22:454,%22rq%22:456,%22rp%22:1240,%22rpe%22:1242,%22dl%22:1244,%22di%22:2517,%22ds%22:2517,%22de%22:2521,%22dc%22:2876,%22l%22:2876,%22le%22:2881%7D,%22navigation%22:%7B%7D%7D&amp;at=HREFF1lLGR4%3D&amp;jsonp=NREUM.setToken"></script>-->
-    <!-- <script src="https://js-agent.newrelic.com/nr-974.min.js"></script>-->
-    <script id="facebook-jssdk" src="//connect.facebook.net/en_GB/sdk.js#xfbml=1&amp;version=v2.3"></script>
-    <script async="" src="//www.google-analytics.com/analytics.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-
-    <script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script>
     <title>Gallery Go!</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/infographic.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/cloudmov.css">
@@ -19,6 +11,18 @@
     <meta property="og:image" content="https://www.heskeyo.com/images/logo-coo.png">
     <meta property="fb:app_id" content="135624513168400">
     <meta property="og:type" content="website">
+
+    <!-- <script type="text/javascript"
+             src="https://bam.nr-data.net/1/a2d6172b61?a=4138587&amp;v=974.7d740e1&amp;to=MVYGYRFRChBZVkxfDAgcJVYXWQsNF0VZUQYVHABcEEAIAkE%3D&amp;rst=3026&amp;ref=https://citipark.co.uk/citipark/braking-badly/&amp;ap=118&amp;be=1303&amp;fe=1573&amp;dc=1214&amp;perf=%7B%22timing%22:%7B%22of%22:1477201386825,%22n%22:0,%22f%22:49,%22dn%22:50,%22dne%22:50,%22c%22:50,%22s%22:61,%22ce%22:454,%22rq%22:456,%22rp%22:1240,%22rpe%22:1242,%22dl%22:1244,%22di%22:2517,%22ds%22:2517,%22de%22:2521,%22dc%22:2876,%22l%22:2876,%22le%22:2881%7D,%22navigation%22:%7B%7D%7D&amp;at=HREFF1lLGR4%3D&amp;jsonp=NREUM.setToken"></script>-->
+    <!-- <script src="https://js-agent.newrelic.com/nr-974.min.js"></script>-->
+    <script id="facebook-jssdk" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&amp;version=v2.3"></script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script id="twitter-wjs" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://fast.fonts.net/jsapi/1c33cdff-5f3c-4b54-96c5-10e1a15f35c2.js"></script>
+    <script type="text/javascript" charset="utf-8" async
+            src="https://platform.twitter.com/js/button.4e56ff84e57afaf5af2506ef73ab8a88.js"></script>
     <script src="javascripts/installation.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css">
     <script>
@@ -59,21 +63,9 @@
         }(document, "script", "twitter-wjs"));
 
 
-        //<![CDATA[
-        // Set JavaScript Key of current app.
-        Kakao.init('dcbeabcda78df18100c882cea12bc31c');
-        // Create KakaoStory share button.
-        Kakao.Story.createShareButton({
-            container: '#kakaostory-share-button',
-            url: 'https://www.heskeyo.com',
-            text: '여기 난 그냥 새로운 마스터 조각을 가지고 앱에 게시. 너무 당신을 가져옵니다. http://www.heskeyo.com :)'
-        });
-        //]]>
     </script>
 
-    <script type="text/javascript" src="https://fast.fonts.net/jsapi/1c33cdff-5f3c-4b54-96c5-10e1a15f35c2.js"></script>
-    <script type="text/javascript" charset="utf-8" async=""
-            src="https://platform.twitter.com/js/button.4e56ff84e57afaf5af2506ef73ab8a88.js"></script>
+
 </head>
 <body>
 
@@ -259,13 +251,30 @@
         </div>
         <div class="share-button line-share">
             <div class="share-bg"></div>
-            <div id="kakaostory-share-button"></div>
             <div class="share-cover">
-                <img src="svg/weixin-logo.svg" width="115px" height="30px">
+                <img src="svg/line-messenger.svg" width="115px" height="30px">
             </div>
 
         </div>
-
+        <div class="share-button kakao-share">
+            <div class="share-bg"></div>
+            <div id="kakaostory-share-button"></div>
+            <script>
+                //<![CDATA[
+                // Set JavaScript Key of current app.
+                Kakao.init('dcbeabcda78df18100c882cea12bc31c');
+                // Create KakaoStory share button.
+                Kakao.Story.createShareButton({
+                    container: '#kakaostory-share-button',
+                    url: 'https://www.heskeyo.com',
+                    text: '여기 난 그냥 새로운 마스터 조각을 가지고 앱에 게시. 너무 당신을 가져옵니다. http://www.heskeyo.com :)'
+                });
+                //]]>
+            </script>
+            <div class="share-cover">
+                <img src="svg/kakaotalk.svg" width="115px" height="30px">
+            </div>
+        </div>
     </div>
 
     <div class="game">
@@ -315,6 +324,13 @@
                     down.</p>
                 <p>Remember the two-second rule and make sure you have enough space both in front and behind your car at
                     all times.</p></div>
+
+            <blockquote class="twitter-tweet" data-theme="dark" data-link-color="#E81C4F"><p lang="en" dir="ltr">Here I
+                just got a new master piece and posted on <a href="https://twitter.com/Gallery_Go">@Gallery_Go</a> app.
+                Get yours too. <a href="https://t.co/tDpjHxmN4v">https://t.co/tDpjHxmN4v</a></p>&mdash; GalleryGO
+                (@Gallery_Go) <a href="https://twitter.com/Gallery_Go/status/790969438497415168">October 25, 2016</a>
+            </blockquote>
+
 
         </div>
     </div>

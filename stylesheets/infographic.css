@@ -48,16 +48,17 @@ html, body {
     height: 32px;
     z-index: 10;
 }
+
 .share-button.kakao-share .share-cover {
     background: rgb(254, 219, 0);
 }
 
 .share-button.weixin-share .share-cover {
-    background: rgb(73, 167, 77);
+    background: rgb(8, 201, 33);
 }
 
 .share-button.line-share .share-cover {
-    background: rgb(73, 167, 77);
+    background: rgb(3, 194, 2);
 }
 
 .share-button.fb-share .share-cover {
@@ -75,6 +76,8 @@ html, body {
 .share-cover {
     position: absolute;
     z-index: 8;
+    height: 100%;
+    top: 0px;
     transition: all 0.3s ease-out;
 }
 
@@ -101,13 +104,15 @@ html, body {
     right: 0px;
     border-radius: 5px;
 }
-.kakao-share{
+
+.kakao-share {
     position: absolute;
     width: 115px;
     height: 32px;
     right: 390px;
     border-radius: 5px;
 }
+
 .line-share {
     position: absolute;
     width: 115px;
