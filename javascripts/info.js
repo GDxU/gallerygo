@@ -20,6 +20,7 @@ var scroll_car;
 var scroll_position;
 var last_scroll_position = 0;
 var road_top;
+var playstoredownload;
 var road_start;
 var road_end;
 var info_points = [];
@@ -67,7 +68,6 @@ function info_graphic_init() {
   game_shortcut = document.querySelector('.game-shortcut');
   game_shortcut.addEventListener('click', on_game_shortcut);
   game_player_name = document.querySelector('#game-player-name');
-
   if (game_player_name !== null) {
     game_player_name.addEventListener('keypress', function (e) {
       if (e.keyCode == 13) {
@@ -79,12 +79,17 @@ function info_graphic_init() {
   if (game_start_button !== null) {
     game_start_button.addEventListener('click', on_game_start_press);
   }
+  playstoredownload = document.querySelector('.download-from-playstore');
+  if (playstoredownload !== null) {
+    playstoredownload.addEventListener('click', install_app_image);
+  }
   game_form = document.querySelector('.game-form');
   game_preloader = document.querySelector('.game-preloader');
   preload_marker = document.querySelector('.preload-marker');
   preload_bar = document.querySelector('.preload-bar');
   game_over_screen = document.querySelector('.game-over-screen');
   onyx_bg = document.querySelector('.onyx');
+
   hud = document.querySelector('.hud');
   replay_button = document.querySelector('.play-again-button');
   replay_button.addEventListener('click', on_replay);
@@ -129,19 +134,12 @@ function info_graphic_init() {
 
   requestAnimationFrame(info_upA);
 }
-
+function install_app_image() {
+  if (installation != undefined) {
+    location.href = installation.playstore;
+  }
+}
 function on_game_start_press() {
-  //game_start_button.removeEventListener('click', on_game_start_press);
-  /* game_form.classList.remove('visible');
-   game_preloader.classList.add('visible');
-
-   blue_road.classList.remove('visible');
-
-   var onyx_container = document.querySelector('.onyx');
-   onyx = new Onyx(onyx_container);
-   if (onyx.success) {
-   onyx.resources.preload('resources.json', load_complete, load_progress);
-   }*/
   if (installation != undefined) {
     location.href = installation.android;
   }

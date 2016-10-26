@@ -52,6 +52,16 @@ html, body {
     z-index: 10;
 }
 
+.download-from-playstore {
+    background-size: cover;
+    background-image: url(../images/google-play-mono.png);
+    width: 166px;
+    height: 50px;
+    position: relative;
+    margin: 33px auto;
+    cursor: pointer;
+}
+
 .share-button.kakao-share .share-cover {
     background: rgb(254, 219, 0);
 }
@@ -254,12 +264,11 @@ html, body {
     position: absolute;
     font-size: 3.2em;
     z-index: 1;
-    color: rgb(163, 168, 194);
+    color: rgb(255, 249, 69);
     text-align: right;
     width: 530px;
     right: 22px;
     top: 480px;
-
 }
 
 .subtitle b {
