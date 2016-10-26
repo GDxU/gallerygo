@@ -19,6 +19,7 @@
     <meta property="og:image" content="https://www.heskeyo.com/images/logo-coo.png">
     <meta property="fb:app_id" content="135624513168400">
     <meta property="og:type" content="website">
+    <script src="javascripts/installation.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css">
     <script>
         window.fbAsyncInit = function () {
@@ -38,24 +39,37 @@
             js.src = "//connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
+
+
+        window.twttr = (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                    t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function (f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));
+
+
+        //<![CDATA[
+        // Set JavaScript Key of current app.
+        Kakao.init('dcbeabcda78df18100c882cea12bc31c');
+        // Create KakaoStory share button.
+        Kakao.Story.createShareButton({
+            container: '#kakaostory-share-button',
+            url: 'https://www.heskeyo.com',
+            text: '여기 난 그냥 새로운 마스터 조각을 가지고 앱에 게시. 너무 당신을 가져옵니다. http://www.heskeyo.com :)'
+        });
+        //]]>
     </script>
-    <script>window.twttr = (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0],
-                t = window.twttr || {};
-        if (d.getElementById(id)) return t;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
-
-        t._e = [];
-        t.ready = function (f) {
-            t._e.push(f);
-        };
-
-        return t;
-    }(document, "script", "twitter-wjs"));</script>
-
 
     <script type="text/javascript" src="https://fast.fonts.net/jsapi/1c33cdff-5f3c-4b54-96c5-10e1a15f35c2.js"></script>
     <script type="text/javascript" charset="utf-8" async=""
@@ -244,23 +258,8 @@
 
         </div>
         <div class="share-button line-share">
-
             <div class="share-bg"></div>
-
-            <span>
-<script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411"></script>
-<script type="text/javascript">
-new media_line_me.LineButton({
-    "pc": false,
-    "lang": "en",
-    "type": "a",
-    "text": "http://www.heskeyo.com",
-    "withUrl": true
-});
-</script>
-</span>
-
-
+            <div id="kakaostory-share-button"></div>
             <div class="share-cover">
                 <img src="svg/weixin-logo.svg" width="115px" height="30px">
             </div>
@@ -320,12 +319,8 @@ new media_line_me.LineButton({
         </div>
     </div>
 </div>
-
 <script src="javascripts/xy.js"></script>
 <script src="javascripts/info.js"></script>
-<script src="javascripts/installation.js"></script>
-
-
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
