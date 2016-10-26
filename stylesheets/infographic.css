@@ -133,10 +133,10 @@ html, body {
     border-radius: 5px;
 }
 
-.fb_iframe_widget {
+.fb_iframe_widget, #facebook-share-box {
     position: absolute !important;
-    top: 6px;
-    left: 11px;
+    top: 2px;
+    left: 1px;
     z-index: 8;
 }
 
