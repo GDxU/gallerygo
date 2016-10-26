@@ -26,7 +26,7 @@
     <script>
         window.fbAsyncInit = function () {
             FB.init({
-                appId: '135624513168400',
+                appId: installation.FB,
                 xfbml: true,
                 version: 'v2.8'
             });
@@ -48,11 +48,7 @@
 
          return t;
          }(document, "script", "twitter-wjs"));*/
-
-
     </script>
-
-
 </head>
 <body>
 <div class="header full-width skybg">
@@ -184,14 +180,23 @@
                          style="opacity: 0; transform: scale(0, 0);">
 
 
-                        <div class="fb-post" data-href="https://www.facebook.com/SiulingGallery/posts/1049468555109875:0" data-width="300" data-show-text="true"><blockquote cite="https://www.facebook.com/SiulingGallery/posts/1049468555109875:0" class="fb-xfbml-parse-ignore"><p>&#x65b0;&#x8fd1;&#x5b8c;&#x6210;&#x7684;&#x4f5c;&#x54c1;&#x201c;&#x82b1;&#x958b;&#x6642;&#x7bc0;&#x201d;&#x3002;</p>Posted by <a href="https://www.facebook.com/SiulingGallery/">HKSiuling Art Garden 香港少龄画室</a> on&nbsp;<a href="https://www.facebook.com/SiulingGallery/posts/1049468555109875:0">Monday, February 8, 2016</a></blockquote></div>
-                        
+                        <div class="fb-post"
+                             data-href="https://www.facebook.com/SiulingGallery/posts/1049468555109875:0"
+                             data-width="300" data-show-text="true">
+                            <blockquote cite="https://www.facebook.com/SiulingGallery/posts/1049468555109875:0"
+                                        class="fb-xfbml-parse-ignore"><p>&#x65b0;&#x8fd1;&#x5b8c;&#x6210;&#x7684;&#x4f5c;&#x54c1;&#x201c;&#x82b1;&#x958b;&#x6642;&#x7bc0;&#x201d;&#x3002;</p>
+                                Posted by <a href="https://www.facebook.com/SiulingGallery/">HKSiuling Art Garden
+                                    香港少龄画室</a> on&nbsp;<a
+                                        href="https://www.facebook.com/SiulingGallery/posts/1049468555109875:0">Monday,
+                                    February 8, 2016</a></blockquote>
+                        </div>
+
 
                     </div>
-                 <!--   <img class="info-icon sweedish-roads" src="svg/sweedish-roads.svg"
-                         width="319px" height="289px"
-                         style="opacity: 0; transform: scale(0, 0);">
--->
+                    <!--   <img class="info-icon sweedish-roads" src="svg/sweedish-roads.svg"
+                            width="319px" height="289px"
+                            style="opacity: 0; transform: scale(0, 0);">
+   -->
 
                     <div class="info-text">
                         <h3 style="opacity: 0;">EASY DOES IT</h3>
@@ -259,7 +264,7 @@
             <script>
                 //<![CDATA[
                 // Set JavaScript Key of current app.
-                Kakao.init('dcbeabcda78df18100c882cea12bc31c');
+                Kakao.init(installation.KAO);
                 // Create KakaoStory share button.
                 Kakao.Story.createShareButton({
                     container: '#kakaostory-share-button',
@@ -346,8 +351,7 @@
         a.src = g;
         m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-32767308-11', 'auto');
+    ga('create', installation.UA, 'auto');
     ga('send', 'pageview');
 </script>
 <div id="fb-root" class=" fb_reset">
