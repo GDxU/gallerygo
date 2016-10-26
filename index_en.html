@@ -21,6 +21,7 @@
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js" type="text/javascript"></script>
     <script async src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript" async src="http://media.line.me/js/line-button.js?v=20140411"></script>
     <script id="twitter-wjs" async src="https://platform.twitter.com/widgets.js" charset="utf-8"
             type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css">
@@ -151,27 +152,27 @@
             <div class="info-row left">
                 <div class="info-point">
 
-                    <div class="info-icon sweedish-roads"
-                         style="opacity: 0; transform: scale(0, 0);">
+                    <!--  <div class="info-icon sweedish-roads"
+                           style="opacity: 0; transform: scale(0, 0);">
 
 
                         <div class="fb-post"
-                             data-href="https://www.facebook.com/SiulingGallery/posts/1049468555109875:0"
-                             data-width="300" data-show-text="true">
-                            <blockquote cite="https://www.facebook.com/SiulingGallery/posts/1049468555109875:0"
-                                        class="fb-xfbml-parse-ignore"><p>&#x65b0;&#x8fd1;&#x5b8c;&#x6210;&#x7684;&#x4f5c;&#x54c1;&#x201c;&#x82b1;&#x958b;&#x6642;&#x7bc0;&#x201d;&#x3002;</p>
-                                Posted by <a href="https://www.facebook.com/SiulingGallery/">HKSiuling Art Garden
-                                    香港少龄画室</a> on&nbsp;<a
-                                        href="https://www.facebook.com/SiulingGallery/posts/1049468555109875:0">Monday,
-                                    February 8, 2016</a></blockquote>
-                        </div>
+                               data-href="https://www.facebook.com/SiulingGallery/posts/1049468555109875:0"
+                               data-width="300" data-show-text="true">
+                              <blockquote cite="https://www.facebook.com/SiulingGallery/posts/1049468555109875:0"
+                                          class="fb-xfbml-parse-ignore"><p>&#x65b0;&#x8fd1;&#x5b8c;&#x6210;&#x7684;&#x4f5c;&#x54c1;&#x201c;&#x82b1;&#x958b;&#x6642;&#x7bc0;&#x201d;&#x3002;</p>
+                                  Posted by <a href="https://www.facebook.com/SiulingGallery/">HKSiuling Art Garden
+                                      香港少龄画室</a> on&nbsp;<a
+                                          href="https://www.facebook.com/SiulingGallery/posts/1049468555109875:0">Monday,
+                                      February 8, 2016</a></blockquote>
+                          </div>
 
 
-                    </div>
-                    <!--   <img class="info-icon sweedish-roads" src="svg/sweedish-roads.svg"
-                            width="319px" height="289px"
-                            style="opacity: 0; transform: scale(0, 0);">
-   -->
+                      </div>-->
+                    <img class="info-icon sweedish-roads" src="svg/sweedish-roads.svg"
+                         width="319px" height="289px"
+                         style="opacity: 0; transform: scale(0, 0);">
+
 
                     <div class="info-text">
                         <h3 style="opacity: 0;">EASY DOES IT</h3>
@@ -224,12 +225,26 @@
             </div>
         </div>
 
-        <!--  <div class="share-button line-share">
-              <div class="share-bg"></div>
-              <div class="share-cover">
-                  <img src="svg/line-messenger.svg" width="115px" height="30px">
-              </div>
-          </div>-->
+        <div class="share-button line-share">
+            <div class="share-bg"></div>
+            <div id="line-share-button">
+                <span>
+
+                        <script type="text/javascript">
+                        new media_line_me.LineButton({
+                            "pc": false,
+                            "lang": "zh-hant",
+                            "type": "a",
+                            "text": "http://www.heskeyo.com/",
+                            "withUrl": true
+                        });
+                        </script>
+                        </span>
+            </div>
+            <div class="share-cover">
+                <img src="svg/line-messenger.svg" width="115px" height="30px">
+            </div>
+        </div>
         <div class="share-button kakao-share">
             <div class="share-bg"></div>
             <div id="kakaostory-share-button"></div>

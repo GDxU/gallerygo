@@ -1,7 +1,10 @@
+@import "fontsettings.css";
+
 html, body {
     margin: 0;
     padding: 0;
     min-width: 1200px;
+    font-family: "aaarghnormal", sans-serif, "Lucida Sans", Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
 }
 
 .full-width {
@@ -117,7 +120,7 @@ html, body {
     position: absolute;
     width: 115px;
     height: 32px;
-    right: 390px;
+    right: 520px;
     border-radius: 5px;
 }
 
@@ -155,6 +158,13 @@ html, body {
 }
 
 #ckepop {
+    position: absolute !important;
+    z-index: 8;
+    top: 9px;
+    left: 11px;
+}
+
+#line-share-button {
     position: absolute !important;
     z-index: 8;
     top: 9px;
@@ -242,7 +252,6 @@ html, body {
 
 .subtitle {
     position: absolute;
-    font-family: 'alfa_slab_oneregular';
     font-size: 3.2em;
     z-index: 1;
     color: rgb(163, 168, 194);
@@ -254,12 +263,10 @@ html, body {
 }
 
 .subtitle b {
-    font-family: 'alfa_slab_oneregular';
     color: #474947;
 }
 
 .into-cta {
-    font-family: 'alfa_slab_oneregular';
     font-size: 1.0em;
     color: rgb(255, 243, 198);
     text-align: center;
@@ -279,7 +286,6 @@ html, body {
     display: block;
     padding: 20px;
     border-radius: 5px;
-    font-family: 'alfa_slab_oneregular';
     font-size: 1.6em;
     letter-spacing: 1.1px;
     cursor: pointer;
@@ -330,11 +336,10 @@ html, body {
 .scroll-cta {
     position: absolute;
     text-align: center;
-    font-family: 'alfa_slab_oneregular';
     font-size: 1.2em;
-    color: rgb(50, 171, 223);
+    color: rgb(255, 249, 69);
     top: 830px;
-    left: 540px;
+    left: 555px;
     -webkit-animation: scale_bob 0.5s infinite;
     -moz-animation: scale_bob 0.5s infinite;
     -o-animation: scale_bob 0.5s infinite;
@@ -487,7 +492,6 @@ html, body {
 }
 
 .info-point h3 {
-    font-family: 'alfa_slab_oneregular';
     color: white;
     font-size: 2.5em;
     /*letter-spacing: 1.1px;*/
@@ -498,13 +502,11 @@ html, body {
 }
 
 .info-point p {
-    font-family: 'alfa_slab_oneregular';
     color: white;
     font-size: 1.2em;
 }
 
 .info-point b {
-    font-family: 'alfa_slab_oneregular';
     color: rgb(96, 184, 229);
 }
 
@@ -520,7 +522,6 @@ html, body {
 }
 
 .game-entry h3 {
-    font-family: 'alfa_slab_oneregular';
     color: #474947;
     font-size: 5.0em;
     /*letter-spacing: 1.1px;*/
@@ -531,7 +532,6 @@ html, body {
 }
 
 .game-entry p {
-    font-family: 'alfa_slab_oneregular';
     font-size: 1.2em;
     color: #474947;
     margin-bottom: 50px;
@@ -559,7 +559,6 @@ html, body {
     border-radius: 6px;
     width: 30%;
     width: 400px;
-    font-family: 'alfa_slab_oneregular';
     height: 60px;
     font-size: 1.2em;
     text-align: center;
@@ -605,7 +604,6 @@ textarea:focus, input:focus {
     margin-right: auto;
     margin-top: 10px;
     border-radius: 5px;
-    font-family: 'alfa_slab_oneregular';
     font-size: 2.5em;
     letter-spacing: 1.1px;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
@@ -725,7 +723,6 @@ textarea:focus, input:focus {
 
 .game-over-screen .scoring {
     display: inline-block;
-    font-family: 'alfa_slab_oneregular';
     text-align: left;
     font-size: 4em;
     line-height: 0.9em;
@@ -785,7 +782,6 @@ textarea:focus, input:focus {
     margin-right: auto;
     margin-top: 10px;
     border-radius: 5px;
-    font-family: 'alfa_slab_oneregular';
     font-size: 2.5em;
     letter-spacing: 1.1px;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
