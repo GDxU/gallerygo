@@ -140,6 +140,13 @@ html, body {
     z-index: 8;
 }
 
+#kakaostory-share-button {
+    position: absolute !important;
+    z-index: 8;
+    top: 6px;
+    left: 18px;
+}
+
 #twitter-widget-0 {
     position: absolute !important;
     z-index: 8;
