@@ -242,7 +242,7 @@ html, body {
 
 .subtitle {
     position: absolute;
-    font-family: 'Quattrocento Sans';
+    font-family: 'alfa_slab_oneregular';
     font-size: 3.2em;
     z-index: 1;
     color: rgb(163, 168, 194);
@@ -254,19 +254,19 @@ html, body {
 }
 
 .subtitle b {
-    font-family: 'Quattrocento Sans';
+    font-family: 'alfa_slab_oneregular';
     color: #474947;
 }
 
 .into-cta {
-    font-family: 'Quattrocento Sans';
+    font-family: 'alfa_slab_oneregular';
     font-size: 1.0em;
-    color: rgb(163, 168, 194);
+    color: rgb(255, 243, 198);
     text-align: center;
     width: 630px;
     position: absolute;
     top: 690px;
-    left: 300px;
+    left: 552px;
 }
 
 .game-shortcut {
@@ -279,7 +279,7 @@ html, body {
     display: block;
     padding: 20px;
     border-radius: 5px;
-    font-family: 'Quattrocento Sans';
+    font-family: 'alfa_slab_oneregular';
     font-size: 1.6em;
     letter-spacing: 1.1px;
     cursor: pointer;
@@ -330,7 +330,7 @@ html, body {
 .scroll-cta {
     position: absolute;
     text-align: center;
-    font-family: 'Quattrocento Sans';
+    font-family: 'alfa_slab_oneregular';
     font-size: 1.2em;
     color: rgb(50, 171, 223);
     top: 830px;
@@ -487,7 +487,7 @@ html, body {
 }
 
 .info-point h3 {
-    font-family: 'Quattrocento Sans';
+    font-family: 'alfa_slab_oneregular';
     color: white;
     font-size: 2.5em;
     /*letter-spacing: 1.1px;*/
@@ -498,13 +498,13 @@ html, body {
 }
 
 .info-point p {
-    font-family: 'Quattrocento Sans';
+    font-family: 'alfa_slab_oneregular';
     color: white;
     font-size: 1.2em;
 }
 
 .info-point b {
-    font-family: 'Quattrocento Sans';
+    font-family: 'alfa_slab_oneregular';
     color: rgb(96, 184, 229);
 }
 
@@ -520,7 +520,7 @@ html, body {
 }
 
 .game-entry h3 {
-    font-family: 'Quattrocento Sans';
+    font-family: 'alfa_slab_oneregular';
     color: #474947;
     font-size: 5.0em;
     /*letter-spacing: 1.1px;*/
@@ -531,7 +531,7 @@ html, body {
 }
 
 .game-entry p {
-    font-family: 'Quattrocento Sans';
+    font-family: 'alfa_slab_oneregular';
     font-size: 1.2em;
     color: #474947;
     margin-bottom: 50px;
@@ -559,7 +559,7 @@ html, body {
     border-radius: 6px;
     width: 30%;
     width: 400px;
-    font-family: 'Quattrocento Sans';
+    font-family: 'alfa_slab_oneregular';
     height: 60px;
     font-size: 1.2em;
     text-align: center;
@@ -605,7 +605,7 @@ textarea:focus, input:focus {
     margin-right: auto;
     margin-top: 10px;
     border-radius: 5px;
-    font-family: 'Quattrocento Sans';
+    font-family: 'alfa_slab_oneregular';
     font-size: 2.5em;
     letter-spacing: 1.1px;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
@@ -725,7 +725,7 @@ textarea:focus, input:focus {
 
 .game-over-screen .scoring {
     display: inline-block;
-    font-family: 'Quattrocento Sans';
+    font-family: 'alfa_slab_oneregular';
     text-align: left;
     font-size: 4em;
     line-height: 0.9em;
@@ -785,7 +785,7 @@ textarea:focus, input:focus {
     margin-right: auto;
     margin-top: 10px;
     border-radius: 5px;
-    font-family: 'Quattrocento Sans';
+    font-family: 'alfa_slab_oneregular';
     font-size: 2.5em;
     letter-spacing: 1.1px;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
