@@ -7,15 +7,13 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-dark.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/installation.js"></script>
     <script src="javascripts/main.js"></script>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script>
-        if (window.screen.availWidth > 720) {
-            location.href = "http://www.heskeyo.com/index_en.html"
-        }
     </script>
 </head>
 <body>
@@ -26,17 +24,10 @@
 
 <div id="banner">
     <span id="logo"></span>
-
     <div id="qrdownload" class="qr">
         <img src="images/qr_0.14.8.png" width="300px" height="300px"/>
     </div>
     <div class="downloads">
-        <span>Downloads:</span>
-        <ul>
-            <li><a href="https://play.google.com/store/apps/details?id=com.zyntauri.gogallery"><img
-                    src="http://m.magmamobile.com/i/googleplayen.png" height="50px"/></a></li>
-            <li><img src="http://m.magmamobile.com/i/appstoreen.png" height="50px"/></li>
-        </ul>
     </div>
 </div><!-- end banner -->
 
@@ -78,12 +69,11 @@
 
         <p>
             <a href="https://play.google.com/store/apps/details?id=com.zyntauri.gogallery">
-                <img src="http://m.magmamobile.com/i/googleplayen.png" height="50px"/></a>
+                <img src="images/google-play-mono.png" height="50px"/></a>
         </p>
 
         <p>
-            <a class="button fork"
-               href="https://cdn.rawgit.com/GDxU/gallerygo/master/android/GIX-20161023122206-v0.14.8.apk">Download</a>
+            <a id="download_offstore" class="button fork">Download</a>
         </p>
 
         <h3>
