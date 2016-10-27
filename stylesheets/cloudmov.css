@@ -1,12 +1,12 @@
 .clip-art-left{
-    display: block;
+	display: block;
     position: absolute;
-    top: 190px;
+    top: 10px;
     left: -30px;
-    width: 590px;
+    width: 740px;
     background-size: cover;
-    height: 570px;
-    background-image: url(../images/life_on_the_water_by_job3hesk.png);
+    height: 700px;
+    background-image: url(../images/20161027_143606b.webp);
     background-repeat: no-repeat;
 }
 .clip-art-right{
