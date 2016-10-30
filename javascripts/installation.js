@@ -2,6 +2,7 @@
  * Created by hesk on 16年10月26日.
  */
 var installation = {
+  chinaandroid: "http://fir.im/smdc",
   android: "https://github.com/GDxU/gallerygo/releases/download/0.15.0/GIX-20161027191437-v0.15.0.apk",
   playstore: "https://play.google.com/store/apps/details?id=com.zyntauri.gogallery",
   UA: "UA-61080213-1",
