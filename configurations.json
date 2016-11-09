@@ -848,14 +848,14 @@
     },
     {
       "name": {
-        "cn": "水墨",
-        "kr": "잉크",
-        "jp": "インク",
-        "fr": "Encre",
-        "en": "Ink"
+        "cn": "花卉",
+        "jp": "フラワーズ",
+        "kr": "꽃",
+        "fr": "Fleurs",
+        "en": "Western Flowers"
       },
       "filter": {
-        "filter[where][image_meta.cat]": "2"
+        "filter[where][image_meta.topic]": "3"
       }
     },
     {
