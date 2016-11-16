@@ -766,6 +766,17 @@
         "cn": "畫家"
       }
     },
+        {
+      "role_id": 103,
+      "label": {
+        "en": "Authorized Artist Agent",
+        "fr": "Agent Artistique Autorisé",
+        "kr": "공인 아티스트 에이전트",
+        "jp": "公認アーティスト代理店",
+        "cn": "授权艺术家代理"
+      }
+    },
+
     {
       "role_id": 101,
       "label": {
