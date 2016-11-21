@@ -6,6 +6,7 @@ var installation = {
   android: "http://fir.im/smdc",
   playstore: "https://play.google.com/store/apps/details?id=com.zyntauri.gogallery",
   UA: "UA-61080213-1",
+  gkey: "AIzaSyAmXtBaDUPvKAe_ZKYVkg2sSTGHAWgLK6I",
   FB: "135624513168400",
   KAO: "dcbeabcda78df18100c882cea12bc31c",
   script_cn: {
