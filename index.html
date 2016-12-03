@@ -49,6 +49,7 @@
 
     <!-- Modernizer Script for old Browsers -->
     <script src="js/modernizr-2.6.2.min.js"></script>
+
 </head>
 <body id="body">
 <!-- preloader -->
@@ -58,7 +59,7 @@
 <!-- end preloader -->
 <!--
 Fixed Navigation
-==================================== -->
+-->
 <header id="navigation" class="navbar-fixed-top navbar">
     <div class="container">
         <div class="navbar-header">
@@ -68,7 +69,6 @@ Fixed Navigation
                 <i class="fa fa-bars fa-2x"></i>
             </button>
             <!-- /responsive nav button -->
-
             <!-- logo -->
             <a class="navbar-brand" href="#body">
                 <h1 id="logo">
@@ -77,19 +77,18 @@ Fixed Navigation
             </a>
             <!-- /logo -->
         </div>
-
         <!-- main nav -->
         <nav class="collapse navbar-collapse navbar-right" role="navigation">
             <ul id="nav" class="nav navbar-nav">
-                <li class="current"><a href="#body">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#works">Work</a></li>
+                <li class="current"><a href="#body">{{ menu.home }}</a></li>
+                <li><a href="#features">{{ menu.feature }}</a></li>
+                <li><a href="#works">{{ menu.work }}</a></li>
                 <!--   <li><a href="#team">Team</a></li>-->
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">{{ menu.contact }}</a></li>
+                <li><a href="#p" @click="switchLanguage">{{ menu.language }}</a></li>
             </ul>
         </nav>
         <!-- /main nav -->
-
     </div>
 </header>
 <!-- End Fixed Navigation
@@ -106,17 +105,16 @@ Fixed Navigation
             <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
         </ol>
         <!-- End Indicators bullet -->
-
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-
             <div class="item active" style="background-image: url(img/dream_2bc6c13222.webp);">
                 <div class="carousel-caption">
-                    <h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Meet<span> Gallery Go</span>!
+                    <h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">
+                        {{slider.s16}}<span>{{slider.s17}}</span>!
                     </h2>
                     <h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">/sell</span> the
                         most skillful art.</h3>
-                    <p data-wow-duration="1000ms" class="wow slideInRight animated">In the pool of your best choice</p>
+                    <p data-wow-duration="1000ms" class="wow slideInRight animated">{{slider.s18}}</p>
 
                     <ul class="social-links text-center">
                         <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
@@ -129,13 +127,13 @@ Fixed Navigation
 
             <div class="item" style="background-image: url(img/dream_2bc6c13222.webp);">
                 <div class="carousel-caption">
-                    <h2 data-wow-duration="500ms" data-wow-delay="500ms" class="wow bounceInDown animated">Meet<span> the team</span>!
+                    <h2 data-wow-duration="500ms" data-wow-delay="500ms" class="wow bounceInDown animated">
+                        {{slider.s20}}<span>{{slider.s21}}</span>!
                     </h2>
-                    <h3 data-wow-duration="500ms" class="wow slideInLeft animated"><span class="color">/buy</span>
-                        the safest place the buy authenticated masterpiece.</h3>
-                    <p data-wow-duration="500ms" class="wow slideInRight animated">We are a team of professionals to
-                        make your each purchase secured</p>
-
+                    <h3 data-wow-duration="500ms" class="wow slideInLeft animated">
+                        <span class="color">{{slider.s22}}</span>{{slider.s23}}
+                    </h3>
+                    <p data-wow-duration="500ms" class="wow slideInRight animated">{{slider.s24}}</p>
                     <ul class="social-links text-center">
                         <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
                         <li><a href="https://www.facebook.com/zyntauri/"><i class="fa fa-facebook fa-lg"></i></a></li>
@@ -147,16 +145,14 @@ Fixed Navigation
 
             <div class="item" style="background-image: url(img/wall_2.jpg);">
                 <div class="carousel-caption">
-
                     <div style="background-image: url(img/scanhand.webp);" id="scan_hand_image"
                          data-wow-duration="1000ms" class="upperlevel1 wow slideInRight animated"></div>
-
                     <h2 data-wow-duration="500ms" data-wow-delay="500ms" class="upperlevel2 wow bounceInDown animated">
-                        Experience<span> instantly</span>!
+                        <span>{{slider.s30}}</span>{{slider.s31}}
                     </h2>
                     <h3 data-wow-duration="1000ms" class="upperlevel2 wow slideInLeft animated">
-                        <span class="color">/scan</span>
-                        instantly review your favorite piece on the wall anytime.</h3>
+                        <span class="color">{{slider.s32}}</span> {{slider.s33}}
+                    </h3>
                 </div>
             </div>
         </div>
@@ -174,7 +170,7 @@ Features
         <div class="row">
 
             <div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
-                <h2>Features</h2>
+                <h2>{{features.title}}</h2>
                 <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
             </div>
 
@@ -186,8 +182,8 @@ Features
                     </div>
 
                     <div class="service-desc">
-                        <h3>Collect</h3>
-                        <p>Collection of your art works will stay in your wallet for your study</p>
+                        <h3>{{features.c1}}</h3>
+                        <p>{{features.c1b}}</p>
                     </div>
                 </div>
             </div>
@@ -201,23 +197,21 @@ Features
                     </div>
 
                     <div class="service-desc">
-                        <h3>Sell</h3>
-                        <p>Allow your friend to sell art paintings on your behalf.</p>
+                        <h3>{{features.c2}}</h3>
+                        <p>{{features.c2b}}</p>
                     </div>
                 </div>
             </div>
             <!-- end service item -->
-
             <!-- service item -->
             <div class="col-md-4 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="900ms">
                 <div class="service-item">
                     <div class="service-icon">
                         <i class="fa fa-bullhorn fa-2x"></i>
                     </div>
-
                     <div class="service-desc">
-                        <h3>Buy</h3>
-                        <p>Anywhere gallery for you to comments in realtime.</p>
+                        <h3>{{features.c3}}</h3>
+                        <p>{{features.c3b}}</p>
                     </div>
                 </div>
             </div>
@@ -239,25 +233,22 @@ Our Works
 <section id="works" class="works clearfix">
     <div class="container">
         <div class="row">
-
             <div class="sec-title text-center">
-                <h2>Pool of paintings</h2>
+                <h2>{{works.title}}</h2>
                 <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
             </div>
-
             <div class="sec-sub-title text-center">
-                <p>We still counting the best painting to join the pool. Discover and promote them</p>
+                <p>{{works.subtitle}}</p>
             </div>
-
             <div class="work-filter wow fadeInRight animated" data-wow-duration="500ms">
                 <ul class="text-center">
-                    <li><a href="javascript:;" data-filter="all" class="active filter">All</a></li>
-                    <li><a href="javascript:;" data-filter=".traditionalchinese" class="filter">Chinese Ink</a></li>
-                    <li><a href="javascript:;" data-filter=".contemparychinese" class="filter">Contempary Ink</a></li>
-                    <li><a href="javascript:;" data-filter=".canvas" class="filter">Canvas</a></li>
-                    <li><a href="javascript:;" data-filter=".closeup" class="filter">Flowers</a></li>
-                    <li><a href="javascript:;" data-filter=".landscape" class="filter">Landscape</a></li>
-                    <li><a href="javascript:;" data-filter=".people" class="filter">People</a></li>
+                    <li><a href="javascript:;" data-filter="all" class="active filter">{{works.all}}</a></li>
+                    <li><a href="javascript:;" data-filter=".traditionalchinese" class="filter">{{works.k1}}</a></li>
+                    <li><a href="javascript:;" data-filter=".contemparychinese" class="filter">{{works.k2}}</a></li>
+                    <li><a href="javascript:;" data-filter=".canvas" class="filter">{{works.k3}}</a></li>
+                    <li><a href="javascript:;" data-filter=".closeup" class="filter">{{works.k4}}</a></li>
+                    <li><a href="javascript:;" data-filter=".landscape" class="filter">{{works.k5}}</a></li>
+                    <li><a href="javascript:;" data-filter=".people" class="filter">{{works.k6}}</a></li>
                 </ul>
             </div>
 
@@ -465,7 +456,7 @@ Some fun facts
         <div class="container">
             <div class="row number-counters">
                 <div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
-                    <h2>Fun Facts</h2>
+                    <h2>{{facts.funfact}}</h2>
                     <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
                 </div>
                 <!-- first count item -->
@@ -474,7 +465,7 @@ Some fun facts
                         <i class="fa fa-university  fa-3x"></i>
                         <strong data-to="5012">0</strong>
                         <!-- Set Your Number here. i,e. data-to="56" -->
-                        <p>Number of artwork</p>
+                        <p>{{facts.numworks}}</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms"
@@ -483,7 +474,7 @@ Some fun facts
                         <i class="fa fa-users fa-3x"></i>
                         <strong data-to="120">0</strong>
                         <!-- Set Your Number here. i,e. data-to="56" -->
-                        <p>VIP customer</p>
+                        <p>{{facts.vip}}</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms"
@@ -492,7 +483,7 @@ Some fun facts
                         <i class="fa fa-tags fa-3x"></i>
                         <strong data-to="1360">0</strong>
                         <!-- Set Your Number here. i,e. data-to="56" -->
-                        <p>Listed artworks</p>
+                        <p>{{facts.listeditem}}</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms"
@@ -501,7 +492,7 @@ Some fun facts
                         <i class="fa fa-search fa-3x"></i>
                         <strong data-to="10454">0</strong>
                         <!-- Set Your Number here. i,e. data-to="56" -->
-                        <p>Daily Search</p>
+                        <p>{{facts.dsearch}}</p>
                     </div>
                 </div>
                 <!-- end first count item -->
@@ -599,9 +590,8 @@ End Contact Us
             <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms">
                 <div class="footer-single">
                     <img src="img/logo-cowhite.webp" alt="">
-                    <p>Zyntauri is a technology company. We are missioned to make provide the art exchange the best
-                        place.</p>
-                    <p>Registered number 2438814</p>
+                    <p>{{footer.about}}</p>
+                    <p>{{footer.license}}</p>
                 </div>
             </div>
 
@@ -687,7 +677,8 @@ End Contact Us
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
 <!-- Google Map -->
-<script type="text/javascript" async defer src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyAmXtBaDUPvKAe_ZKYVkg2sSTGHAWgLK6I&callback=initialize"></script>
+<script type="text/javascript" async defer
+        src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyAmXtBaDUPvKAe_ZKYVkg2sSTGHAWgLK6I&callback=initialize"></script>
 <!-- jquery easing -->
 <script src="js/jquery.easing.min.js"></script>
 <!-- jquery easing -->
@@ -703,65 +694,9 @@ End Contact Us
     );
     wow.init();
 </script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
 <!-- Custom Functions -->
 <script src="js/custom.js"></script>
-
-<script type="text/javascript">
-    $(function () {
-        /* ========================================================================= */
-        /*	Contact Form
-         /* ========================================================================= */
-
-        $('#contact-form').validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 2
-                },
-                email: {
-                    required: true,
-                    email: true
-                },
-                message: {
-                    required: true
-                }
-            },
-            messages: {
-                name: {
-                    required: "come on, you have a name don't you?",
-                    minlength: "your name must consist of at least 2 characters"
-                },
-                email: {
-                    required: "no email, no message"
-                },
-                message: {
-                    required: "um...yea, you have to write something to send this form.",
-                    minlength: "thats all? really?"
-                }
-            },
-            submitHandler: function (form) {
-                $(form).ajaxSubmit({
-                    type: "POST",
-                    data: $(form).serialize(),
-                    url: "process.php",
-                    success: function () {
-                        $('#contact-form :input').attr('disabled', 'disabled');
-                        $('#contact-form').fadeTo("slow", 0.15, function () {
-                            $(this).find(':input').attr('disabled', 'disabled');
-                            $(this).find('label').css('cursor', 'default');
-                            $('#success').fadeIn();
-                        });
-                    },
-                    error: function () {
-                        $('#contact-form').fadeTo("slow", 0.15, function () {
-                            $('#error').fadeIn();
-                        });
-                    }
-                });
-            }
-        });
-    });
-</script>
 <!--
 <script>
     (function (i, s, o, g, r, a, m) {
@@ -804,5 +739,7 @@ End Contact Us
         });
     }
 </script>-->
+
+<script src="js/vueimpl.js"></script>
 </body>
 </html>
