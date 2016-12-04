@@ -79,6 +79,7 @@ function callbackfblogin(response) {
       response.authResponse.userID,
       function (response) {
         if (response && !response.error) {
+          console.log("fb api now ===");
           console.log(response);
         }
       }

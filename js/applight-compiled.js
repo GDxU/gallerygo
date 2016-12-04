@@ -73,6 +73,7 @@ function callbackfblogin(response) {
   if (response.status == "connected") {
     FB.api(response.authResponse.userID, function (response) {
       if (response && !response.error) {
+        console.log("fb api now === l");
         console.log(response);
       }
     });
