@@ -85,25 +85,29 @@ document.getElementById('toggleProfile').addEventListener('click', function () {
 function callbackfblogin(response) {
   if (response.status == "connected") {
     var reskeep = response;
-    FB.api("/me",
-      {fields: 'id,email,name,picture'},
-      function (response) {
-        if (response && !response.error) {
-          console.log(response);
-          Vue.http.post(installation.baseapi + "users/login_facebook", {
-            "facebook.userid": response.id,
-            "facebook.email": response.email,
-            "photo": response.picture,
-            "facebook.token": reskeep.authReponse.accessToken,
-            "facebook.expire": reskeep.authReponse.expiresIn,
-          }).then(function (response) {
+    if (reskeep.authReponse.accessToken == undefined) {
+      console.log(reskeep);
+    } else {
+      FB.api("/me",
+        {fields: 'id,email,name,picture'},
+        function (response) {
+          if (response && !response.error) {
             console.log(response);
-          }, function (errorresponse) {
-            console.log(errorresponse);
-          });
+            Vue.http.post(installation.baseapi + "users/login_facebook", {
+              "facebook.userid": response.id,
+              "facebook.email": response.email,
+              "photo": response.picture.data.url,
+              "facebook.token": reskeep.authReponse.accessToken,
+              "facebook.expire": reskeep.authReponse.expiresIn,
+            }).then(function (response) {
+              console.log(response);
+            }, function (errorresponse) {
+              console.log(errorresponse);
+            });
+          }
         }
-      }
-    );
+      );
+    }
   } else {
 
   }
