@@ -16,12 +16,14 @@ var model_control = {
       username: "邮箱/手机",
       password: "密码",
       login: "登录",
+      fblogin: "臉書登入",
       failurelogin: "请填写电子邮件和密码。"
     },
     en: {
       username: "Email/Phone number",
       password: "Password",
       login: "Login",
+      fblogin: "Facebook Login",
       failurelogin: "Please fill out the form email and password."
     }
   },
@@ -53,7 +55,11 @@ var slider = new Vue({
         this.$data.translate.current = model_control.translate.cn;
       }
       this.$data.translate.current.using = now;
-    }
+    },
+    facebooklogin: function facebooklogin() {
+      FB.login();
+    },
+    googlelogin: function googlelogin() {}
   }
 });
 
@@ -63,6 +69,19 @@ document.getElementById('toggleProfile').addEventListener('click', function () {
     el.classList.toggle('profile--open');
   });
 });
+
+window.fbAsyncInit = function () {
+  FB.init({
+    appId: installation.FB,
+    status: true,
+    cookie: true,
+    xfbml: true,
+    version: 'v2.4'
+  });
+  FB.getLoginStatus(function (response) {
+    console.log(response);
+  });
+};
 slider.$data.translate.current = model_control.translate.cn;
 
 //# sourceMappingURL=applight-compiled.js.map

@@ -36,7 +36,7 @@ function init() {
   scene.add(background());
   buildGround().then(render);
   // render();
-  console.log(ground);
+  // console.log(ground);
 }
 
 function background(scene) {

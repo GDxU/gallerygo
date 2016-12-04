@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Gallery Go Center</title>
-
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
     <script src="https://cdn.rawgit.com/mrdoob/three.js/dev/examples/js/controls/OrbitControls.js"></script>
@@ -37,24 +36,33 @@
                 <a href="#" class="language-switch" @click="switchlang">EN/CN</a>
                 <div class="profile__fields">
                     <div class="field">
+                        <button @click="facebooklogin" class="loginBtn loginBtn--facebook">
+                            {{translate.current.fblogin}}
+                        </button>
+                        <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
+                    </div>
+                    <div class="field">
                         <input type="text" id="fieldUser" class="input" v-model="username" required pattern=.*\S.*/>
                         <label for="fieldUser" class="label">{{translate.current.username}}</label>
                     </div>
                     <div class="field">
-                        <input type="password" id="fieldPassword" v-model="password" class="input" required pattern=.*\S.*/>
+                        <input type="password" id="fieldPassword" v-model="password" class="input" required
+                               pattern=.*\S.*/>
                         <label for="fieldPassword" class="label">{{translate.current.password}}</label>
                     </div>
                     <div class="profile__footer">
-                        <button class="btn" @click="loginprocess">{{translate.current.login}}</button>
+                        <button class="loginBtn btnlogin" @click="loginprocess">{{translate.current.login}}</button>
                     </div>
-
-
                 </div>
             </div>
         </div>
     </div>
 </div>
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<div id="fb-root"></div>
+<script  src="https://connect.facebook.net/en_US/sdk.js"></script>
+<script  src="https://unpkg.com/vue/dist/vue.js"></script>
+<script  src="https://unpkg.com/vue-resource@1.0.3/dist/vue-resource.min.js"></script>
+<script src="js/installation.js"></script>
 <script src="js/applight.js"></script>
 <script src="js/background.js"></script>
 
