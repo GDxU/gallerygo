@@ -81,9 +81,8 @@ document.getElementById('toggleProfile').addEventListener('click', function () {
 function callbackfblogin(response) {
   if (response.status == "connected") {
     var reskeep = response;
-    if (reskeep.authReponse.accessToken == undefined) {
-      console.log(reskeep);
-    } else {
+    console.log(reskeep);
+    if (reskeep.authReponse.accessToken == null) {} else {
       FB.api("/me", { fields: 'id,email,name,picture' }, function (response) {
         if (response && !response.error) {
           console.log(response);
