@@ -85,7 +85,9 @@ document.getElementById('toggleProfile').addEventListener('click', function () {
 function callbackfblogin(response) {
   if (response.status == "connected") {
     var uuid = response.authResponse.userID;
-    FB.api("/me",
+    var auth = response.authResponse;
+    console.log(auth);
+   /* FB.api("/me",
       {fields: 'id,email,name'},
       function (response) {
         if (response && !response.error) {
@@ -94,10 +96,22 @@ function callbackfblogin(response) {
           console.log("fb api uuid ===");
           console.log(uuid);
           console.log("fb api authresponse ===");
-          console.log(response.authResponse);
+          console.log(auth);
+
+          Vue.http.post(installation.baseapi + "users/login_facebook", {
+            "facebook.userid": this.$data.username,
+            "facebook.email": this.$data.password,
+            "photo": this.$data.password,
+            "facebook.token": this.$data.password,
+            "facebook.expire": this.$data.password,
+          }).then(function (response) {
+            console.log(response);
+          }, function (errorresponse) {
+            console.log(errorresponse);
+          });
         }
       }
-    );
+    );*/
   } else {
 
   }
