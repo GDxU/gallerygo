@@ -49,7 +49,9 @@ var installation = {
       k3: "油画",
       k4: "花卉",
       k5: "山水",
-      k6: "人"
+      k6: "人",
+      k7: "人",
+      k8: "人"
     },
     slider: {
       s16: "迎接",
@@ -89,7 +91,7 @@ var installation = {
     features: {
       title: "Features",
       c1: "Collect",
-      c1b: "Collect the works of artist and invest for the future value",
+      c1b: "Collect the works of artist and invest for the future value.",
       c2: "Listing for Sell",
       c2b: "Sell the works for better value and help the artist to sell their works",
       c3: "Copyright Monetization",
@@ -111,7 +113,9 @@ var installation = {
       k3: "Canvas",
       k4: "Flowers",
       k5: "Landscape",
-      k6: "People"
+      k6: "People",
+      k7: "Vision Abstract",
+      k8: "Info Abstract"
     },
     slider: {
       s16: "Meet",

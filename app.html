@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery Go Center</title>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/dev/examples/js/controls/OrbitControls.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Fontawesome Icon font -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Twitter Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- media-queries -->
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/applogin.css">
+</head>
+<body>
+<div class="background_container"></div>
+<div id="main_app">
+    <!-- <section id="login_box">
+         <label for="name">Enter name:</label>
+         <input type="text" v-model="name" id="name" name="name"/>
+         <p>{{ name }} is {{ age }} years old.</p>
+         <sitepoint></sitepoint>
+     </section>-->
+    <div id="loginbox" class="container">
+        <div class="profile">
+            <button class="profile__avatar" id="toggleProfile">
+                <img src="img/logo-cowhite.webp" alt="Avatar"/>
+            </button>
+            <div class="profile__form">
+                <a href="#" class="language-switch" @click="switchlang">EN/CN</a>
+                <div class="profile__fields">
+                    <div class="field">
+                        <input type="text" id="fieldUser" class="input" v-model="username" required pattern=.*\S.*/>
+                        <label for="fieldUser" class="label">{{translate.current.username}}</label>
+                    </div>
+                    <div class="field">
+                        <input type="password" id="fieldPassword" v-model="password" class="input" required pattern=.*\S.*/>
+                        <label for="fieldPassword" class="label">{{translate.current.password}}</label>
+                    </div>
+                    <div class="profile__footer">
+                        <button class="btn" @click="loginprocess">{{translate.current.login}}</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="js/applight.js"></script>
+<script src="js/background.js"></script>
+
+</body>
+</html>
