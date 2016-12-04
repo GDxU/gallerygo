@@ -80,9 +80,7 @@ document.getElementById('toggleProfile').addEventListener('click', function () {
 });
 function callbackfblogin(response) {
   if (response.status == "connected") {
-    var uuid = response.authResponse.userID;
-    var auth = response.authResponse;
-    console.log(auth);
+    console.log(response);
     /* FB.api("/me",
        {fields: 'id,email,name'},
        function (response) {
