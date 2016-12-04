@@ -84,24 +84,18 @@ document.getElementById('toggleProfile').addEventListener('click', function () {
 });
 function callbackfblogin(response) {
   if (response.status == "connected") {
-    console.log(response);
-   /* FB.api("/me",
-      {fields: 'id,email,name'},
+    var reskeep = response;
+    FB.api("/me",
+      {fields: 'id,email,name,picture'},
       function (response) {
         if (response && !response.error) {
-          console.log("fb api now ===");
           console.log(response);
-          console.log("fb api uuid ===");
-          console.log(uuid);
-          console.log("fb api authresponse ===");
-          console.log(auth);
-
           Vue.http.post(installation.baseapi + "users/login_facebook", {
-            "facebook.userid": this.$data.username,
-            "facebook.email": this.$data.password,
-            "photo": this.$data.password,
-            "facebook.token": this.$data.password,
-            "facebook.expire": this.$data.password,
+            "facebook.userid": response.id,
+            "facebook.email": response.email,
+            "photo": response.picture,
+            "facebook.token": reskeep.authReponse.accessToken,
+            "facebook.expire": reskeep.authReponse.expiresIn,
           }).then(function (response) {
             console.log(response);
           }, function (errorresponse) {
@@ -109,7 +103,7 @@ function callbackfblogin(response) {
           });
         }
       }
-    );*/
+    );
   } else {
 
   }
