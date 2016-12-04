@@ -73,8 +73,21 @@ document.getElementById('toggleProfile').addEventListener('click', function () {
     el.classList.toggle('profile--open');
   });
 });
+function callbackfblogin(response) {
+  if (response.status == "connected") {
+    FB.api(
+      response.authResponse.userID,
+      function (response) {
+        if (response && !response.error) {
+          console.log(response);
+        }
+      }
+    );
+  } else {
 
-window.fbAsyncInit = function() {
+  }
+}
+window.fbAsyncInit = function () {
   FB.init({
     appId: installation.FB,
     status: true,
@@ -82,8 +95,8 @@ window.fbAsyncInit = function() {
     xfbml: true,
     version: 'v2.4'
   });
-  FB.getLoginStatus(function(response) {
-    console.log(response);
+  FB.getLoginStatus(function (response) {
+    callbackfblogin(response);
   });
 };
 slider.$data.translate.current = model_control.translate.cn;
