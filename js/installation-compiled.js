@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Created by hesk on 16年10月26日.
  */
@@ -9,7 +11,7 @@ var installation = {
   gkey: "AIzaSyAmXtBaDUPvKAe_ZKYVkg2sSTGHAWgLK6I",
   FB: "135624513168400",
   KAO: "dcbeabcda78df18100c882cea12bc31c",
-  baseapi:"http://farm.heskeyo.com/api/",
+  baseapi: "http://farm.heskeyo.com/api/",
   script_cn: {
     head: "用您最優秀的繪畫作品，推向市場并介紹給您的粉絲！",
     create: "利用AR技术在世界任何地方，把艺术创作的心路历程以及艺术作品上传到您的个人收藏。",
@@ -139,3 +141,5 @@ var installation = {
     }
   }
 };
+
+//# sourceMappingURL=installation-compiled.js.map

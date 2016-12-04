@@ -45,6 +45,15 @@ var slider = new Vue({
     loginprocess: function loginprocess(e) {
       if (this.$data.username == "" || this.$data.password == "") {
         alert(this.$data.translate.current.failurelogin);
+      } else {
+        this.$http.post(installation.baseapi + "users/login", {
+          email: this.$data.username,
+          password: this.$data.password
+        }).then(function (response) {
+          console.log(response);
+        }, function (errorresponse) {
+          console.log(errorresponse);
+        });
       }
     },
     switchlang: function switchlang() {
@@ -71,10 +80,15 @@ document.getElementById('toggleProfile').addEventListener('click', function () {
 });
 function callbackfblogin(response) {
   if (response.status == "connected") {
-    FB.api(response.authResponse.userID, function (response) {
+    var uuid = response.authResponse.userID;
+    FB.api("/me", { fields: 'id,email,name' }, function (response) {
       if (response && !response.error) {
-        console.log("fb api now === l");
+        console.log("fb api now ===");
         console.log(response);
+        console.log("fb api uuid ===");
+        console.log(uuid);
+        console.log("fb api authresponse ===");
+        console.log(response.authResponse);
       }
     });
   } else {}
@@ -85,7 +99,7 @@ window.fbAsyncInit = function () {
     status: true,
     cookie: true,
     xfbml: true,
-    version: 'v2.4'
+    version: 'v2.8'
   });
   FB.getLoginStatus(function (response) {
     callbackfblogin(response);
