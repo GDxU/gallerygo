@@ -108,7 +108,7 @@ window.fbAsyncInit = function () {
     status: true,
     cookie: true,
     xfbml: true,
-    version: 'v2.8'
+    version: 'v2.7'
   });
   FB.getLoginStatus(function (response) {
     callbackfblogin(response);
