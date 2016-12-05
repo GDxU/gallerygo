@@ -91,25 +91,26 @@ function callbackfblogin(response) {
       function (response) {
         console.log(response);
         if (response && !response.error) {
-          FB.getAccessToken(function (token) {
-            Vue.http.post(installation.baseapi + "users/login_facebook", {
-              "facebook.userid": response.id,
-              "facebook.email": response.email,
-              "photo": response.picture.data.url,
-              "facebook.token": token,
-              "facebook.expire": reskeep.authReponse.expiresIn,
-            }).then(function (response) {
-              console.log(response);
-            }, function (errorresponse) {
-              console.log(errorresponse);
-            });
-          });
+          syslog(response.id, response.email, response.picture.data.url, reskeep.authResponse.accessToken, reskeep.authResponse.expiresIn);
         }
       }
     );
   } else {
 
   }
+}
+function syslog(id, email, photo, token, expired) {
+  Vue.http.post(installation.baseapi + "users/login_facebook", {
+    "facebook.userid": id,
+    "facebook.email": email,
+    "photo": photo,
+    "facebook.token": token,
+    "facebook.expire": expired,
+  }).then(function (response) {
+    console.log(response);
+  }, function (errorresponse) {
+    console.log(errorresponse);
+  });
 }
 window.fbAsyncInit = function () {
   FB.init({
