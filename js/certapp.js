@@ -11,10 +11,7 @@ angular
           templateUrl: 'views/my-certs.html',
           controller: 'CertReviewControl'
         });
-
-
      // $mdIconProvider.iconSet("avatars", 'icons/avatar-icons.svg', 128);
-
       console.log("=config done=");
       //url: '/Preview/:id/:mode/:lang',
       //$urlRouterProvider.otherwise('certreview');
