@@ -40,6 +40,11 @@ Vue.component('sitepoint', {
   template: '<a href="https://www.sitepoint.com/{{ channel | lowercase }}">{{ channel }} @Sitepoint</span>',
 });
 
+Vue.component('panel-main', {
+  template: '#panel-template',
+  props: ['myinfo', 'myart', 'mydata', 'mysales', 'browse'],
+});
+
 var slider = new Vue({
   el: "#main_app",
   data: model_control,
@@ -73,9 +78,23 @@ var slider = new Vue({
     googlelogin: function () {
 
     }
+  },
+  mounted: function () {
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: installation.FB,
+        status: true,
+        cookie: true,
+        xfbml: true,
+        version: 'v2.7'
+      });
+      FB.getLoginStatus(function (response) {
+        callbackfblogin(response);
+      });
+    };
+    this.translate.current = model_control.translate.cn;
   }
 });
-
 var thesnd = new Vue({});
 document.getElementById('toggleProfile').addEventListener('click', function () {
   [].map.call(document.querySelectorAll('.profile'), function (el) {
@@ -112,16 +131,3 @@ function syslog(id, email, photo, token, expired) {
     console.log(errorresponse);
   });
 }
-window.fbAsyncInit = function () {
-  FB.init({
-    appId: installation.FB,
-    status: true,
-    cookie: true,
-    xfbml: true,
-    version: 'v2.7'
-  });
-  FB.getLoginStatus(function (response) {
-    callbackfblogin(response);
-  });
-};
-slider.$data.translate.current = model_control.translate.cn;

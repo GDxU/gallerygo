@@ -39,7 +39,8 @@
                         <button @click="facebooklogin" class="loginBtn loginBtn--facebook">
                             {{translate.current.fblogin}}
                         </button>
-                        <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
+                        <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false"
+                             data-auto-logout-link="false"></div>
                     </div>
                     <div class="field">
                         <input type="text" id="fieldUser" class="input" v-model="username" required pattern=.*\S.*/>
@@ -56,15 +57,52 @@
                 </div>
             </div>
         </div>
+        <div class="panel">
+
+        </div>
     </div>
 </div>
+<template id="panel-template">
+    <div id="myinfo">
+        {{myinfo}}
+    </div>
+    <div id="myart">
+        {{myart}}
+    </div>
+    <div id="mydata">
+        {{mydata}}
+    </div>
+    <div id="mysales">
+        {{mysales}}
+    </div>
+    <div id="browse">
+        {{browse}}
+    </div>
+</template>
+<template id="grid-template">
+    <table>
+        <thead>
+        <tr>
+            <th v-for="col in columns">
+                {{ col | capitalize}}
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="(index,entry) in dataList">
+            <td v-for="col in columns">
+                {{entry[col]}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</template>
 <div id="fb-root"></div>
-<script  src="https://connect.facebook.net/en_US/sdk.js"></script>
-<script  src="https://unpkg.com/vue/dist/vue.js"></script>
-<script  src="https://unpkg.com/vue-resource@1.0.3/dist/vue-resource.min.js"></script>
+<script src="https://connect.facebook.net/en_US/sdk.js"></script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-resource@1.0.3/dist/vue-resource.min.js"></script>
 <script src="js/installation.js"></script>
 <script src="js/applight.js"></script>
 <script src="js/background.js"></script>
-
 </body>
 </html>

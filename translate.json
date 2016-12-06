@@ -1,0 +1,48 @@
+{
+  "apptranslate": {
+    "title_cert_review": {
+      "cn": "认证审查",
+      "en": "Certification Review"
+    },
+    "selected_cert": {
+      "cn": "您已选择参与计划",
+      "en": "Your have selected participation program"
+    },
+    "participate_intro": {
+      "cn": "参加我们的活动，成为活跃的原创艺术家，活跃的原创艺术家授权代理，或绘画贸易组织。您将能够通过销售原创版权和原创作品获得收入。选择您感兴趣的最佳位置，然后点击“继续”。",
+      "en": "To participate our program to become active original artist, active original artist authorized agent, or painting organization. You will able to earn income through sales of original works or sales of copyrights. Choose the best position you are interested in and hit continue. "
+    },
+    "role_1": {
+      "cn": "我是一个艺术家，我也想在这个平台管理我的画作销售。",
+      "en": "I am an artist and I would like manage sales of my work in this platform."
+    },
+    "roleName1": {
+      "cn": "艺术家",
+      "en": "artist"
+    },
+    "role_2": {
+      "cn": "我是一个商人，我被任命为艺术家的授权销售代理。我将代表他经营画作销售。",
+      "en": "I am a businessman and I am appointed as an authorized sales agent for the artist. I will be running businesses on his behalf."
+    },
+    "roleName2": {
+      "cn": "商人",
+      "en": "businessman"
+    },
+    "role_3": {
+      "cn": "我是一个组织的代表，我经营多个销售不同的艺术家的作品。",
+      "en": "I am a representative of an organization and I run multiple sales of different artists works."
+    },
+    "roleName3": {
+      "cn": "组织",
+      "en": "organization"
+    },
+    "continue": {
+      "cn": "继续",
+      "en": "continue"
+    },
+    "errorcheck": {
+      "cn": "请选择您的程序，然后重试。",
+      "en": "Please choose your program and try again."
+    }
+  }
+}

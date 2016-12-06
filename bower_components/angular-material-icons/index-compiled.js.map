@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":[],"mappings":";;AAAA,QAAQ,0BAAR;AACA,OAAO,OAAP,GAAiB,WAAjB","file":"index-compiled.js","sourcesContent":["require('./angular-material-icons');\nmodule.exports = 'ngMdIcons';\n"]}

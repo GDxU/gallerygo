@@ -1,0 +1,49 @@
+<section>
+    <md-toolbar>
+        <h2 class="md-toolbar-tools">
+            <span>{{str.title}}</span>
+        </h2>
+    </md-toolbar>
+
+    <div id="content" ui-view flex>
+        <div class="radioButtondemoBasicUsage" ng-app="App">
+            <!--  <form ng-submit="decidedAndNext()" ng-controller="CertReviewControl" ng-cloak=""> layout="row"-->
+            <div class="selectionanswer toppart">{{str.intro}}</div>
+            <md-divider></md-divider>
+            <p class="selectionanswer">{{str.pp}}: <span class="radioValue">{{ data.group1 }}</span></p>
+            <md-divider></md-divider>
+
+            <md-radio-group
+                    ng-model="data.group1"
+                    class="md-primary">
+
+                <div ng-repeat="d in radioData" class="row">
+                    <md-radio-button flex
+                                     ng-value="d.value"
+                                     ng-disabled="d.isDisabled">
+
+                        <span class="blocktitle">{{ d.label }}</span>
+                        <br>
+                        <span class="blockselectdetail">
+                             {{ d.detail }}
+                        </span>
+                    </md-radio-button>
+                </div>
+
+            </md-radio-group>
+
+            <hr>
+
+            <!--      </form>-->
+        </div>
+
+        <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
+            <md-button flex="100" class="md-primary md-raised" ng-click="decidedAndNext()">{{str.continuebut}}
+            </md-button>
+            <!-- <md-button flex="50" class="md-primary md-raised" ng-click="showGridBottomSheet()">Show as Grid</md-button>-->
+        </div>
+
+    </div>
+
+
+</section>

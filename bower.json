@@ -1,0 +1,48 @@
+{
+  "name": "Gallo",
+  "version": "1.5.0",
+  "homepage": "https://github.com/romansanchez/Calaca",
+  "authors": [
+    "Roman Sanchez http://romansanchez.me"
+  ],
+  "description": "fpeo",
+  "main": "index.html",
+  "keywords": [
+    "elasticsearch",
+    "search"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.10-build.5179+sha.752b1e6",
+    "angular-animate": "1.5.10-build.5179+sha.752b1e6",
+    "angular-aria": "1.5.10-build.5179+sha.752b1e6",
+    "angular-sanitize": "1.5.10-build.5179+sha.752b1e6",
+    "angular-resource": "1.5.10-build.5179+sha.752b1e6",
+    "angular-touch": "1.5.10-build.5179+sha.752b1e6",
+    "angular-ui-router": "1.0.0-beta.3",
+    "angular-route": "1.5.10-build.5179+sha.752b1e6",
+    "angular-material": "1.1.1-master-f7ecb4f",
+    "angular-messages": "1.5.10-build.5179+sha.752b1e6",
+    "angular-google-maps": "2.4.0",
+    "ng-device-detector": "3.0.1",
+    "elasticsearch": "12.0.0-rc5",
+    "angular-material-icons": "0.7.1",
+    "angular-pageslide-directive": "2.1.2",
+    "ui-leaflet": "2.0.0",
+    "bootstrap": "3.3.7",
+    "lodash": "4.16.4",
+    "re-tree": "0.0.2",
+    "moment": "2.14.1",
+    "wowjs": "1.1.2",
+    "vue": "2.1.4",
+    "moment-timezone": "0.4.1"
+  },
+  "private": true
+}

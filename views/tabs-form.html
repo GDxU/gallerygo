@@ -1,0 +1,26 @@
+<section>
+    <md-toolbar>
+        <h2 class="md-toolbar-tools">
+            <span>Certification Review</span>
+        </h2>
+    </md-toolbar>
+    <md-tabs md-stretch-tabs
+             md-selected="selectedIndex">
+        <md-tab label="tab1"></md-tab>
+        <md-tab label="tab2"></md-tab>
+        <md-tab label="tab3"></md-tab>
+    </md-tabs>
+    <div id="content" ui-view flex>
+        <div layout="row">
+            <div flex>First item in row</div>
+            <div flex>Second item in row</div>
+        </div>
+
+        <div layout="column">
+            <div flex>First item in column</div>
+            <div flex>Second item in column</div>
+        </div>
+
+    </div>
+
+</section>

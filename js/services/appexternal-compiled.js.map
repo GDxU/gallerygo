@@ -1,0 +1,1 @@
+{"version":3,"sources":["appexternal.js"],"names":[],"mappings":";;AAAA;;;AAGA,IAAI,UAAS,QAAQ,MAAR,CAAe,aAAf,EAA8B,CAAC,YAAD,CAA9B,CAAb","file":"appexternal-compiled.js","sourcesContent":["/**\n * Created by hesk on 16年12月6日.\n */\nvar module = angular.module(\"externalapp\", ['ngResource']);"]}

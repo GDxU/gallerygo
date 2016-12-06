@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":[],"mappings":";;AAAA,QAAQ,gBAAR;AACA,OAAO,OAAP,GAAiB,QAAjB","file":"index-compiled.js","sourcesContent":["require('./angular-aria');\nmodule.exports = 'ngAria';\n"]}

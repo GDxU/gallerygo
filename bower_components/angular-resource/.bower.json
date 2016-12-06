@@ -1,0 +1,20 @@
+{
+  "name": "angular-resource",
+  "version": "1.5.10-build.5179+sha.752b1e6",
+  "license": "MIT",
+  "main": "./angular-resource.js",
+  "ignore": [],
+  "dependencies": {
+    "angular": "1.5.10-build.5179+sha.752b1e6"
+  },
+  "homepage": "https://github.com/angular/bower-angular-resource",
+  "_release": "1.5.10-build.5179+sha.752b1e6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.5.10-build.5179+sha.752b1e6",
+    "commit": "34aeb3060270d24a27b29adf74cb6742353f9c35"
+  },
+  "_source": "https://github.com/angular/bower-angular-resource.git",
+  "_target": "1.5.10-build.5179+sha.752b1e6",
+  "_originalSource": "angular-resource"
+}
