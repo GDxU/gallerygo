@@ -107,32 +107,17 @@ angular.module('app').factory('$Servica', function ($http, $q) {
        * android photo document uploads
        */
       case 1:
-        console.log("AnJsApi defined? ", arg);
-        // if (angular.isDefined(AnJsApi)) {
-
-        console.log(window);
-        console.log(window.AnJsApi);
-        console.log(window["AnJsApi"]);
-        console.log(AnJsApi);
-
         if (typeof window.AnJsApi != 'undefined') {
-          console.log("AnJsApi is defined");
           if (arg.doctype == "me_id") {
-            console.log("doctype is matched");
-            //   console.log(arg.doctype);
-            //    console.log("AnJsApi post args", arg.doctype, arg.name. arg.idcard);
             window.AnJsApi.uploadDoc(arg.doctype, arg.name, arg.idcard);
           }
           if (arg.doctype == "companynamecard") {
-            //   console.log(arg.doctype);
             window.AnJsApi.uploadDoc(arg.doctype, arg.comname, arg.comregid);
           }
           if (arg.doctype == "auth_artist_id") {
-            //   console.log(arg.doctype);
             window.AnJsApi.uploadDoc(arg.doctype, arg.authorizer_name, arg.authorizer_id);
           }
           if (arg.doctype == "companyreg") {
-            //   console.log(arg.doctype);
             window.AnJsApi.uploadDoc(arg.doctype, arg.comname, arg.comregid);
           }
         } else {
