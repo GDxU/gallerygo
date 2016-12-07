@@ -116,7 +116,8 @@ angular.module('app')
          */
         case 1:
           console.log("androidapi defined? ", Androidapi);
-          if (angular.isDefined(Androidapi)) {
+          // if (angular.isDefined(Androidapi)) {
+          if (typeof (Androidapi) != 'undefined') {
             console.log("arg defined? ", arg);
             console.log("arg.docType defined? ", arg.docType);
             if (arg.docType == "me_id") {
@@ -135,6 +136,8 @@ angular.module('app')
               Androidapi.uploadDoc(arg.docType, arg.comname, arg.comregid);
             }
 
+          } else {
+            console.log("Androidapi is not found");
           }
 
           break;
