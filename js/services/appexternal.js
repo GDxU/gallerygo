@@ -117,6 +117,7 @@ angular.module('app')
         case 1:
           console.log("androidapi defined? ", Androidapi);
           if (angular.isDefined(Androidapi)) {
+            console.log("arg defined? ", arg);
             console.log("arg.docType defined? ", arg.docType);
             if (arg.docType == "me_id") {
               Androidapi.uploadDoc(arg.docType, arg.name, arg.idcard);
