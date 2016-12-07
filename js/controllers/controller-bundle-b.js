@@ -7,7 +7,7 @@ angular.module('app')
     ($scope, $state, $stateParams, $http, $q, $Servica, $mdToast) => {
       let lang;
       $Servica.getTranslateFile().then((translatedata)=> {
-        lang = $stateParams._lang == null ? "cn" : $stateParams._lang;
+        var lang = $Servica.localConvertTr($stateParams);
         $scope.radioData[0].detail = translatedata.role_1[lang];
         $scope.radioData[0].label = translatedata.roleName1[lang];
         $scope.radioData[1].detail = translatedata.role_2[lang];
@@ -49,7 +49,7 @@ angular.module('app')
           $Servica.popError($mdToast, $scope.str.check);
         } else {
           const state_name = 'Contract-' + $scope.data.group1;
-          $state.go(state_name, {_lang: lang});
+          $state.go(state_name, {_lang: $Servica.localConvertTr($stateParams)});
         }
       };
     }])
@@ -59,7 +59,7 @@ angular.module('app')
       ($scope, $state, $stateParams, $Servica, $sce, $mdDialog)=> {
 
         $Servica.getTranslateFile().then((tr_data)=> {
-          var lang = $stateParams._lang == null ? "cn" : $stateParams._lang;
+          var lang = $Servica.localConvertTr($stateParams);
           $scope.str.title_contract_1 = tr_data.title_contract_1[lang];
           $scope.str.enter_your = tr_data.enter_your[lang];
           $scope.str.your_legal_name = tr_data.your_legal_name[lang];
@@ -113,7 +113,7 @@ angular.module('app')
       ($scope, $state, $stateParams, $q, $http, $Servica, $sce, $mdDialog)=> {
 
         $Servica.getTranslateFile().then((tr_data)=> {
-          var lang = $stateParams._lang == null ? "cn" : $stateParams._lang;
+          var lang = $Servica.localConvertTr($stateParams);
           $scope.str.title_contract_2 = tr_data.title_contract_2[lang];
           $scope.str.enter_your = tr_data.enter_your[lang];
           $scope.str.your_legal_name = tr_data.your_legal_name[lang];
@@ -173,7 +173,7 @@ angular.module('app')
       ($scope, $state, $stateParams, $q, $http, $Servica, $sce, $mdDialog)=> {
 
         $Servica.getTranslateFile().then((tr_data)=> {
-          var lang = $stateParams._lang == null ? "cn" : $stateParams._lang;
+          var lang = $Servica.localConvertTr($stateParams);
           $scope.str.title_contract_3 = tr_data.title_contract_3[lang];
           $scope.str.enter_your = tr_data.enter_your[lang];
           $scope.str.your_legal_name = tr_data.your_legal_name[lang];
@@ -226,7 +226,7 @@ angular.module('app')
           }
         };
         $scope.disagreeandexit = ()=> {
-          
+
         };
       }])
 

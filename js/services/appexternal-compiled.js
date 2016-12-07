@@ -62,6 +62,27 @@ angular.module('app').factory('$Servica', function ($http, $q) {
     }
     return final_lang;
   };
+  Servica.localConvertTr = function ($stateParams) {
+    var tag = $stateParams._lang == null ? "cn" : $stateParams._lang,
+        final_lang = void 0;
+
+    if (tag == "ja") {
+      final_lang = "en";
+    }
+    if (tag == "zh") {
+      final_lang = "cn";
+    }
+    if (tag == "cn") {
+      final_lang = "cn";
+    }
+    if (tag == "it") {
+      final_lang = "en";
+    }
+    if (tag == "ko") {
+      final_lang = "en";
+    }
+    return final_lang;
+  };
 
   Servica.checkEmptyFields = function (scope) {
     var result = true;

@@ -62,7 +62,26 @@ angular.module('app')
       }
       return final_lang;
     };
-
+    Servica.localConvertTr = ($stateParams) => {
+      let tag = $stateParams._lang == null ? "cn" : $stateParams._lang, final_lang;
+      
+      if (tag == "ja") {
+        final_lang = "en";
+      }
+      if (tag == "zh") {
+        final_lang = "cn";
+      }
+      if (tag == "cn") {
+        final_lang = "cn";
+      }
+      if (tag == "it") {
+        final_lang = "en";
+      }
+      if (tag == "ko") {
+        final_lang = "en";
+      }
+      return final_lang;
+    };
 
     Servica.checkEmptyFields = (scope)=> {
       let result = true;
@@ -78,17 +97,17 @@ angular.module('app')
       $mdToast.show($mdToast.simple().textContent(message).position('bottom right').hideDelay(3000));
     };
     Servica.popDialog = ($mdDialog, ev, message)=> {
-        // $mdToast.show($mdToast.simple().textContent(message).position('bottom right').hideDelay(3000));
-        $mdDialog.show(
-          $mdDialog.alert()
-            .parent(angular.element(document.querySelector('#content')))
-            .clickOutsideToClose(true)
-            .title('Error')
-            .textContent(message)
-            .ariaLabel('Alert Error Dialog')
-            .ok('OK')
-            .targetEvent(ev)
-        );
+      // $mdToast.show($mdToast.simple().textContent(message).position('bottom right').hideDelay(3000));
+      $mdDialog.show(
+        $mdDialog.alert()
+          .parent(angular.element(document.querySelector('#content')))
+          .clickOutsideToClose(true)
+          .title('Error')
+          .textContent(message)
+          .ariaLabel('Alert Error Dialog')
+          .ok('OK')
+          .targetEvent(ev)
+      );
     };
     return Servica;
   })

@@ -6,7 +6,7 @@
 angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$stateParams', '$http', '$q', '$Servica', '$mdToast', function ($scope, $state, $stateParams, $http, $q, $Servica, $mdToast) {
   var lang = void 0;
   $Servica.getTranslateFile().then(function (translatedata) {
-    lang = $stateParams._lang == null ? "cn" : $stateParams._lang;
+    var lang = $Servica.localConvertTr($stateParams);
     $scope.radioData[0].detail = translatedata.role_1[lang];
     $scope.radioData[0].label = translatedata.roleName1[lang];
     $scope.radioData[1].detail = translatedata.role_2[lang];
@@ -43,13 +43,13 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
       $Servica.popError($mdToast, $scope.str.check);
     } else {
       var state_name = 'Contract-' + $scope.data.group1;
-      $state.go(state_name, { _lang: lang });
+      $state.go(state_name, { _lang: $Servica.localConvertTr($stateParams) });
     }
   };
 }]).controller('C1', ['$scope', '$state', '$stateParams', '$Servica', '$sce', '$mdDialog', function ($scope, $state, $stateParams, $Servica, $sce, $mdDialog) {
 
   $Servica.getTranslateFile().then(function (tr_data) {
-    var lang = $stateParams._lang == null ? "cn" : $stateParams._lang;
+    var lang = $Servica.localConvertTr($stateParams);
     $scope.str.title_contract_1 = tr_data.title_contract_1[lang];
     $scope.str.enter_your = tr_data.enter_your[lang];
     $scope.str.your_legal_name = tr_data.your_legal_name[lang];
@@ -97,7 +97,7 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
 }]).controller('C2', ['$scope', '$state', '$stateParams', '$q', '$http', '$Servica', '$sce', '$mdDialog', function ($scope, $state, $stateParams, $q, $http, $Servica, $sce, $mdDialog) {
 
   $Servica.getTranslateFile().then(function (tr_data) {
-    var lang = $stateParams._lang == null ? "cn" : $stateParams._lang;
+    var lang = $Servica.localConvertTr($stateParams);
     $scope.str.title_contract_2 = tr_data.title_contract_2[lang];
     $scope.str.enter_your = tr_data.enter_your[lang];
     $scope.str.your_legal_name = tr_data.your_legal_name[lang];
@@ -149,7 +149,7 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
 }]).controller('C3', ['$scope', '$state', '$stateParams', '$q', '$http', '$Servica', '$sce', '$mdDialog', function ($scope, $state, $stateParams, $q, $http, $Servica, $sce, $mdDialog) {
 
   $Servica.getTranslateFile().then(function (tr_data) {
-    var lang = $stateParams._lang == null ? "cn" : $stateParams._lang;
+    var lang = $Servica.localConvertTr($stateParams);
     $scope.str.title_contract_3 = tr_data.title_contract_3[lang];
     $scope.str.enter_your = tr_data.enter_your[lang];
     $scope.str.your_legal_name = tr_data.your_legal_name[lang];
