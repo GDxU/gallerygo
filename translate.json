@@ -10,7 +10,7 @@
     },
     "participate_intro": {
       "cn": "参加我们的活动，成为活跃的原创艺术家，活跃的原创艺术家授权代理，或绘画贸易组织。您将能够通过销售原创版权和原创作品获得收入。选择您感兴趣的最佳位置，然后点击“继续”。",
-      "en": "To participate our program to become active original artist, active original artist authorized agent, or painting organization. You will able to earn income through sales of original works or sales of copyrights. Choose the best position you are interested in and hit continue. "
+      "en": "To participate our program to become active original artist, active original artist authorized agent, or painting organization. You will able to earn income through sales of original works or sales of copyrights. Choose the best position you are interested in and hit continue."
     },
     "role_1": {
       "cn": "我是一个艺术家，我也想在这个平台管理我的画作销售。",
@@ -18,7 +18,7 @@
     },
     "roleName1": {
       "cn": "艺术家",
-      "en": "artist"
+      "en": "Artist"
     },
     "role_2": {
       "cn": "我是一个商人，我被任命为艺术家的授权销售代理。我将代表他经营画作销售。",
@@ -26,7 +26,7 @@
     },
     "roleName2": {
       "cn": "商人",
-      "en": "businessman"
+      "en": "Businessman"
     },
     "role_3": {
       "cn": "我是一个组织的代表，我经营多个销售不同的艺术家的作品。",
@@ -34,7 +34,7 @@
     },
     "roleName3": {
       "cn": "组织",
-      "en": "organization"
+      "en": "Organization"
     },
     "continue": {
       "cn": "继续",
@@ -43,6 +43,86 @@
     "errorcheck": {
       "cn": "请选择您的程序，然后重试。",
       "en": "Please choose your program and try again."
+    },
+    "erroremptyfield": {
+      "cn": "请填写所需的信息。",
+      "en": "Please filled out the required information."
+    },
+    "title_contract_1": {
+      "cn": "起始自我管理合同",
+      "en": "Starting Self Management Contract"
+    },
+    "title_contract_2": {
+      "cn": "起始特许管理合同",
+      "en": "Starting Exclusive Management Contract"
+    },
+    "title_contract_3": {
+      "cn": "起始组织合同",
+      "en": "Starting Organization Contract"
+    },
+    "heading_1": {
+      "cn": "该合同建立在公司，Zyntauri， 瑪爾發，有限公司和 我，”原创内容创作者”，”艺术家”，”画家”，”原创作者”之间。我同意以下项目如下：",
+      "en": "This contract is established between the company, Zyntauri Limited, and me, “original content creator”, “artist”, “painter”, “original creator”.  I agree to the following items as listed below:"
+    },
+    "heading_2": {
+      "cn": "这个合同是在公司，Zyntauri，玛尔发有限公司和我，“授权卖方”，“唯一艺术家代表”，“唯一代理人”，“唯一艺术家的自然卖方”之间建立的。我同意以下列出的项目：",
+      "en": "This contract is established between the company, Zyntauri, 瑪爾發 Limited, and me, “authorized seller”, “sole artist representative”, “sole agent”, “natural seller for sole artist”.  I agree to the following items as listed below:"
+    },
+    "heading_3": {
+      "cn": "该合同是在公司，Zyntauri，玛尔发有限公司和我，“法律实体”，“法律组织”，“注册公司”，“注册公司”之间建立的。我同意以下列出的项目：",
+      "en": "This contract is established between the company, Zyntauri, 瑪爾發 Limited, and me, “legal entity”, “legal organization”, “registered company”, “registered corporation”.  I agree to the following items as listed below:"
+    },
+    "contract_body": {
+      "en": "<p class=\"c0\"><span class=\"c1\">Copyright</span></p><p class=\"c0\"><span>Copyright is fully transferred to the company as to manage and monetize unless upon exclusively claimed or changed options properties of the content before publicly listed for sales. Agreed to the company to hold data of the imagery of the original paints upon the first upload via mobile application, web application the published by us.</span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span class=\"c1\">Pricing</span></p><p class=\"c0\"><span>The price of the content is agreed to be altered to respect our marketing policy. The final sale of the item will be either markup or markdown from the claim of the original price from the artist. The  “registered organization”, “sales agent” or “artist” will also need to agree that no notification or alert that notify the artist when markup has been taken place.</span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span class=\"c1\">Imagery</span></p><p class=\"c0\"><span> “Registered organization”, “sales agent” or “artist”  will be responsible for ensure the uploaded imagery is subjected to the original artwork and it is completely composed by hand and not by the machine or any artificial means.  The quality of the uploaded imagery need to meet the minimum requirement of the dimension and the display size. No photography is allowed for submission unless it is subjected to the original flat creation and design. There should be no artificial enhancement or alteration of color of the imagery from the original artwork unless it is done to promote its presentation of the original color and the scale of its color range. Artist is responsible to take the best imagery of its original artwork on a flat surface and upload to us via mobile application or web application.</span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span class=\"c1\">Packing for delivery</span></p><p class=\"c0\"><span>“Registered organization”, “sales agent” and “artist” are responsible for making reasonable package of the artwork that will safely delivered to the customer’s hand for successful collection of the sale of that artwork. It is recommended to follow our package guide to wrap the artworks into a box that will enable shipping process handled.</span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span>Upon the first declaration of sales is successfully submitted to us and such price data is confidential for the trade of such artwork. For the “registered organization”, “sales agent” or “artist” disclose the price third party and cause financial damage to the company and we will hold financial measure and we will hold legal right against the artist.</span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span class=\"c1\">Delivery and acceptance of works </span></p><p class=\"c0\"><span>“Registered organization”, “sales agent” and “artist” shall make delivery notification to the buyer within 14 days once the payment process has been completed.</span></p><p class=\"c0\"><span>The acceptance of confirmation shall be signed by buyer or the referred signer on the authorized machine where mobile application or web application offer by Zyntauri is recommended. The acceptance of confirm shall perform against its loop up, look down, and bottom view of its merchandise. The property of its merchandise shall meet the condition stated property information that is summary, creation year, dimension, medium, preserving quality, defects and additional notes. </span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span class=\"c1\">Termination of Transaction</span></p><p class=\"c0\"><span>Buyer is eligible to terminate the trade upon the following conditions has departure from its stated information: copyright, legitmatency, non-handmade, defects disclosure. If the above situation is proven to be true after investigation, the buyer has the right to resolve the agreement to purchase the delivered item. The fund shall be return to the buyer within 30 days. The seller shall be responsible for its delivery cost in full.</span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span class=\"c4 c1\">Responsibility for return of merchandise</span></p><p class=\"c0\"><span>Seller shall make deposit for return policy that cover for its required minimum delivery cost and its return delivery insurance. </span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span class=\"c1\">Payment</span></p><p class=\"c0\"><span>We will require the artist to register his or her own bank account, wechat payment account, alipay account, paypal account, and any financial account that we technically supported for their earnings from sale.</span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span>The goods delivered by a Seller to a Buyer must comply with the relevant provisions of laws and regulations. The Seller must not sell counterfeit goods, goods sold must not violate the relevant provisions of the “Zyntauri Limited Terms” on the misappropriation of another’s account, false trading, inaccurate descriptions as stipulated in Article 1 and Article 2, misappropriation of another’s property, posting of prohibited information, sale of counterfeit goods, and falsifying material composition of goods.</span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span>Seller must accurately describe the goods being sold, and must provide true and complete descriptions of a good’s basic properties, including but not limited to summary, creation year, dimension, medium, preserving quality, defects and other information that must be stated at the good’s description page, store page, and all other channels provided by Zyntauri Limited. </span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span>A Seller is responsible for the guarantee of the quality of the goods being sold, and warrant that the goods being delivered to the Buyer may be ordinarily used within a reasonable period, which includes warranting that the goods do not impose unreasonable danger to personal safety and property safety, goods perform as it should, and that goods comply with the standards specified on the good or its packaging etc. Seller must conduct true transactions, and must not conduct false transactions with the purpose of increasing sales volume. </span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span>A Seller must dispatch goods within one hundred and twenty (120) hours of the Buyer making payment (Rules on the Delay of Delivering Goods), unless there are special exemptions. </span></p><p class=\"c0\"><span>Where a Buyer applies for a refund before the Seller dispatches the goods, the Seller should seek the consent of the Buyer before dispatching the goods. Where a Seller delays in the dispatch of goods, or where a Seller did not seek the consent of the Buyer and dispatches the goods after the Buyer has applied for a refund, the Seller must recover the goods dispatched, unless the Buyer has already signed and confirmed receipt of the goods. </span></p><p class=\"c0\"><span class=\"c1\">Explanation</span></p><p class=\"c0\"><span class=\"c4 c5\">The contract shall be understood and interpreted in accordance with the purpose of the contract and the original meaning of the text. The title of this contract is for convenience of reading only and shall not affect the interpretation of this contract.</span></p><p class=\"c0 c2\"><span class=\"c4 c5\"></span></p><p class=\"c0\"><span class=\"c1\">Notification</span></p><p class=\"c0\"><span>All notices required in accordance with this Contract, as well as the documents of the Parties and the notice and request in relation to this Contract, must be communicated in writing in the form of email, letter, facsimile, telegraph, face-to-face, etc.. If the above methods can not be delivered, the notice may be served.</span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span>The notice of change or mailing address shall be notified in writing to the other party within 15 days from the date of change; otherwise, the unaccounted party shall bear the corresponding liabilities arising therefrom.</span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span class=\"c1\">Force majeure</span></p><p class=\"c0\"><span class=\"c4 c5\">The term &quot;force majeure&quot; as used in this contract refers to objective events that can not be foreseen, insurmountable, can not be avoided and have a significant impact on one party, including but not limited to natural disasters such as floods, earthquakes, fires and storms and social events such as war, Behavior and so on.</span></p><p class=\"c0 c2\"><span class=\"c4 c5\"></span></p><p class=\"c0\"><span class=\"c4 c5\">If the force majeure event can not be performed due to the event of force majeure, the force majeure party shall promptly inform the other party of the accident situation and shall, within ___ days after the end of the force majeure event, provide details of the accident and the contract can not be fulfilled or need to be postponed Written information, the two sides agreed to terminate the contract after consultation or the temporary suspension of the performance of the contract.</span></p><p class=\"c0 c2\"><span class=\"c4 c5\"></span></p><p class=\"c0\"><span class=\"c1\">Supplements and accessories </span></p><p class=\"c0\"><span>In case the matters not covered by this contract are implemented in accordance with the relevant laws and regulations, and the laws and regulations are not stipulated, both parties may reach a written supplemental agreement. The Annexes and Supplementary Agreements of this Contract are an integral part of this Contract and shall have the same legal effect as this Contract.</span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span class=\"c1\">Liability for breach of contract</span></p><p class=\"c0\"><span>Party A shall be liable to Party B for compensation in accordance with the transaction price stipulated in this contract if there is any dishonesty in the ownership, authenticity and flaw disclosure of the auction. If Party B fails to pay the transaction fee in accordance with the contract, Party B shall pay the liquidated damages in accordance with the standard of ___ day ___%.</span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span class=\"c1\">Global delivery service</span></p><p class=\"c0\"><span>That is China without public holiday, the merchandise with label “global delivery” enabled and the item is successfully paid by the customer. The term will be valid if seller cannot make the service within 24 hours, as the time is verified by the time of payment, the seller will need to pay the customer with penalty fee. </span></p><p class=\"c0\"><span>The seller sending product within tax redemption area, the penalty fee is 20 RMB.</span></p><p class=\"c0\"><span>The seller sending product from Hong Kong or Macau and other countries, the penalty fee is 50 RMB.</span></p><p class=\"c0\"><span>This activity will follow the specific rules of its detail.</span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span class=\"c1\">Penalty payout agreement</span></p><p class=\"c0\"><span>If the conditions above are met, the buyer can have the right to apply the penalty fee. Abusive use of the penalty triggers or such trades may breach the related regulations or applicable laws or public good. If there are reasonable traces to confirm above behavior, Zyntauri Limited will not support the penalty fee and such deputies will redirect to negotiation between the buyer and the seller.</span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span class=\"c1\">Complain</span></p><p class=\"c0\"><span>When to complain: the buyer can issue a complaint within 15 days after between the breach date of promise delivery and the first success transaction or closed transaction time. </span></p><p class=\"c0\"><span>How to complain: go to the ordered item and press complain. Select the complain type as global delivery not on time.</span></p><p class=\"c0 c2\"><span></span></p><p class=\"c0\"><span class=\"c1\">Seller disclaimer</span></p><p class=\"c0\"><span>If the below conditions cause the seller cannot meet the promise of “global delivery” on time. The seller will not be responsible for such penalty fee:</span></p><ol class=\"c6 lst-kix_9geypvkqjhgt-0 start\" start=\"1\"><li class=\"c0 c3\"><span>The buyer cannot provide accurate second generation resident ID card and cause seller cannot make custom border clearance. (Sales of merchandise to China)</span></li><li class=\"c0 c3\"><span>The buyer requests change of delivery address, unknown delivery address, error from delivery address, unable to reach the contact, denial of delivery, lack of substitute collection person</span></li><li class=\"c0 c3\"><span>The receiver person premises such as school, organization building, organization unit, residential district has an restriction of access.</span></li><li class=\"c0 c3\"><span>Any reasons given by the buyer to hold the delivery</span></li><li class=\"c0 c3\"><span>Any public holiday, Saturday, or Sunday in receiver’s country that such delivery operation is held or paused</span></li><li class=\"c0 c3\"><span>Including, but not limited to, national or regional air or ground transportation system control or interruption (such as weather causes, etc.), or communication system interference (such as weather conditions, etc.), or caused by force majeure (&quot;force majeure&quot; War or earthquake, typhoons, floods, fires or other similar events)</span></li><li class=\"c0 c3\"><span class=\"c4\">Buyers do not meet the purchase of goods into the relevant laws and regulations, resulting in immigration can not be cleared;</span></li><li class=\"c0 c3\"><span class=\"c4\">Other due to consumer responsibility led to the business cannot be delivered on time.</span></li></ol>",
+      "cn": "<p class=\"c0\"><span class=\"c4 c1\">版权</span></p><p class=\"c0\"><span class=\"c4\">版权完全转移到公司以管理和货币化，除非特别声明或更改内容的选项属性，然后公开上市销售。同意公司保存原始油漆的图像的数据在首次上传通过移动应用程序，Web应用程序由我们发布。</span></p><p class=\"c0\"><span class=\"c4 c1\">价格</span></p><p class=\"c0\"><span class=\"c4\">内容的价格同意改变，以尊重我们的营销政策。该项目的最终销售将是从艺术家原始价格的索赔的标记或降价。 “注册组织”，“销售代理”或“艺术家”也将需要同意，在发生标记时不通知艺术家的通知或警报。</span></p><p class=\"c0\"><span class=\"c4 c1\">图像</span></p><p class=\"c0\"><span>“注册组织”，“销售代理”，或“艺术家”将负责确保上传的图像受原始图稿的影响，并且完全由手工制作，而不是由机器或任何人工方法。上传的图像的质量需要满足尺寸和显示尺寸的最低要求。除非经过原始的平面创作和设计，否则不允许提交摄影。除非是为了促进其原始颜色的呈现和其颜色范围的规模，否则不应该对原始图像的图像的颜色进行人为增强或改变。艺术家负责在平面上拍摄其原创艺术品的最佳图像，并通过移动应用程序或网络应用程序上传到我们。</span></p><p class=\"c0\"><span class=\"c1 c4\">包装交货</span></p><p class=\"c0\"><span>“注册组织”，“销售代理”，和“艺术家”负责制作合理包装的艺术品，将安全地交付给客户的手，以成功收集该艺术品的销售。建议按照我们的包装指南，将艺术品包装在一个盒子里，使装运过程得到处理。在第一次宣布销售成功提交给我们，这样的价格数据是保密的这种艺术品的贸易。对于“注册组织”，“销售代理”或“艺术家”披露价格第三方，并对公司造成财务损害，我们将采取财务措施，我们将对艺术家拥有法律权利。</span></p><p class=\"c0\"><span class=\"c1\">作品的交付及验收</span></p><p class=\"c0\"><span>“註冊機構”，“銷售代理” 和 “藝術家” 應在付款過程完成後14天內向買方發送通知。</span></p><p class=\"c0\"><span class=\"c4\">接受确认应由买方或被授权机器上的推荐签名者签署，Zyntauri推荐移动应用程序或网络应用程序。接受确认将对其循环，俯视和其商品的底视图执行。其商品的财产应符合条件陈述的财产信息，即概要，创造年份，尺寸，中度，保存质量，缺陷和附加说明。</span></p><p class=\"c0\"><span class=\"c1\">交易的中止</span></p><p class=\"c0\"><span class=\"c4\">买方有资格在以下条件离开其声明的信息终止贸易：版权，合法性，非手工，缺陷披露。如果上述情况在调查后证明是真实的，买方有权解决购买交付项目的协议。基金应在30天内退还给买方。卖方应负责全额交付成本。</span></p><p class=\"c0\"><span class=\"c4 c1\">返还商品的责任</span></p><p class=\"c0\"><span class=\"c4\">卖方应支付保证金，以满足其所需的最低交货成本和退货保险。</span></p><p class=\"c0\"><span class=\"c4 c1\">付款</span></p><p class=\"c0\"><span>我们将要求艺术家注册他或她自己的银行帐户，微信支付帐户，支付宝帐户，paypal帐户，以及我们技术支持的销售收入的任何金融帐户。</span></p><p class=\"c0\"><span>卖方交付给买方的货物必须符合法律法规的有关规定。卖方不得出售假冒商品，出售的商品不得违反“Zyntauri有限条款”中关于盗用他人帐户，虚假交易，第1条和第2条规定的不准确描述，盗用他人财产，禁止信息，销售假冒商品和伪造商品的材料成分。</span></p><p class=\"c0\"><span>卖方必须准确描述被销售的商品，并且必须提供关于商品的基本属性的真实完整的描述，包括但不限于摘要，创建年份，尺寸，介质，保存质量，缺陷和其他信息，描述页面，商店页面以及Zyntauri有限公司提供的所有其他渠道。</span></p><p class=\"c0\"><span>卖方负责保证所销售货物的质量，并保证交付给买方的货物通常在合理期限内使用，包括保证货物不会对人身安全造成不合理的危险，财产安全，货物按照应有的方式运行，货物应符合货物或其包装上规定的标准。卖方必须进行真实交易，不得为增加销售量而进行虚假交易。</span></p><p class=\"c0\"><span>卖家应当在买家付款后的120小时内（瑪爾發</span><span>服务条款规则</span><span>）内发货，但有特殊规定的除外。买家申请退款时卖家尚未发货的，卖家应当征得买家同意后再发货。</span></p><p class=\"c0\"><span>卖家逾期发货，或者未经买家同意在买家申请退款后发货，卖家应当追回已经发出的商品，但买家已经签收并确认收货的除外。</span></p><p class=\"c0\"><span class=\"c1\">解释</span></p><p class=\"c0\"><span>本合同的理解与解释应依据合同目的和文本原义进行，本合同的标题仅是为了阅读方便而设，不应影响本合同的解释。</span></p><p class=\"c0\"><span class=\"c1\">通知</span></p><p class=\"c0\"><span>根据本合同需要发出的全部通知以及双方的文件往来及与本合同有关的通知和要求等，必须用书面形式，可采用 </span><span class=\"c4\">电子邮件</span><span>、书信、传真、电报、当面送交等方式 传递。以上方式无法送达的，方可采取公告送达的方式。</span></p><p class=\"c0\"><span>一方变更通知或通讯地址，应自变更之日起 15 日内，以书面形式通知对方;否则，由未通知方承担由此而引起的相应责任。</span></p><p class=\"c0\"><span class=\"c1\">不可抗力</span></p><p class=\"c0\"><span>本合同所称不可抗力是指不能预见、不能克服、不能避免并对一方当事人造成重大影响的客观事件，包括但不限于自然灾害如洪水、地震、火灾和风暴等以及社会事件如战争、动乱、政府行为等。</span></p><p class=\"c0\"><span>如因不可抗力事件的发生导致合同无法履行时，遇不可抗力的一方应立即将事故情况书面告知另一方，并应在不可抗力事件结束后____日内，提供事故详情及合同不能履行或者需要延期履行的书面资料，双方认可后协商终止合同或暂时延迟合同的履行。</span></p><p class=\"c0\"><span class=\"c1\">补充与附件</span></p><p class=\"c0\"><span>本合同未尽事宜，依照有关法律、法规执行，法律、法规未作规定的，甲乙双方可以达成书面补充协议。本合同的附件和补充协议均为本合同不可分割的组成部分，与本合同具有同等的法律效力。</span></p><p class=\"c0\"><span class=\"c1\"> 违约责任</span></p><p class=\"c0\"><span>甲方在拍品权属、真伪、瑕疵披露等方面存在不实之处的，应按本合同约定的交易价格双方向乙方进行赔偿。</span></p><p class=\"c0\"><span>乙方未按约定支付交易款项的，逾期不支付则应按___日___%的标准支付违约金。</span></p><p class=\"c0\"><span class=\"c1\">合同效力</span></p><p class=\"c0\"><span>本合同自甲、乙双方签字之日起生效。有效期为____年，自____年____月____日至____年____月____日。本合同正本一式____份，双方各执____份，具有同等法律效力。</span></p><p class=\"c0\"><span class=\"c1\">争议的处理</span></p><p class=\"c0\"><span>本合同在履行过程中发生的争议，由双方当事人协商解决，也可由有关部门调解;协商或调解不成的，按下列第____种方式解决：</span></p><p class=\"c0\"><span>(1)提交________仲裁委员会仲裁;</span></p><p class=\"c0\"><span>(2)依法向________人民法院起诉。</span></p><p class=\"c0\"><span class=\"c1\">服务定义</span></p><p class=\"c0\"><span>环球必达：是指除中国及发货地法定节假日外，买家在瑪爾發上购买带有&quot;环球必达&quot;标识的商品且付款成功后，商家未在服务承诺时效内送达的（已买到订单标识页面注明“X月X日必达”，X日指当日24:00:00前），预售的订单以支付尾款完成的时间为准，商家需向买家支付违约金：</span></p><p class=\"c0\"><span>（1）商家在保税区发货的商品，每笔订单商家支付人民币20元的违约金；</span></p><p class=\"c0\"><span>（2）商家在海外及港澳台地区发货的商品，每笔订单商家支付人民币50元的违约金。</span></p><p class=\"c0\"><span>（3）活动以对应规则为准。</span></p><p class=\"c0\"><span class=\"c1\">赔付条件</span></p><p class=\"c0\"><span>若满足上述条件的订单，未在承诺时效内送达，买家可以向商家申请违约赔付。</span></p><p class=\"c0\"><span>滥用环球必达规则发起赔付申请的，或交易可能违反相关法律法规或公共利益的或存在有其他合理理由的，瑪爾發不强制支持赔付，由买卖双方自行协商确定。</span></p><p class=\"c0\"><span class=\"c1\">投诉注意事项</span></p><p class=\"c0\"><span>（1）投诉时效：消费者可在超过承诺到货日期起，至交易关闭或交易成功的15天内发起投诉，否则瑪爾發有权不予受理；</span></p><p class=\"c0\"><span>（2）投诉方式：在已买到宝贝，选择“投诉商家”，投诉类型选择“环球必达-到货不准时”。</span></p><p class=\"c0\"><span class=\"c1\">商家免责说明</span></p><p class=\"c0\"><span>如发生以下情形，导致商家无法按承诺时间送达的，商家不承担赔付责任：</span></p><p class=\"c0\"><span>（1）因买家未协助提供正确的第二代居民身份证件等信息导致商家无法发货清关入境的；</span></p><p class=\"c0\"><span>（2）买家要求更换收货地址、地址不详、地址错误、联系不上、拒收、无代收人等导致包裹延误派送或无法送达的；</span></p><p class=\"c0\"><span>（3）因收件人学校、单位或住宅小区不允许投递人员入内，或买家代收方原因，导致造成延误；</span></p><p class=\"c0\"><span>（4）因收件人地址在周六、周日和公众节假日不接收邮件，导致造成延误；</span></p>"
+    },
+    "enter_your": {
+      "cn": "请输入以下信息：",
+      "en": "Please enter below information:"
+    },
+    "your_legal_name": {
+      "cn": "您的法定名称：",
+      "en": "Your legal name:"
+    },
+    "your_id": {
+      "cn": "您的居民卡身分证(ID)：",
+      "en": "Your identification number (ID) on your resident card:"
+    },
+    "your_authorized_artist": {
+      "cn": "授权美术家的法定名称：",
+      "en": "The authorized artist's legal name:"
+    },
+    "your_authorized_artist_id": {
+      "cn": "授权美术家的居民卡身分证(ID)：",
+      "en": "The authorized artist ID number:"
+    },
+    "company_name": {
+      "cn": "公司名：",
+      "en": "Company Name:"
+    },
+    "company_registration_id": {
+      "cn": "公司注册ID：",
+      "en": "Company Registration Identification No:"
+    },
+    "contract_check_box": {
+      "cn": "我了解并将提供相关的支持文件",
+      "en": "I understand and will supply the related supporting document"
+    },
+    "your_position": {
+      "cn": "公司职位",
+      "en": "Company Post"
+    },
+    "contract_read": {
+      "cn": "我了解上述条款和条件",
+      "en": "I understand the above terms and conditions"
+    },
+    "express_agree": {
+      "cn": "完成并提供相关支持文件",
+      "en": "Supply Documents"
+    },
+    "express_disagree": {
+      "cn": "放弃",
+      "en": "Quit"
     }
   }
 }

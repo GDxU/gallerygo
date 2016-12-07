@@ -5,9 +5,21 @@
  */
 angular.module('app', ['ui.router', 'lbServices', 'ng.deviceDetector', 'ngTouch', 'ngAnimate', 'ngMaterial', 'ngMessages', 'material.svgAssetsCache']).config(['$stateProvider', '$urlRouterProvider', '$mdThemingProvider', function ($stateProvider, $urlRouterProvider, $mdThemingProvider) {
   $stateProvider.state('CertView', {
-    url: '/certreview/{certid}',
+    url: '/certreview/{_lang}/{certid}',
     templateUrl: 'views/my-certs.html',
     controller: 'CertReviewControl'
+  }).state('Contract-1', {
+    url: '/contract-1/{_lang}',
+    templateUrl: 'views/enter-contract-1.html',
+    controller: 'C1'
+  }).state('Contract-2', {
+    url: '/contract-2/{_lang}',
+    templateUrl: 'views/enter-contract-2.html',
+    controller: 'C2'
+  }).state('Contract-3', {
+    url: '/contract-3/{_lang}',
+    templateUrl: 'views/enter-contract-3.html',
+    controller: 'C3'
   });
   // $mdIconProvider.iconSet("avatars", 'icons/avatar-icons.svg', 128);
   console.log("=config done=");

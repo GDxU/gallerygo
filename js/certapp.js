@@ -3,21 +3,37 @@
  */
 angular
   .module('app', ['ui.router', 'lbServices', 'ng.deviceDetector', 'ngTouch', 'ngAnimate', 'ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
-  .config(['$stateProvider', '$urlRouterProvider', '$mdThemingProvider', 
-    function ($stateProvider, $urlRouterProvider, $mdThemingProvider) {
+  .config(['$stateProvider', '$urlRouterProvider', '$mdThemingProvider',
+    ($stateProvider, $urlRouterProvider, $mdThemingProvider)=> {
       $stateProvider
         .state('CertView', {
-          url: '/certreview/{certid}',
+          url: '/certreview/{_lang}/{certid}',
           templateUrl: 'views/my-certs.html',
           controller: 'CertReviewControl'
-        });
-     // $mdIconProvider.iconSet("avatars", 'icons/avatar-icons.svg', 128);
+        })
+        .state('Contract-1', {
+          url: '/contract-1/{_lang}',
+          templateUrl: 'views/enter-contract-1.html',
+          controller: 'C1'
+        })
+        .state('Contract-2', {
+          url: '/contract-2/{_lang}',
+          templateUrl: 'views/enter-contract-2.html',
+          controller: 'C2'
+        })
+        .state('Contract-3', {
+          url: '/contract-3/{_lang}',
+          templateUrl: 'views/enter-contract-3.html',
+          controller: 'C3'
+        })
+      ;
+      // $mdIconProvider.iconSet("avatars", 'icons/avatar-icons.svg', 128);
       console.log("=config done=");
       //url: '/Preview/:id/:mode/:lang',
       //$urlRouterProvider.otherwise('certreview');
     }])
-  .run(['$rootScope', '$state', function ($rootScope, $state) {
-    $rootScope.$on('$stateChangeStart', function (event, next) {
+  .run(['$rootScope', '$state', ($rootScope, $state)=> {
+    $rootScope.$on('$stateChangeStart', (event, next)=> {
       // redirect to login page if not logged in
       if (next.authenticate && !$rootScope.currentUser) {
         console.log("====== state change start =======");

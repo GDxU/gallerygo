@@ -3,20 +3,10 @@
 /**
  * Created by hesk on 16年10月13日.
  */
-angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$stateParams', '$http', '$q', '$mdToast', function ($scope, $state, $stateParams, $http, $q, $mdToast) {
-  var Servica = {};
-  Servica.getTranslateFile = function () {
-    var deferred = $q.defer();
-    $http.get('translate.json').then(function (response_good) {
-      deferred.resolve(response_good.data.apptranslate);
-    }, function (response_fail) {
-      deferred.reject(response_fail);
-    });
-    return deferred.promise;
-  };
-
-  Servica.getTranslateFile().then(function (translatedata) {
-    var lang = "cn";
+angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$stateParams', '$http', '$q', '$Servica', '$mdToast', function ($scope, $state, $stateParams, $http, $q, $Servica, $mdToast) {
+  var lang = void 0;
+  $Servica.getTranslateFile().then(function (translatedata) {
+    lang = $stateParams._lang == null ? "cn" : $stateParams._lang;
     $scope.radioData[0].detail = translatedata.role_1[lang];
     $scope.radioData[0].label = translatedata.roleName1[lang];
     $scope.radioData[1].detail = translatedata.role_2[lang];
@@ -47,67 +37,172 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
 
   $scope.radioData = [{ label: '1', value: 1 }, { label: '2', value: 2 }, { label: '3', value: 3 }];
 
-  /*  function sanitizePosition() {
-   var current = $scope.toastPosition;
-   if ( current.bottom && last.top ) current.top = false;
-   if ( current.top && last.bottom ) current.bottom = false;
-   if ( current.right && last.left ) current.left = false;
-   if ( current.left && last.right ) current.right = false;
-   last = angular.extend({},current);
-   }*/
-  $scope.changeSelection = function (val) {
-    $scope.data.group1 = val;
-  };
   $scope.decidedAndNext = function () {
-    console.log($scope.data);
+    // console.log($scope.data);
     if ($scope.data.group1 == null || $scope.data.group1 == undefined) {
-      console.log("try again1");
-      $mdToast.show($mdToast.simple().textContent($scope.str.check).position('top right').hideDelay(3000));
+      $Servica.popError($mdToast, $scope.str.check);
     } else {
-      console.log("try continue");
+      var state_name = 'Contract-' + $scope.data.group1;
+      $state.go(state_name, { _lang: lang });
     }
   };
-}])
+}]).controller('C1', ['$scope', '$state', '$stateParams', '$Servica', '$sce', '$mdDialog', function ($scope, $state, $stateParams, $Servica, $sce, $mdDialog) {
 
-/**
-   ng-change="changeSelection(program_selected)"
- name="program_selected"
-   */
-/*  .directive('mdRadioGroup', function () {
- return {
- restrict: 'E',
- link: function ($scope, $el, $attrs) {
- $el.on('keypress', function (event) {
- if (event.keyCode === 13) {
- var form = angular.element(getClosest($el[0], 'form'));
- form.triggerHandler('submit');
- }
- function getClosest(el, tag) {
- tag = tag.toUpperCase();
- do {
- if (el.nodeName === tag) {
- return el;
- }
- } while (el = el.parentNode);
- return null;
- }
- })
- }
- }
- })*/
+  $Servica.getTranslateFile().then(function (tr_data) {
+    var lang = $stateParams._lang == null ? "cn" : $stateParams._lang;
+    $scope.str.title_contract_1 = tr_data.title_contract_1[lang];
+    $scope.str.enter_your = tr_data.enter_your[lang];
+    $scope.str.your_legal_name = tr_data.your_legal_name[lang];
+    $scope.str.your_id = tr_data.your_id[lang];
+    $scope.str.contract_body = tr_data.contract_body[lang];
+    $scope.str.heading_1 = tr_data.heading_1[lang];
+    $scope.str.express_disagree = tr_data.express_disagree[lang];
+    $scope.str.express_agree = tr_data.express_agree[lang];
+    $scope.str.contract_check_box = tr_data.contract_check_box[lang];
+    $scope.str.contract_read = tr_data.contract_read[lang];
+    $scope.str.erroremptyfield = tr_data.erroremptyfield[lang];
+  });
 
-/*.config(function ($mdIconProvider) {
- $mdIconProvider.iconSet("avatars", 'icons/avatar-icons.svg', 128);
- })*/
+  $scope.str = {
+    title_contract_1: "---",
+    enter_your: "---",
+    your_legal_name: "---",
+    your_id: "---",
+    contract_body: "---",
+    heading_1: "---",
+    contract_check_box: "---",
+    contract_read: "---",
+    erroremptyfield: "error",
+    express_disagree: "disagree",
+    express_agree: "agree"
+  };
 
-.controller('PreviewController', ['$scope', '$stateParams', '$q', '$http', 'Basemap', function ($scope, $stateParams, $q, $http, _basemap) {
+  $scope.data = {
+    name: "",
+    idcard: "",
+    agree: ""
+  };
+
+  $scope.trustAsHtml = $sce.trustAsHtml;
+  $scope.agree = function (ev) {
+    console.log("get is now");
+    if ($Servica.checkEmptyFields($scope.data)) {
+      console.log("get is now 1 ");
+    } else {
+      $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
+      console.log("get is now 2");
+    }
+  };
+  $scope.disagreeandexit = function () {};
+}]).controller('C2', ['$scope', '$state', '$stateParams', '$q', '$http', '$Servica', '$sce', '$mdDialog', function ($scope, $state, $stateParams, $q, $http, $Servica, $sce, $mdDialog) {
+
+  $Servica.getTranslateFile().then(function (tr_data) {
+    var lang = $stateParams._lang == null ? "cn" : $stateParams._lang;
+    $scope.str.title_contract_2 = tr_data.title_contract_2[lang];
+    $scope.str.enter_your = tr_data.enter_your[lang];
+    $scope.str.your_legal_name = tr_data.your_legal_name[lang];
+    $scope.str.your_id = tr_data.your_id[lang];
+    $scope.str.your_authorized_artist = tr_data.your_authorized_artist[lang];
+    $scope.str.your_authorized_artist_id = tr_data.your_authorized_artist_id[lang];
+    $scope.str.contract_body = tr_data.contract_body[lang];
+    $scope.str.heading_2 = tr_data.heading_2[lang];
+    $scope.str.express_disagree = tr_data.express_disagree[lang];
+    $scope.str.express_agree = tr_data.express_agree[lang];
+    $scope.str.contract_check_box = tr_data.contract_check_box[lang];
+    $scope.str.contract_read = tr_data.contract_read[lang];
+    $scope.str.erroremptyfield = tr_data.erroremptyfield[lang];
+  });
+
+  $scope.str = {
+    title_contract_2: "---",
+    enter_your: "---",
+    your_legal_name: "---",
+    your_id: "---",
+    your_authorized_artist: "---",
+    your_authorized_artist_id: "---",
+    contract_body: "---",
+    heading_2: "---",
+    contract_check_box: "---",
+    contract_read: "---",
+    erroremptyfield: "error",
+    express_disagree: "disagree",
+    express_agree: "agree"
+  };
+
+  $scope.data = {
+    name: "",
+    idcard: "",
+    authorizer_name: "",
+    authorizer_id: "",
+    agree: ""
+  };
+
+  $scope.trustAsHtml = $sce.trustAsHtml;
+
+  $scope.agree = function (ev) {
+    if ($Servica.checkEmptyFields($scope.data)) {} else {
+
+      $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
+    }
+  };
+  $scope.disagreeandexit = function () {};
+}]).controller('C3', ['$scope', '$state', '$stateParams', '$q', '$http', '$Servica', '$sce', '$mdDialog', function ($scope, $state, $stateParams, $q, $http, $Servica, $sce, $mdDialog) {
+
+  $Servica.getTranslateFile().then(function (tr_data) {
+    var lang = $stateParams._lang == null ? "cn" : $stateParams._lang;
+    $scope.str.title_contract_3 = tr_data.title_contract_3[lang];
+    $scope.str.enter_your = tr_data.enter_your[lang];
+    $scope.str.your_legal_name = tr_data.your_legal_name[lang];
+    $scope.str.your_position = tr_data.your_position[lang];
+    $scope.str.your_id = tr_data.your_id[lang];
+    $scope.str.company_name = tr_data.company_name[lang];
+    $scope.str.company_registration_id = tr_data.company_registration_id[lang];
+    $scope.str.contract_body = tr_data.contract_body[lang];
+    $scope.str.heading_3 = tr_data.heading_3[lang];
+    $scope.str.express_disagree = tr_data.express_disagree[lang];
+    $scope.str.express_agree = tr_data.express_agree[lang];
+    $scope.str.contract_check_box = tr_data.contract_check_box[lang];
+    $scope.str.contract_read = tr_data.contract_read[lang];
+    $scope.str.erroremptyfield = tr_data.erroremptyfield[lang];
+  });
+
+  $scope.str = {
+    title_contract_3: "---",
+    enter_your: "---",
+    your_legal_name: "---",
+    your_id: "---",
+    contract_body: "---",
+    your_position: "---",
+    heading_3: "---",
+    contract_check_box: "---",
+    contract_read: "---",
+    company_name: "---",
+    erroremptyfield: "error",
+    company_registration_id: "---",
+    express_disagree: "disagree",
+    express_agree: "agree"
+  };
+
+  $scope.data = {
+    name: "",
+    idcard: "",
+    comname: "",
+    composition: "",
+    comregid: "",
+    agree: ""
+  };
+
+  $scope.trustAsHtml = $sce.trustAsHtml;
+
+  $scope.agree = function (ev) {
+    if ($Servica.checkEmptyFields($scope.data)) {} else {
+      $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
+    }
+  };
+  $scope.disagreeandexit = function () {};
+}]).controller('PreviewController', ['$scope', '$stateParams', '$q', '$http', 'Basemap', '$Servica', function ($scope, $stateParams, $q, $http, _basemap, $Servica) {
   var googleplayurl = 'https://play.google.com/store/apps/details?id=com.zyntauri.gogallery&hl=zh-TW';
   var china_apk_url = '';
-  var detectionuser = 'https://api.userinfo.io/userinfos';
-  var conp1 = 'gallerygo/master/configurations.json';
-  var conp2 = 'rawgit';
-  var conp3 = 'https://cdn.' + conp2 + '.com/GDxU/';
-
   var default_path1 = "http://s3.heskeyo.com/basemap/";
   //var default_path2 = "http://s3.heskeyo.com/basemap/";
 
@@ -126,54 +221,18 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
   var _itemId = $stateParams.id;
   var _mode = $stateParams.mode;
   var _lang = $stateParams.lang;
-  var Servica = {};
+
   /*  console.log("=============================");
    console.log("id", _itemId);
    console.log("_mode", _mode);
    console.log("_lang", _lang);
    console.log("=============================");*/
-  Servica.getGeo = function () {
-    var deferred = $q.defer();
-    $http({ method: 'GET', url: detectionuser }).then(function (response) {
-      deferred.resolve(response.data);
-    }, function (respf) {
-      console.log("error", respf);
-    });
-    return deferred.promise;
-  };
-  Servica.getMetaDict = function () {
-    var deferred = $q.defer();
-    $http({
-      method: 'GET',
-      url: conp3 + conp1
-    }).then(function (response_good) {
-      deferred.resolve(response_good.data);
-    }, function (response_fail) {
-      deferred.reject(response_fail);
-    });
-    return deferred.promise;
-  };
-  var locale_convert = function locale_convert(tag) {
-    var final_lang = tag;
-    if (tag == "ja") {
-      final_lang = "jp";
-    }
-    if (tag == "zh") {
-      final_lang = "cn";
-    }
-    if (tag == "it") {
-      final_lang = "en";
-    }
-    if (tag == "ko") {
-      final_lang = "kr";
-    }
-    return final_lang;
-  };
+
   var _get_name_tag = function _get_name_tag(intput_label) {
     if (_lang == null || _lang == "") {
       return intput_label.cn;
     } else {
-      var lang_t = locale_convert(_lang);
+      var lang_t = $Servica.localConvert(_lang);
       if (intput_label.hasOwnProperty(lang_t)) {
         return intput_label[lang_t];
       } else {
@@ -185,7 +244,7 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
     installapp: function installapp() {
       // var el = angular.element(document.querySelector('#openGallery .open-icon'));
       this.rotating = !this.rotating;
-      Servica.getGeo().then(function (json) {
+      $Servica.getGeo().then(function (json) {
         console.log(json);
         if (json.country.code == "CN") {
           //  console.log("you are in China");
@@ -204,7 +263,7 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
     }
   };
 
-  Servica.getMetaDict().then(function (data_config) {
+  $Servica.getMetaDict().then(function (data_config) {
     _basemap.findOne({
       filter: {
         where: {

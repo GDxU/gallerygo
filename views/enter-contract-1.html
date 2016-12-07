@@ -1,0 +1,60 @@
+<md-content>
+    <md-toolbar>
+        <h2 class="md-toolbar-tools">
+            <span>{{str.title_contract_1}}</span>
+        </h2>
+    </md-toolbar>
+    <div id="content" ui-view flex>
+
+        <div flex layout-gt-sm="row" layout-padding>
+            <p ng-bind-html="trustAsHtml(str.heading_1)" class="c1"></p>
+            <p ng-bind-html="trustAsHtml(str.contract_body)"></p>
+        </div>
+
+        <md-divider></md-divider>
+
+        <div flex layout-gt-sm="row" layout-padding>
+            <span>{{str.enter_your}}</span>
+        </div>
+
+        <md-content layout-gt-sm="row" layout-padding>
+            <div>
+                <md-input-container flex="100">
+                    <label>{{str.your_legal_name}}</label>
+                    <input ng-model="data.name">
+                </md-input-container>
+
+                <md-input-container flex="100">
+                    <label>{{str.your_id}}</label>
+                    <input ng-model="data.idcard">
+                </md-input-container>
+            </div>
+        </md-content>
+
+        <md-checkbox
+                style="margin-left: 20px"
+                ng-model="data.agree"
+                aria-label="checker"
+                ng-true-value="'yup'"
+                ng-false-value="'nope'"
+                class="md-warn md-align-top-left" flex>
+            {{str.contract_read}} <br/>
+            <span class="blockselectdetail">
+             {{ str.contract_check_box }}
+            </span> <br/>{{data.agree}}
+        </md-checkbox>
+
+        <md-divider></md-divider>
+        <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
+
+            <md-button flex="50" class="md-primary md-raised" ng-click="agree()">
+                {{str.express_agree}}
+            </md-button>
+
+            <md-button flex="50" class="md-primary md-raised" ng-click="disagreeandexit()">
+                {{str.express_disagree}}
+            </md-button>
+
+        </div>
+    </div>
+</md-content>

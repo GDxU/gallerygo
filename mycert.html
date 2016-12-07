@@ -5,7 +5,6 @@
     <title>Go Gallery My Cert</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' type='text/css' href='bower_components/angular-material/angular-material.min.css'/>
-    <link href="css/multilevelmenu.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/mycert.css" rel="stylesheet">
     <script src="bower_components/angular/angular.min.js" type='text/javascript'></script>
@@ -13,7 +12,7 @@
     <script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script>
     <![endif]-->
 </head>
-<body>
+<body layout="column">
 <div id="root">
     <main ui-view>
 
@@ -33,9 +32,10 @@
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src='bower_components/angular-material/angular-material.min.js' type='text/javascript'></script>
 <script src="js/certapp-compiled.js" type='text/javascript'></script>
-<script src="js/services/lb-services.js" type='text/javascript'></script>
-<script src="js/services/auth.js" type='text/javascript'></script>
-<script src="js/controllers/auth.js" type='text/javascript'></script>
+<script src="js/services/appexternal-compiled.js" type='text/javascript'></script>
+<script src="js/services/lb-services-compiled.js" type='text/javascript'></script>
+<script src="js/services/auth-compiled.js" type='text/javascript'></script>
+<!--<script src="js/controllers/auth.js" type='text/javascript'></script>-->
 <script src="js/controllers/controller-bundle-b-compiled.js" type='text/javascript'></script>
 </body>
 </html>
