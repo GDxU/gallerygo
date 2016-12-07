@@ -114,30 +114,30 @@ angular.module('app')
          * android photo document uploads
          */
         case 1:
-          console.log("androidapi defined? ", Androidapi);
-          // if (angular.isDefined(Androidapi)) {
-          if (typeof (Androidapi) != 'undefined') {
-            console.log("Androidapi is defined");
+          console.log("AnJsApi defined? ", AnJsApi);
+          // if (angular.isDefined(AnJsApi)) {
+          if (typeof (AnJsApi) != 'undefined') {
+            console.log("AnJsApi is defined");
             if (arg.docType == "me_id") {
               console.log("docType is matched");
               console.log(arg.docType);
-              console.log("Androidapi post args", arg.docType, arg.name. arg.idcard);
-              Androidapi.uploadDoc(arg.docType, arg.name, arg.idcard);
+              console.log("AnJsApi post args", arg.docType, arg.name. arg.idcard);
+              AnJsApi.uploadDoc(arg.docType, arg.name, arg.idcard);
             }
             if (arg.docType == "companynamecard") {
               console.log(arg.docType);
-              Androidapi.uploadDoc(arg.docType, arg.comname, arg.comregid);
+              AnJsApi.uploadDoc(arg.docType, arg.comname, arg.comregid);
             }
             if (arg.docType == "auth_artist_id") {
               console.log(arg.docType);
-              Androidapi.uploadDoc(arg.docType, arg.authorizer_name, arg.authorizer_id);
+              AnJsApi.uploadDoc(arg.docType, arg.authorizer_name, arg.authorizer_id);
             }
             if (arg.docType == "companyreg") {
               console.log(arg.docType);
-              Androidapi.uploadDoc(arg.docType, arg.comname, arg.comregid);
+              AnJsApi.uploadDoc(arg.docType, arg.comname, arg.comregid);
             }
           } else {
-            console.log("Androidapi is not found");
+            console.log("AnJsApi is not found");
           }
 
           break;
