@@ -115,23 +115,23 @@ angular.module('app')
          * android photo document uploads
          */
         case 1:
-          console.log("androidapi defined? ", androidapi);
-          if (angular.isDefined(androidapi)) {
+          console.log("androidapi defined? ", Androidapi);
+          if (angular.isDefined(Androidapi)) {
             console.log("arg.docType defined? ", arg.docType);
             if (arg.docType == "me_id") {
-              androidapi.uploadDoc(arg.docType, arg.name, arg.idcard);
+              Androidapi.uploadDoc(arg.docType, arg.name, arg.idcard);
             }
 
             if (arg.docType == "companynamecard") {
-              androidapi.uploadDoc(arg.docType, arg.comname, arg.comregid);
+              Androidapi.uploadDoc(arg.docType, arg.comname, arg.comregid);
             }
 
             if (arg.docType == "auth_artist_id") {
-              androidapi.uploadDoc(arg.docType, arg.authorizer_name, arg.authorizer_id);
+              Androidapi.uploadDoc(arg.docType, arg.authorizer_name, arg.authorizer_id);
             }
 
             if (arg.docType == "companyreg") {
-              androidapi.uploadDoc(arg.docType, arg.comname, arg.comregid);
+              Androidapi.uploadDoc(arg.docType, arg.comname, arg.comregid);
             }
 
           }
