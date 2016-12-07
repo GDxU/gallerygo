@@ -1,15 +1,13 @@
-/**
- * Created by hesk on 16年12月7日.
- */
-var bowerMin = require('bower-min');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var merge2 = require('merge2');
-var gulpIgnore = require('gulp-ignore');
-var exists = require('path-exists').sync;
-var gulp = require('gulp');
+import bowerMin from 'bower-min'
+import concat from 'gulp-concat'
+import uglify from 'gulp-uglify'
+import merge2 from 'merge2'
+import gulpIgnore from 'gulp-ignore'
+import exists, {sync} from 'path-exists'
+import obfuscate from 'gulp-obfuscate'
+import gulp from 'gulp'
 
-var bowerMinJavaScriptFiles = bowerMin('js', 'min.js');
+const bowerMinJavaScriptFiles = bowerMin('js', 'min.js');
 /*
  * A function that checks whether a Bower file has a minified version.
  */
@@ -17,11 +15,11 @@ function keepNonMinified(file) {
   var keep = true;
   if (file.path.match('\.js$')) {
     var minPath = file.path.replace('.js', '.min.js');
-    keep = !exists(minPath);
+    keep = !sync(minPath);
 
   } else if (file.path.match('\.css$')) {
     var minPath = file.path.replace('.css', '.min.css');
-    keep = !exists(minPath);
+    keep = !sync(minPath);
   }
   // gutil.log( file.path + ' => ' + keep );
   return keep;

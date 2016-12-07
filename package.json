@@ -32,6 +32,7 @@
     "gulp-concat": "2.6.1",
     "gulp-uglify": "2.0.0",
     "gulp-ignore": "2.0.2",
+    "gulp-obfuscate": "0.2.9",
     "merge2": "1.0.2",
     "gulp": "3.9.1",
     "path-exists": "3.0.0",

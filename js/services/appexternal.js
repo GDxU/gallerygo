@@ -64,7 +64,6 @@ angular.module('app')
     };
     Servica.localConvertTr = ($stateParams) => {
       let tag = $stateParams._lang == null ? "cn" : $stateParams._lang, final_lang = "";
-      console.log("get tag", tag);
       if (tag == "ja") {
         final_lang = "en";
       }
@@ -80,7 +79,6 @@ angular.module('app')
       if (tag == "ko") {
         final_lang = "en";
       }
-      console.log("becomes lang", final_lang);
       return final_lang;
     };
 
@@ -111,13 +109,15 @@ angular.module('app')
       );
     };
     Servica.nativeAPI = (request_api_code, arg) => {
-      console.log(arg.docType);
+
       switch (request_api_code) {
         /**
          * android photo document uploads
          */
         case 1:
+          console.log("androidapi defined? ", androidapi);
           if (angular.isDefined(androidapi)) {
+            console.log("arg.docType defined? ", arg.docType);
             if (arg.docType == "me_id") {
               androidapi.uploadDoc(arg.docType, arg.name, arg.idcard);
             }
