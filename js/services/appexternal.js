@@ -63,8 +63,7 @@ angular.module('app')
       return final_lang;
     };
     Servica.localConvertTr = ($stateParams) => {
-      let tag = $stateParams._lang == null ? "cn" : $stateParams._lang, final_lang;
-      
+      let tag = $stateParams._lang == null ? "cn" : $stateParams._lang, final_lang = "";
       if (tag == "ja") {
         final_lang = "en";
       }

@@ -64,8 +64,7 @@ angular.module('app').factory('$Servica', function ($http, $q) {
   };
   Servica.localConvertTr = function ($stateParams) {
     var tag = $stateParams._lang == null ? "cn" : $stateParams._lang,
-        final_lang = void 0;
-
+        final_lang = "";
     if (tag == "ja") {
       final_lang = "en";
     }
