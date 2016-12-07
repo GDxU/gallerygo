@@ -110,21 +110,20 @@ angular.module('app').factory('$Servica', function ($http, $q) {
         console.log("androidapi defined? ", Androidapi);
         // if (angular.isDefined(Androidapi)) {
         if (typeof Androidapi != 'undefined') {
-          console.log("arg defined? ", arg);
-          console.log("arg.docType defined? ", arg.docType);
           if (arg.docType == "me_id") {
+            console.log(arg.docType);
             Androidapi.uploadDoc(arg.docType, arg.name, arg.idcard);
           }
-
           if (arg.docType == "companynamecard") {
+            console.log(arg.docType);
             Androidapi.uploadDoc(arg.docType, arg.comname, arg.comregid);
           }
-
           if (arg.docType == "auth_artist_id") {
+            console.log(arg.docType);
             Androidapi.uploadDoc(arg.docType, arg.authorizer_name, arg.authorizer_id);
           }
-
           if (arg.docType == "companyreg") {
+            console.log(arg.docType);
             Androidapi.uploadDoc(arg.docType, arg.comname, arg.comregid);
           }
         } else {
