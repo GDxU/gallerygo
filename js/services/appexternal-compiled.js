@@ -109,10 +109,10 @@ angular.module('app').factory('$Servica', function ($http, $q) {
       case 1:
         console.log("AnJsApi defined? ", arg);
         // if (angular.isDefined(AnJsApi)) {
+
         console.log(window);
-
         console.log(window.AnJsApi);
-
+        console.log(window["AnJsApi"]);
         console.log(AnJsApi);
 
         if (typeof window.AnJsApi != 'undefined') {
