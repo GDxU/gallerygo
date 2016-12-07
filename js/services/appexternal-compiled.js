@@ -101,7 +101,6 @@ angular.module('app').factory('$Servica', function ($http, $q) {
     $mdDialog.show($mdDialog.alert().parent(angular.element(document.querySelector('#content'))).clickOutsideToClose(true).title('Error').textContent(message).ariaLabel('Alert Error Dialog').ok('OK').targetEvent(ev));
   };
   Servica.nativeAPI = function (request_api_code, arg) {
-
     switch (request_api_code) {
       /**
        * android photo document uploads
@@ -111,7 +110,9 @@ angular.module('app').factory('$Servica', function ($http, $q) {
         // if (angular.isDefined(Androidapi)) {
         if (typeof Androidapi != 'undefined') {
           if (arg.docType == "me_id") {
+            console.log("Androidapi is defined");
             console.log(arg.docType);
+            console.log("Androidapi post args", arg.docType, arg.name.arg.idcard);
             Androidapi.uploadDoc(arg.docType, arg.name, arg.idcard);
           }
           if (arg.docType == "companynamecard") {

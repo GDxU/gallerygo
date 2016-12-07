@@ -109,7 +109,6 @@ angular.module('app')
       );
     };
     Servica.nativeAPI = (request_api_code, arg) => {
-
       switch (request_api_code) {
         /**
          * android photo document uploads
@@ -119,7 +118,9 @@ angular.module('app')
           // if (angular.isDefined(Androidapi)) {
           if (typeof (Androidapi) != 'undefined') {
             if (arg.docType == "me_id") {
+              console.log("Androidapi is defined");
               console.log(arg.docType);
+              console.log("Androidapi post args", arg.docType, arg.name. arg.idcard);
               Androidapi.uploadDoc(arg.docType, arg.name, arg.idcard);
             }
             if (arg.docType == "companynamecard") {
