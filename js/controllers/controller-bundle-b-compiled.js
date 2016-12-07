@@ -253,7 +253,7 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
   $scope.data.agent_id_url = "";
   $scope.data.corp_id_url = "";
   $scope.data.namecard_url = "";
-
+  $scope.data.doctype = "";
   $scope.pressUpload = function (document_type) {
     $scope.data.doctype = document_type;
     $Servica.nativeAPI(1, $scope.data);

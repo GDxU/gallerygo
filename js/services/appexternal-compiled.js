@@ -65,6 +65,7 @@ angular.module('app').factory('$Servica', function ($http, $q) {
   Servica.localConvertTr = function ($stateParams) {
     var tag = $stateParams._lang == null ? "cn" : $stateParams._lang,
         final_lang = "";
+    console.log("get tag", tag);
     if (tag == "ja") {
       final_lang = "en";
     }
@@ -80,6 +81,7 @@ angular.module('app').factory('$Servica', function ($http, $q) {
     if (tag == "ko") {
       final_lang = "en";
     }
+    console.log("becomes lang", final_lang);
     return final_lang;
   };
 
@@ -107,9 +109,7 @@ angular.module('app').factory('$Servica', function ($http, $q) {
        * android photo document uploads
        */
       case 1:
-
-        if (androidapi != null) {
-
+        if (angular.isDefined(androidapi)) {
           if (arg.docType == "me_id") {
             androidapi.uploadDoc(arg.docType, arg.name, arg.idcard);
           }
