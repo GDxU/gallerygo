@@ -255,7 +255,8 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
   $scope.data.namecard_url = "";
 
   $scope.pressUpload = function (document_type) {
-    console.log(document_type);
+    $scope.data.doctype = document_type;
+    $Servica.nativeAPI(1, $scope.data);
   };
   $scope.submissionComplete = function () {
     console.log('document submission upload now');

@@ -108,6 +108,40 @@ angular.module('app')
           .targetEvent(ev)
       );
     };
+    Servica.nativeAPI = (request_api_code, arg) => {
+      console.log(arg.docType);
+      switch (request_api_code) {
+        /**
+         * android photo document uploads
+         */
+        case 1:
+
+          if (androidapi != null) {
+
+            if (arg.docType == "me_id") {
+              androidapi.uploadDoc(arg.docType, arg.name, arg.idcard);
+            }
+
+            if (arg.docType == "companynamecard") {
+              androidapi.uploadDoc(arg.docType, arg.comname, arg.comregid);
+            }
+
+            if (arg.docType == "auth_artist_id") {
+              androidapi.uploadDoc(arg.docType, arg.authorizer_name, arg.authorizer_id);
+            }
+
+            if (arg.docType == "companyreg") {
+              androidapi.uploadDoc(arg.docType, arg.comname, arg.comregid);
+            }
+
+          }
+
+          break;
+        default:
+          break;
+      }
+
+    };
     return Servica;
   })
 

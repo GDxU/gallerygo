@@ -100,6 +100,38 @@ angular.module('app').factory('$Servica', function ($http, $q) {
     // $mdToast.show($mdToast.simple().textContent(message).position('bottom right').hideDelay(3000));
     $mdDialog.show($mdDialog.alert().parent(angular.element(document.querySelector('#content'))).clickOutsideToClose(true).title('Error').textContent(message).ariaLabel('Alert Error Dialog').ok('OK').targetEvent(ev));
   };
+  Servica.nativeAPI = function (request_api_code, arg) {
+    console.log(arg.docType);
+    switch (request_api_code) {
+      /**
+       * android photo document uploads
+       */
+      case 1:
+
+        if (androidapi != null) {
+
+          if (arg.docType == "me_id") {
+            androidapi.uploadDoc(arg.docType, arg.name, arg.idcard);
+          }
+
+          if (arg.docType == "companynamecard") {
+            androidapi.uploadDoc(arg.docType, arg.comname, arg.comregid);
+          }
+
+          if (arg.docType == "auth_artist_id") {
+            androidapi.uploadDoc(arg.docType, arg.authorizer_name, arg.authorizer_id);
+          }
+
+          if (arg.docType == "companyreg") {
+            androidapi.uploadDoc(arg.docType, arg.comname, arg.comregid);
+          }
+        }
+
+        break;
+      default:
+        break;
+    }
+  };
   return Servica;
 });
 
