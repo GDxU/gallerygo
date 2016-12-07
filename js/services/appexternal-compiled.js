@@ -109,8 +109,9 @@ angular.module('app').factory('$Servica', function ($http, $q) {
         console.log("androidapi defined? ", Androidapi);
         // if (angular.isDefined(Androidapi)) {
         if (typeof Androidapi != 'undefined') {
+          console.log("Androidapi is defined");
           if (arg.docType == "me_id") {
-            console.log("Androidapi is defined");
+            console.log("docType is matched");
             console.log(arg.docType);
             console.log("Androidapi post args", arg.docType, arg.name.arg.idcard);
             Androidapi.uploadDoc(arg.docType, arg.name, arg.idcard);
