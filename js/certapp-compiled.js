@@ -20,6 +20,14 @@ angular.module('app', ['ui.router', 'lbServices', 'ng.deviceDetector', 'ngTouch'
     url: '/contract-3/{_lang}',
     templateUrl: 'views/enter-contract-3.html',
     controller: 'C3'
+  }).state('FinishingCertificationSupport', {
+    url: '/cert-support-a/{_lang}/{_data}/{_from}',
+    templateUrl: 'views/enter-supportings.html',
+    controller: 'CertSupportings'
+  }).state('Preview', {
+    url: '/preview/:id/:mode/:lang',
+    templateUrl: 'views/simple-view.html',
+    controller: 'PreviewController'
   });
   // $mdIconProvider.iconSet("avatars", 'icons/avatar-icons.svg', 128);
   console.log("=config done=");

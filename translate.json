@@ -123,6 +123,26 @@
     "express_disagree": {
       "cn": "放弃",
       "en": "Quit"
+    },
+    "press_upload_photo_id_agent": {
+      "cn": "按这里上传你的照片ID",
+      "en": "Press here to upload your photo ID"
+    },
+    "press_upload_photo_id_artist": {
+      "cn": "按这里上传授权人照片ID",
+      "en": "Press here to upload authorizing artist ID"
+    },
+    "press_upload_company_registration": {
+      "cn": "按这里上传公司照片ID",
+      "en": "Press here to upload certification of your company"
+    },
+    "press_upload_company_name_card": {
+      "cn": "按这里上传你的公司名片",
+      "en": "Press here to upload your name card"
+    },
+    "title_supportings": {
+      "cn": "上传支持文档",
+      "en": "Upload supporting documents"
     }
   }
 }

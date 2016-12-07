@@ -97,10 +97,13 @@ angular.module('app')
         $scope.agree = (ev)=> {
           console.log("get is now");
           if ($Servica.checkEmptyFields($scope.data)) {
-            console.log("get is now 1 ");
+            $state.go("FinishingCertificationSupport", {
+              _lang: $Servica.localConvertTr($stateParams),
+              _from: 1,
+              _data: angular.toJson($scope.data, false)
+            });
           } else {
             $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
-            console.log("get is now 2");
           }
         };
         $scope.disagreeandexit = ()=> {
@@ -157,9 +160,12 @@ angular.module('app')
 
         $scope.agree = (ev)=> {
           if ($Servica.checkEmptyFields($scope.data)) {
-
+            $state.go("FinishingCertificationSupport", {
+              _lang: $Servica.localConvertTr($stateParams),
+              _from: 2,
+              _data: angular.toJson($scope.data, false)
+            });
           } else {
-
             $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
           }
         };
@@ -220,7 +226,11 @@ angular.module('app')
 
         $scope.agree = (ev)=> {
           if ($Servica.checkEmptyFields($scope.data)) {
-
+            $state.go("FinishingCertificationSupport", {
+              _lang: $Servica.localConvertTr($stateParams),
+              _from: 3,
+              _data: angular.toJson($scope.data, false)
+            });
           } else {
             $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
           }
@@ -230,6 +240,58 @@ angular.module('app')
         };
       }])
 
+  .controller('CertSupportings',
+    ['$scope', '$stateParams', '$q', '$http', '$Servica',
+      ($scope, $stateParams, $q, $http, $Servica)=> {
+        // console.log($stateParams);
+        $Servica.getTranslateFile().then((tr_data)=> {
+          var lang = $Servica.localConvertTr($stateParams);
+          $scope.str.title_supportings = tr_data.title_supportings[lang];
+          $scope.str.press_upload_photo_id_agent = tr_data.press_upload_photo_id_agent[lang];
+          $scope.str.press_upload_company_registration = tr_data.press_upload_company_registration[lang];
+          $scope.str.press_upload_company_name_card = tr_data.press_upload_company_name_card[lang];
+          $scope.str.press_upload_photo_id_artist = tr_data.press_upload_photo_id_artist[lang];
+          $scope.str.erroremptyfield = tr_data.erroremptyfield[lang];
+        });
+
+        $scope.str = {
+          title_supportings: "---",
+          press_upload_photo_id_agent: "---",
+          press_upload_company_registration: "---",
+          press_upload_company_name_card: "---",
+          press_upload_photo_id_artist: "---",
+          erroremptyfield: "error"
+        };
+        $scope.displaycontrol = {
+          contract1: false,
+          contract2: false,
+          contract3: false
+        };
+        if (parseInt($stateParams._from) == 1) {
+          $scope.data = angular.fromJson($stateParams._data);
+          $scope.displaycontrol.contract1 = true;
+        } else if (parseInt($stateParams._from) == 2) {
+          $scope.data = angular.fromJson($stateParams._data);
+          $scope.displaycontrol.contract2 = true;
+        } else if (parseInt($stateParams._from) == 3) {
+          $scope.data = angular.fromJson($stateParams._data);
+          $scope.displaycontrol.contract3 = true;
+        }
+        $scope.data.artist_id_url = "";
+        $scope.data.agent_id_url = "";
+        $scope.data.corp_id_url = "";
+        $scope.data.namecard_url = "";
+
+        $scope.pressUpload = (document_type)=> {
+          console.log(document_type);
+
+        };
+        $scope.submissionComplete = ()=> {
+          console.log('document submission upload now');
+
+        };
+      }
+    ])
 
   .controller('PreviewController',
     ['$scope', '$stateParams', '$q', '$http', 'Basemap', '$Servica',

@@ -77,3 +77,37 @@
 .c1 {
     font-weight: bold;
 }
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.img-placeholder {
+    background: #a4bbcf;
+    padding: 10px;
+}
+
+.dash-border {
+    height: 100%;
+    width: 100%;
+    border: 4px dashed white;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    padding: 10px 0;
+}
+
+.dash-border .plus {
+    font-size: 80px;
+    line-height: 1.3;
+}
+
+.dash-border .text {
+    font-size: 20px;
+}
+
+.float {
+    float: left;
+    margin: 40px;
+}
