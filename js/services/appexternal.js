@@ -109,32 +109,33 @@ angular.module('app')
       );
     };
     Servica.nativeAPI = (request_api_code, arg) => {
+      //  console.log(arg.doctype);
       switch (request_api_code) {
         /**
          * android photo document uploads
          */
         case 1:
-          console.log("AnJsApi defined? ", AnJsApi);
+          // console.log("AnJsApi defined? ", arg);
           // if (angular.isDefined(AnJsApi)) {
           if (typeof (AnJsApi) != 'undefined') {
-            console.log("AnJsApi is defined");
-            if (arg.docType == "me_id") {
-              console.log("docType is matched");
-              console.log(arg.docType);
-              console.log("AnJsApi post args", arg.docType, arg.name. arg.idcard);
-              AnJsApi.uploadDoc(arg.docType, arg.name, arg.idcard);
+            //  console.log("AnJsApi is defined");
+            if (arg.doctype == "me_id") {
+              //   console.log("doctype is matched");
+              //   console.log(arg.doctype);
+              //    console.log("AnJsApi post args", arg.doctype, arg.name. arg.idcard);
+              AnJsApi.uploadDoc(arg.doctype, arg.name, arg.idcard);
             }
-            if (arg.docType == "companynamecard") {
-              console.log(arg.docType);
-              AnJsApi.uploadDoc(arg.docType, arg.comname, arg.comregid);
+            if (arg.doctype == "companynamecard") {
+              //   console.log(arg.doctype);
+              AnJsApi.uploadDoc(arg.doctype, arg.comname, arg.comregid);
             }
-            if (arg.docType == "auth_artist_id") {
-              console.log(arg.docType);
-              AnJsApi.uploadDoc(arg.docType, arg.authorizer_name, arg.authorizer_id);
+            if (arg.doctype == "auth_artist_id") {
+              //   console.log(arg.doctype);
+              AnJsApi.uploadDoc(arg.doctype, arg.authorizer_name, arg.authorizer_id);
             }
-            if (arg.docType == "companyreg") {
-              console.log(arg.docType);
-              AnJsApi.uploadDoc(arg.docType, arg.comname, arg.comregid);
+            if (arg.doctype == "companyreg") {
+              //   console.log(arg.doctype);
+              AnJsApi.uploadDoc(arg.doctype, arg.comname, arg.comregid);
             }
           } else {
             console.log("AnJsApi is not found");
