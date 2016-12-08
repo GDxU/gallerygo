@@ -140,6 +140,5 @@ angular.module('app')
     };
     return Servica;
   })
-
-
 ;
+

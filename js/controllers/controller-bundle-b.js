@@ -158,6 +158,28 @@ angular.module('app')
 
         $scope.trustAsHtml = $sce.trustAsHtml;
 
+        window.addImageToField = (doctype, path_image) => {
+          switch (doctype) {
+            case "me_id":
+              $scope.data.agent_id_url = path_image;
+              break;
+            case "companynamecard":
+              $scope.data.namecard_url = path_image;
+              break;
+
+            case "auth_artist_id":
+              $scope.data.artist_id_url = path_image;
+              break;
+
+            case "companyreg":
+              $scope.data.corp_id_url = path_image;
+              break;
+
+            default:
+              break;
+          }
+        };
+
         $scope.agree = (ev)=> {
           if ($Servica.checkEmptyFields($scope.data)) {
             $state.go("FinishingCertificationSupport", {
