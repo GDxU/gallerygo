@@ -142,28 +142,6 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
 
   $scope.trustAsHtml = $sce.trustAsHtml;
 
-  window.addImageToField = function (doctype, path_image) {
-    switch (doctype) {
-      case "me_id":
-        $scope.data.agent_id_url = path_image;
-        break;
-      case "companynamecard":
-        $scope.data.namecard_url = path_image;
-        break;
-
-      case "auth_artist_id":
-        $scope.data.artist_id_url = path_image;
-        break;
-
-      case "companyreg":
-        $scope.data.corp_id_url = path_image;
-        break;
-
-      default:
-        break;
-    }
-  };
-
   $scope.agree = function (ev) {
     if ($Servica.checkEmptyFields($scope.data)) {
       $state.go("FinishingCertificationSupport", {
@@ -282,6 +260,28 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
   };
   $scope.submissionComplete = function () {
     console.log('document submission upload now');
+  };
+
+  window.addImageToField = function (doctype, path_image) {
+    switch (doctype) {
+      case "me_id":
+        $scope.data.agent_id_url = path_image;
+        break;
+      case "companynamecard":
+        $scope.data.namecard_url = path_image;
+        break;
+
+      case "auth_artist_id":
+        $scope.data.artist_id_url = path_image;
+        break;
+
+      case "companyreg":
+        $scope.data.corp_id_url = path_image;
+        break;
+
+      default:
+        break;
+    }
   };
 }]).controller('PreviewController', ['$scope', '$stateParams', '$q', '$http', 'Basemap', '$Servica', function ($scope, $stateParams, $q, $http, _basemap, $Servica) {
   var googleplayurl = 'https://play.google.com/store/apps/details?id=com.zyntauri.gogallery&hl=zh-TW';
