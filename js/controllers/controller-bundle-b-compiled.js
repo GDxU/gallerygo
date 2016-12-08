@@ -224,6 +224,7 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
     $scope.str.press_upload_company_name_card = tr_data.press_upload_company_name_card[lang];
     $scope.str.press_upload_photo_id_artist = tr_data.press_upload_photo_id_artist[lang];
     $scope.str.erroremptyfield = tr_data.erroremptyfield[lang];
+    $scope.str.press_to_complete = tr_data.press_to_complete[lang];
   });
 
   $scope.str = {
@@ -232,6 +233,7 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
     press_upload_company_registration: "---",
     press_upload_company_name_card: "---",
     press_upload_photo_id_artist: "---",
+    press_to_complete: "---",
     erroremptyfield: "error"
   };
   $scope.displaycontrol = {
@@ -255,10 +257,12 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
   $scope.data.corp_id_url = "";
   $scope.data.namecard_url = "";
   $scope.data.doctype = "";
+
   $scope.pressUpload = function (document_type) {
     $scope.data.doctype = document_type;
     $Servica.nativeAPI(1, $scope.data);
   };
+
   $scope.submissionComplete = function () {
     console.log('document submission upload now');
   };

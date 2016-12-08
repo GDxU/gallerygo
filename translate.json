@@ -143,6 +143,10 @@
     "title_supportings": {
       "cn": "上传支持文档",
       "en": "Upload supporting documents"
+    },
+    "press_to_complete": {
+      "cn": "完成支持文件",
+      "en": "Complete Supportings"
     }
   }
 }
