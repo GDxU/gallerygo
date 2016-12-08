@@ -279,6 +279,7 @@ angular.module('app')
         }
         $scope.data.artist_id_url = "";
         $scope.data.agent_id_url = "";
+        //$Servica.getSampleImage();
         $scope.data.corp_id_url = "";
         $scope.data.namecard_url = "";
         $scope.data.doctype = "";
@@ -291,6 +292,9 @@ angular.module('app')
         };
 
         window.addImageToField = (doctype, path_image) => {
+          console.log('make sure it works now.');
+          console.log(path_image);
+          console.log('============');
           switch (doctype) {
             case "me_id":
               $scope.data.agent_id_url = path_image;

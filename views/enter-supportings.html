@@ -11,10 +11,10 @@
                 <md-card ng-cloak
                          ng-if="displaycontrol.contract1 || displaycontrol.contract2|| displaycontrol.contract3">
 
-                    <img ng-if="data.agent_id_url"
+             <!--       <img ng-if="data.agent_id_url"
                          ng-src="{{data.agent_id_url}}"
                          class="md-card-image"
-                         alt="photo area"/>
+                    />-->
 
                     <md-card-title>
                         <md-card-title-text>
@@ -24,6 +24,15 @@
                                 {{data.idcard}}
                             </span>
                         </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-md card-media">
+                                <img
+                                    ng-if="data.agent_id_url"
+                                     ng-src="./image/icons/tick-inside-circle.svg"
+                                     class="md-card-image"
+                                />
+                            </div>
+                        </md-card-title-media>
                     </md-card-title>
 
                     <md-card-content class="img-placeholder" ng-click="pressUpload('me_id')">
@@ -35,10 +44,10 @@
 
                 <md-card ng-cloak ng-if="displaycontrol.contract3">
 
-                    <img ng-if="data.namecard_url"
+             <!--       <img ng-if="data.namecard_url"
                          ng-src="{{data.namecard_url}}"
                          class="md-card-image"
-                         alt="photo area"/>
+                         alt="photo area"/>-->
 
                     <md-card-title>
                         <md-card-title-text>
@@ -54,6 +63,17 @@
                                 {{data.comregid}}
                             </span>
                         </md-card-title-text>
+
+                        <md-card-title-media>
+                            <div class="md-media-md card-media">
+                                <img
+                                        ng-if="data.namecard_url"
+                                        ng-src="./image/icons/tick-inside-circle.svg"
+                                        class="md-card-image"
+                                />
+                            </div>
+                        </md-card-title-media>
+
                     </md-card-title>
                     <md-card-content class="img-placeholder" ng-click="pressUpload('companynamecard')">
                         <div class="dash-border">
@@ -69,10 +89,10 @@
 
                 <md-card ng-cloak ng-if="displaycontrol.contract2">
 
-                    <img ng-if="data.artist_id_url"
+               <!--     <img ng-if="data.artist_id_url"
                          ng-src="{{data.artist_id_url}}"
                          class="md-card-image"
-                         alt="photo area"/>
+                         alt="photo area"/>-->
 
                     <md-card-title>
                         <md-card-title-text>
@@ -82,6 +102,18 @@
                                 {{data.authorizer_id}}
                             </span>
                         </md-card-title-text>
+
+                        <md-card-title-media>
+                            <div class="md-media-md card-media">
+                                <img
+                                        ng-if="data.artist_id_url"
+                                        ng-src="./image/icons/tick-inside-circle.svg"
+                                        class="md-card-image"
+                                />
+                            </div>
+                        </md-card-title-media>
+
+
                     </md-card-title>
 
                     <md-card-content class="img-placeholder" ng-click="pressUpload('auth_artist_id')">
@@ -95,10 +127,10 @@
 
                 <md-card ng-cloak ng-if="displaycontrol.contract3">
 
-                    <img ng-if="data.corp_id_url"
+         <!--           <img ng-if="data.corp_id_url"
                          ng-src="{{data.corp_id_url}}"
                          class="md-card-image"
-                         alt="photo area"/>
+                         alt="photo area"/>-->
 
                     <md-card-title>
                         <md-card-title-text>
@@ -114,6 +146,17 @@
                                 {{data.comregid}}
                             </span>
                         </md-card-title-text>
+
+                        <md-card-title-media>
+                            <div class="md-media-md card-media">
+                                <img
+                                        ng-if="data.corp_id_url"
+                                        ng-src="./image/icons/tick-inside-circle.svg"
+                                        class="md-card-image"
+                                />
+                            </div>
+                        </md-card-title-media>
+
                     </md-card-title>
                     <md-card-content class="img-placeholder" ng-click="pressUpload('companyreg')">
                         <div class="dash-border">

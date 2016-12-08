@@ -129,6 +129,7 @@ angular.module('app').factory('$Servica', function ($http, $q) {
         break;
     }
   };
+
   return Servica;
 });
 
