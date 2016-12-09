@@ -214,7 +214,7 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
     }
   };
   $scope.disagreeandexit = function () {};
-}]).controller('CertSupportings', ['$scope', '$stateParams', '$q', '$http', '$Servica', function ($scope, $stateParams, $q, $http, $Servica) {
+}]).controller('CertSupportings', ['$scope', '$stateParams', '$q', '$http', '$Servica', '$mdDialog', function ($scope, $stateParams, $q, $http, $Servica, $mdDialog) {
   // console.log($stateParams);
   $Servica.getTranslateFile().then(function (tr_data) {
     var lang = $Servica.localConvertTr($stateParams);
@@ -253,7 +253,6 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
   }
   $scope.data.artist_id_url = "";
   $scope.data.agent_id_url = "";
-  //$Servica.getSampleImage();
   $scope.data.corp_id_url = "";
   $scope.data.namecard_url = "";
   $scope.data.doctype = "";
@@ -263,10 +262,20 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
     $Servica.nativeAPI(1, $scope.data);
   };
 
-  $scope.submissionComplete = function () {
-    console.log('document submission upload now');
+  $scope.submissionComplete = function (ev) {
+    if ($scope.displaycontrol.contract3 && $scope.data.corp_id_url != "" && $scope.data.namecard_url != "") {
+      $Servica.nativeAPI(2, null);
+    } else if ($scope.displaycontrol.contract2 && $scope.data.agent_id_url != "" && $scope.data.artist_id_url != "") {
+      $Servica.nativeAPI(2, null);
+    } else if ($scope.displaycontrol.contract1 && $scope.data.agent_id_url != "") {
+      $Servica.nativeAPI(2, null);
+    } else {
+      $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
+    }
   };
-
+  window.confirm_contract_after = function () {
+    console.log('confirmed contract after');
+  };
   window.addImageToField = function (doctype, path_image) {
     console.log('make sure it works now.');
     console.log(path_image);

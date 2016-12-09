@@ -109,7 +109,6 @@ angular.module('app')
       );
     };
     Servica.nativeAPI = (request_api_code, arg) => {
-      //  console.log(arg.doctype);
       switch (request_api_code) {
         /**
          * android photo document uploads
@@ -129,13 +128,21 @@ angular.module('app')
               window.AnJsApi.uploadDoc(arg.doctype, arg.comname, arg.comregid);
             }
           } else {
-          //  console.log("AnJsApi is not found");
             if (typeof (window.addImageToField) != 'undefined') {
               console.log("mock pass only");
               window.addImageToField(arg.doctype, "---");
             }
           }
           break;
+        case 2:
+          if (typeof (window.AnJsApi) != 'undefined') {
+            window.AnJsApi.confirm_contract();
+          } else {
+            if (typeof (window.confirm_contract_after) != 'undefined') {
+              console.log("mock pass only");
+              window.confirm_contract_after();
+            }
+          }
         default:
           break;
       }
