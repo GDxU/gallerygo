@@ -129,7 +129,11 @@ angular.module('app')
               window.AnJsApi.uploadDoc(arg.doctype, arg.comname, arg.comregid);
             }
           } else {
-            console.log("AnJsApi is not found");
+          //  console.log("AnJsApi is not found");
+            if (typeof (window.addImageToField) != 'undefined') {
+              console.log("mock pass only");
+              window.addImageToField(arg.doctype, "---");
+            }
           }
 
           break;
