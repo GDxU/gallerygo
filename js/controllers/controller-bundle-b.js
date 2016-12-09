@@ -267,7 +267,9 @@ angular.module('app')
         $scope.displaycontrol = {
           contract1: false,
           contract2: false,
-          contract3: false
+          contract3: false,
+          panel_show: true,
+          disable_final: true
         };
         if (parseInt($stateParams._from) == 1) {
           $scope.data = angular.fromJson($stateParams._data);
@@ -284,7 +286,6 @@ angular.module('app')
         $scope.data.corp_id_url = "";
         $scope.data.namecard_url = "";
         $scope.data.doctype = "";
-
         $scope.pressUpload = (document_type)=> {
           $scope.data.doctype = document_type;
           $Servica.nativeAPI(1, $scope.data);
@@ -293,12 +294,30 @@ angular.module('app')
         $scope.submissionComplete = (ev)=> {
           if ($scope.displaycontrol.contract3 && $scope.data.corp_id_url != "" && $scope.data.namecard_url != "") {
             $Servica.nativeAPI(2, null);
+            $scope.displaycontrol.panel_show = false;
+            $scope.displaycontrol.disable_final = true;
+            $scope.$apply();
           } else if ($scope.displaycontrol.contract2 && $scope.data.agent_id_url != "" && $scope.data.artist_id_url != "") {
             $Servica.nativeAPI(2, null);
+            $scope.displaycontrol.panel_show = false;
+            $scope.displaycontrol.disable_final = true;
+            $scope.$apply();
           } else if ($scope.displaycontrol.contract1 && $scope.data.agent_id_url != "") {
             $Servica.nativeAPI(2, null);
+            $scope.displaycontrol.panel_show = false;
+            $scope.displaycontrol.disable_final = true;
+            $scope.$apply();
           } else {
             $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
+          }
+        };
+        $scope.check = ()=> {
+          if ($scope.displaycontrol.contract3 && $scope.data.corp_id_url != "" && $scope.data.namecard_url != "") {
+            $scope.displaycontrol.disable_final = false;
+          } else if ($scope.displaycontrol.contract2 && $scope.data.agent_id_url != "" && $scope.data.artist_id_url != "") {
+            $scope.displaycontrol.disable_final = false;
+          } else if ($scope.displaycontrol.contract1 && $scope.data.agent_id_url != "") {
+            $scope.displaycontrol.disable_final = false;
           }
         };
         window.confirm_contract_after = ()=> {
@@ -324,6 +343,7 @@ angular.module('app')
             default:
               break;
           }
+          $scope.check();
           $scope.$apply();
         };
       }

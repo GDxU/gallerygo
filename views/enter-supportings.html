@@ -5,16 +5,16 @@
         </h2>
     </md-toolbar>
     <div id="content">
-        <md-content class="md-padding" layout-xs="column" layout="row">
+        <md-content class="md-padding" layout-xs="column" layout="row" ng-if="displaycontrol.panel_show">
             <div flex-xs flex-gt-xs="50" layout="column">
 
                 <md-card ng-cloak
                          ng-if="displaycontrol.contract1 || displaycontrol.contract2|| displaycontrol.contract3">
 
-             <!--       <img ng-if="data.agent_id_url"
-                         ng-src="{{data.agent_id_url}}"
-                         class="md-card-image"
-                    />-->
+                    <!--       <img ng-if="data.agent_id_url"
+                                ng-src="{{data.agent_id_url}}"
+                                class="md-card-image"
+                           />-->
 
                     <md-card-title>
                         <md-card-title-text>
@@ -27,9 +27,9 @@
                         <md-card-title-media>
                             <div class="md-media-md card-media">
                                 <img
-                                    ng-if="data.agent_id_url"
-                                     ng-src="./image/icons/tick-inside-circle.svg"
-                                     class="md-card-image"
+                                        ng-if="data.agent_id_url"
+                                        ng-src="./image/icons/tick-inside-circle.svg"
+                                        class="md-card-image"
                                 />
                             </div>
                         </md-card-title-media>
@@ -44,10 +44,10 @@
 
                 <md-card ng-cloak ng-if="displaycontrol.contract3">
 
-             <!--       <img ng-if="data.namecard_url"
-                         ng-src="{{data.namecard_url}}"
-                         class="md-card-image"
-                         alt="photo area"/>-->
+                    <!--       <img ng-if="data.namecard_url"
+                                ng-src="{{data.namecard_url}}"
+                                class="md-card-image"
+                                alt="photo area"/>-->
 
                     <md-card-title>
                         <md-card-title-text>
@@ -89,10 +89,10 @@
 
                 <md-card ng-cloak ng-if="displaycontrol.contract2">
 
-               <!--     <img ng-if="data.artist_id_url"
-                         ng-src="{{data.artist_id_url}}"
-                         class="md-card-image"
-                         alt="photo area"/>-->
+                    <!--     <img ng-if="data.artist_id_url"
+                              ng-src="{{data.artist_id_url}}"
+                              class="md-card-image"
+                              alt="photo area"/>-->
 
                     <md-card-title>
                         <md-card-title-text>
@@ -127,10 +127,10 @@
 
                 <md-card ng-cloak ng-if="displaycontrol.contract3">
 
-         <!--           <img ng-if="data.corp_id_url"
-                         ng-src="{{data.corp_id_url}}"
-                         class="md-card-image"
-                         alt="photo area"/>-->
+                    <!--           <img ng-if="data.corp_id_url"
+                                    ng-src="{{data.corp_id_url}}"
+                                    class="md-card-image"
+                                    alt="photo area"/>-->
 
                     <md-card-title>
                         <md-card-title-text>
@@ -164,14 +164,22 @@
                         </div>
                     </md-card-content>
                 </md-card>
-
-
             </div>
         </md-content>
 
+        <div layout="row" ng-if="!displaycontrol.panel_show"
+             layout-sm="column"
+             layout-align="center"
+             layout-padding>
+            <md-progress-circular md-diameter="80"></md-progress-circular>
+        </div>
+
         <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
 
-            <md-button flex="100" class="md-primary md-raised" ng-click="submissionComplete()">
+            <md-button ng-disabled="displaycontrol.disable_final"
+                       flex="100"
+                       class="md-primary md-raised"
+                       ng-click="submissionComplete()">
                 {{str.press_to_complete}}
             </md-button>
 
