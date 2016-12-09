@@ -55,8 +55,8 @@ angular.module('app')
     }])
 
   .controller('C1',
-    ['$scope', '$state', '$stateParams', '$Servica', '$sce', '$mdDialog',
-      ($scope, $state, $stateParams, $Servica, $sce, $mdDialog)=> {
+    ['$scope', '$state', '$stateParams', '$Servica', '$sce', '$mdToast',
+      ($scope, $state, $stateParams, $Servica, $sce, $mdToast)=> {
 
         $Servica.getTranslateFile().then((tr_data)=> {
           var lang = $Servica.localConvertTr($stateParams);
@@ -103,7 +103,7 @@ angular.module('app')
               _data: angular.toJson($scope.data, false)
             });
           } else {
-            $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
+            $Servica.popError($mdToast, $scope.str.erroremptyfield);
           }
         };
         $scope.disagreeandexit = ()=> {
@@ -254,7 +254,6 @@ angular.module('app')
           $scope.str.erroremptyfield = tr_data.erroremptyfield[lang];
           $scope.str.press_to_complete = tr_data.press_to_complete[lang];
         });
-
         $scope.str = {
           title_supportings: "---",
           press_upload_photo_id_agent: "---",
@@ -290,7 +289,6 @@ angular.module('app')
           $scope.data.doctype = document_type;
           $Servica.nativeAPI(1, $scope.data);
         };
-
         $scope.submissionComplete = (ev)=> {
           if ($scope.displaycontrol.contract3 && $scope.data.corp_id_url != "" && $scope.data.namecard_url != "") {
             $Servica.nativeAPI(2, null);

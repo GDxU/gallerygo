@@ -3,15 +3,12 @@
  */
 
 angular.module('app')
-
   .factory('$Servica', ($http, $q)=> {
-
     const googleplayurl = 'https://play.google.com/store/apps/details?id=com.zyntauri.gogallery&hl=zh-TW';
     const detectionuser = 'https://api.userinfo.io/userinfos';
     const conp1 = 'gallerygo/master/configurations.json';
     const conp2 = 'rawgit';
     const conp3 = 'https://cdn.' + conp2 + '.com/GDxU/';
-
     const Servica = {};
     Servica.getTranslateFile = ()=> {
       var deferred = $q.defer();
@@ -22,7 +19,6 @@ angular.module('app')
       });
       return deferred.promise;
     };
-
     Servica.getGeo = () => {
       var deferred = $q.defer();
       $http({method: 'GET', url: detectionuser}).then((response) => {
@@ -32,7 +28,6 @@ angular.module('app')
       });
       return deferred.promise;
     };
-
     Servica.getMetaDict = () => {
       var deferred = $q.defer();
       $http({
@@ -45,7 +40,6 @@ angular.module('app')
       });
       return deferred.promise;
     };
-
     Servica.localConvert = (tag) => {
       var final_lang = tag;
       if (tag == "ja") {
@@ -81,7 +75,6 @@ angular.module('app')
       }
       return final_lang;
     };
-
     Servica.checkEmptyFields = (scope)=> {
       let result = true;
       for (var h in scope) {
@@ -91,7 +84,6 @@ angular.module('app')
       }
       return result;
     };
-
     Servica.popError = ($mdToast, message)=> {
       $mdToast.show($mdToast.simple().textContent(message).position('bottom right').hideDelay(3000));
     };
@@ -146,9 +138,7 @@ angular.module('app')
         default:
           break;
       }
-
     };
-
     return Servica;
   })
 ;

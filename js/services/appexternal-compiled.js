@@ -5,13 +5,11 @@
  */
 
 angular.module('app').factory('$Servica', function ($http, $q) {
-
   var googleplayurl = 'https://play.google.com/store/apps/details?id=com.zyntauri.gogallery&hl=zh-TW';
   var detectionuser = 'https://api.userinfo.io/userinfos';
   var conp1 = 'gallerygo/master/configurations.json';
   var conp2 = 'rawgit';
   var conp3 = 'https://cdn.' + conp2 + '.com/GDxU/';
-
   var Servica = {};
   Servica.getTranslateFile = function () {
     var deferred = $q.defer();
@@ -22,7 +20,6 @@ angular.module('app').factory('$Servica', function ($http, $q) {
     });
     return deferred.promise;
   };
-
   Servica.getGeo = function () {
     var deferred = $q.defer();
     $http({ method: 'GET', url: detectionuser }).then(function (response) {
@@ -32,7 +29,6 @@ angular.module('app').factory('$Servica', function ($http, $q) {
     });
     return deferred.promise;
   };
-
   Servica.getMetaDict = function () {
     var deferred = $q.defer();
     $http({
@@ -45,7 +41,6 @@ angular.module('app').factory('$Servica', function ($http, $q) {
     });
     return deferred.promise;
   };
-
   Servica.localConvert = function (tag) {
     var final_lang = tag;
     if (tag == "ja") {
@@ -82,7 +77,6 @@ angular.module('app').factory('$Servica', function ($http, $q) {
     }
     return final_lang;
   };
-
   Servica.checkEmptyFields = function (scope) {
     var result = true;
     for (var h in scope) {
@@ -92,7 +86,6 @@ angular.module('app').factory('$Servica', function ($http, $q) {
     }
     return result;
   };
-
   Servica.popError = function ($mdToast, message) {
     $mdToast.show($mdToast.simple().textContent(message).position('bottom right').hideDelay(3000));
   };
@@ -139,7 +132,6 @@ angular.module('app').factory('$Servica', function ($http, $q) {
         break;
     }
   };
-
   return Servica;
 });
 

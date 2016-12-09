@@ -7,7 +7,6 @@
     <div id="content">
         <md-content class="md-padding" layout-xs="column" layout="row" ng-if="displaycontrol.panel_show">
             <div flex-xs flex-gt-xs="50" layout="column">
-
                 <md-card ng-cloak
                          ng-if="displaycontrol.contract1 || displaycontrol.contract2|| displaycontrol.contract3">
 
@@ -15,7 +14,6 @@
                                 ng-src="{{data.agent_id_url}}"
                                 class="md-card-image"
                            />-->
-
                     <md-card-title>
                         <md-card-title-text>
                             <span class="md-headline">
@@ -169,7 +167,7 @@
 
         <div layout="row" ng-if="!displaycontrol.panel_show"
              layout-sm="column"
-             layout-align="center"
+             layout-align="center center"
              layout-padding>
             <md-progress-circular md-diameter="80"></md-progress-circular>
         </div>

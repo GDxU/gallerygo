@@ -46,7 +46,7 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
       $state.go(state_name, { _lang: $Servica.localConvertTr($stateParams) });
     }
   };
-}]).controller('C1', ['$scope', '$state', '$stateParams', '$Servica', '$sce', '$mdDialog', function ($scope, $state, $stateParams, $Servica, $sce, $mdDialog) {
+}]).controller('C1', ['$scope', '$state', '$stateParams', '$Servica', '$sce', '$mdToast', function ($scope, $state, $stateParams, $Servica, $sce, $mdToast) {
 
   $Servica.getTranslateFile().then(function (tr_data) {
     var lang = $Servica.localConvertTr($stateParams);
@@ -93,7 +93,7 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
         _data: angular.toJson($scope.data, false)
       });
     } else {
-      $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
+      $Servica.popError($mdToast, $scope.str.erroremptyfield);
     }
   };
   $scope.disagreeandexit = function () {};
@@ -226,7 +226,6 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
     $scope.str.erroremptyfield = tr_data.erroremptyfield[lang];
     $scope.str.press_to_complete = tr_data.press_to_complete[lang];
   });
-
   $scope.str = {
     title_supportings: "---",
     press_upload_photo_id_agent: "---",
@@ -262,7 +261,6 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
     $scope.data.doctype = document_type;
     $Servica.nativeAPI(1, $scope.data);
   };
-
   $scope.submissionComplete = function (ev) {
     if ($scope.displaycontrol.contract3 && $scope.data.corp_id_url != "" && $scope.data.namecard_url != "") {
       $Servica.nativeAPI(2, null);

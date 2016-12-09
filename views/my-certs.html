@@ -1,47 +1,34 @@
-<md-content>
-    <md-toolbar>
-        <h2 class="md-toolbar-tools">
-            <span>{{str.title}}</span>
-        </h2>
-    </md-toolbar>
-    <div id="content" flex>
-        <div class="radioButtondemoBasicUsage">
-            <!--  <form ng-submit="decidedAndNext()" ng-controller="CertReviewControl" ng-cloak=""> layout="row"-->
-            <div class="selectionanswer toppart">{{str.intro}}</div>
-            <md-divider></md-divider>
-            <p class="selectionanswer">{{str.pp}}: <span class="radioValue">{{ data.group1 }}</span></p>
-            <md-divider></md-divider>
+<md-toolbar>
+    <h2 class="md-toolbar-tools">
+        <span>{{str.title}}</span>
+    </h2>
+</md-toolbar>
+<div id="content" flex>
+    <div class="radioButtondemoBasicUsage">
+        <!--  <form ng-submit="decidedAndNext()" ng-controller="CertReviewControl" ng-cloak=""> layout="row"-->
+        <div class="selectionanswer toppart">{{str.intro}}</div>
+        <md-divider></md-divider>
+        <p class="selectionanswer">{{str.pp}}: <span class="radioValue">{{ data.group1 }}</span></p>
+        <md-divider></md-divider>
+        <md-radio-group
+                ng-model="data.group1"
+                class="md-primary">
+            <div ng-repeat="d in radioData" class="row">
+                <md-radio-button flex
+                                 ng-value="d.value"
+                                 ng-disabled="d.isDisabled">
 
-            <md-radio-group
-                    ng-model="data.group1"
-                    class="md-primary">
-
-                <div ng-repeat="d in radioData" class="row">
-                    <md-radio-button flex
-                                     ng-value="d.value"
-                                     ng-disabled="d.isDisabled">
-
-                        <span class="blocktitle">{{ d.label }}</span>
-                        <br>
-                        <span class="blockselectdetail">
+                    <span class="blocktitle">{{ d.label }}</span>
+                    <br>
+                    <span class="blockselectdetail">
                              {{ d.detail }}
                         </span>
-                    </md-radio-button>
-                </div>
-
-            </md-radio-group>
-
-            <hr>
-
-            <!--</form>-->
-        </div>
-
-        <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
-            <md-button flex="100" class="md-primary md-raised" ng-click="decidedAndNext()">{{str.continuebut}}
-            </md-button>
-        </div>
-
+                </md-radio-button>
+            </div>
+        </md-radio-group>
     </div>
-
-
-</md-content>
+    <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
+        <md-button flex="100" class="md-primary md-raised" ng-click="decidedAndNext()">{{str.continuebut}}
+        </md-button>
+    </div>
+</div>
