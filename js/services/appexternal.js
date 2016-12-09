@@ -44,15 +44,14 @@ angular.module('app')
       var final_lang = tag;
       if (tag == "ja") {
         final_lang = "jp";
-      }
-      if (tag == "zh") {
+      } else if (tag == "zh") {
         final_lang = "cn";
-      }
-      if (tag == "it") {
+      } else if (tag == "it") {
         final_lang = "en";
-      }
-      if (tag == "ko") {
+      } else if (tag == "ko") {
         final_lang = "kr";
+      } else {
+        final_lang = "en";
       }
       return final_lang;
     };
@@ -60,17 +59,15 @@ angular.module('app')
       let tag = $stateParams._lang == null ? "cn" : $stateParams._lang, final_lang = "";
       if (tag == "ja") {
         final_lang = "en";
-      }
-      if (tag == "zh") {
+      } else if (tag == "zh") {
         final_lang = "cn";
-      }
-      if (tag == "cn") {
+      } else if (tag == "cn") {
         final_lang = "cn";
-      }
-      if (tag == "it") {
+      } else if (tag == "it") {
         final_lang = "en";
-      }
-      if (tag == "ko") {
+      } else if (tag == "ko") {
+        final_lang = "en";
+      } else {
         final_lang = "en";
       }
       return final_lang;

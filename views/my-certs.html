@@ -4,7 +4,17 @@
     </h2>
 </md-toolbar>
 <div id="content" flex>
-    <div class="radioButtondemoBasicUsage">
+
+    <div flex
+         layout="row"
+         ng-if="!displaycontrol.panel_show"
+         layout-sm="column"
+         layout-align="center center"
+         layout-padding>
+        <mddisplaycontrol.panel_show-progress-circular md-diameter="50"></mddisplaycontrol.panel_show-progress-circular>
+    </div>
+
+    <div class="radioButtondemoBasicUsage" ng-if="displaycontrol.panel_show">
         <!--  <form ng-submit="decidedAndNext()" ng-controller="CertReviewControl" ng-cloak=""> layout="row"-->
         <div class="selectionanswer toppart">{{str.intro}}</div>
         <md-divider></md-divider>

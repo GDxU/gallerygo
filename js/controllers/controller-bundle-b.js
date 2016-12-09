@@ -5,25 +5,26 @@ angular.module('app')
 
   .controller('CertReviewControl', ['$scope', '$state', '$stateParams', '$http', '$q', '$Servica', '$mdToast',
     ($scope, $state, $stateParams, $http, $q, $Servica, $mdToast) => {
-      let lang;
-      $Servica.getTranslateFile().then((translatedata)=> {
+      $Servica.getTranslateFile().then((transl)=> {
         var lang = $Servica.localConvertTr($stateParams);
-        $scope.radioData[0].detail = translatedata.role_1[lang];
-        $scope.radioData[0].label = translatedata.roleName1[lang];
-        $scope.radioData[1].detail = translatedata.role_2[lang];
-        $scope.radioData[1].label = translatedata.roleName2[lang];
-        $scope.radioData[2].detail = translatedata.role_3[lang];
-        $scope.radioData[2].label = translatedata.roleName3[lang];
-
+        $scope.radioData[0].detail = transl.role_1[lang];
+        $scope.radioData[0].label = transl.roleName1[lang];
+        $scope.radioData[1].detail = transl.role_2[lang];
+        $scope.radioData[1].label = transl.roleName2[lang];
+        $scope.radioData[2].detail = transl.role_3[lang];
+        $scope.radioData[2].label = transl.roleName3[lang];
         $scope.str = {
-          intro: translatedata.participate_intro[lang],
-          title: translatedata.title_cert_review[lang],
-          pp: translatedata.selected_cert[lang],
-          continuebut: translatedata.continue[lang],
-          check: translatedata.errorcheck[lang]
+          intro: transl.participate_intro[lang],
+          title: transl.title_cert_review[lang],
+          pp: transl.selected_cert[lang],
+          continuebut: transl.continue[lang],
+          check: transl.errorcheck[lang]
         };
       });
-
+      $scope.displaycontrol = {
+        panel_show: false,
+        have_certs: false
+      };
       $scope.str = {
         intro: "",
         title: "",
@@ -44,7 +45,6 @@ angular.module('app')
 
 
       $scope.decidedAndNext = ()=> {
-        // console.log($scope.data);
         if ($scope.data.group1 == null || $scope.data.group1 == undefined) {
           $Servica.popError($mdToast, $scope.str.check);
         } else {
