@@ -318,6 +318,7 @@ angular.module('app')
             default:
               break;
           }
+          $scope.$apply();
         };
       }
     ])
