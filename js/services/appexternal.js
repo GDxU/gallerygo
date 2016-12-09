@@ -135,7 +135,6 @@ angular.module('app')
               window.addImageToField(arg.doctype, "---");
             }
           }
-
           break;
         default:
           break;

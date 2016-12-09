@@ -127,7 +127,6 @@ angular.module('app').factory('$Servica', function ($http, $q) {
             window.addImageToField(arg.doctype, "---");
           }
         }
-
         break;
       default:
         break;

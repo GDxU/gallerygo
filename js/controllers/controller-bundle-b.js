@@ -306,15 +306,12 @@ angular.module('app')
             case "companynamecard":
               $scope.data.namecard_url = path_image;
               break;
-
             case "auth_artist_id":
               $scope.data.artist_id_url = path_image;
               break;
-
             case "companyreg":
               $scope.data.corp_id_url = path_image;
               break;
-
             default:
               break;
           }

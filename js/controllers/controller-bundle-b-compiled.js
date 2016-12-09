@@ -278,18 +278,16 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
       case "companynamecard":
         $scope.data.namecard_url = path_image;
         break;
-
       case "auth_artist_id":
         $scope.data.artist_id_url = path_image;
         break;
-
       case "companyreg":
         $scope.data.corp_id_url = path_image;
         break;
-
       default:
         break;
     }
+    $scope.$apply();
   };
 }]).controller('PreviewController', ['$scope', '$stateParams', '$q', '$http', 'Basemap', '$Servica', function ($scope, $stateParams, $q, $http, _basemap, $Servica) {
   var googleplayurl = 'https://play.google.com/store/apps/details?id=com.zyntauri.gogallery&hl=zh-TW';
