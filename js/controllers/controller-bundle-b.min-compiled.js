@@ -1,104 +1,21 @@
 'use strict';
 
-angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$stateParams', '$http', '$q', '$Servica', '$mdToast', function ($scope, $state, $stateParams, $http, $q, $Servica, $mdToast) {
-  var lang = void 0;$Servica.getTranslateFile().then(function (translatedata) {
-    var lang = $Servica.localConvertTr($stateParams);$scope.radioData[0].detail = translatedata.role_1[lang];$scope.radioData[0].label = translatedata.roleName1[lang];$scope.radioData[1].detail = translatedata.role_2[lang];$scope.radioData[1].label = translatedata.roleName2[lang];$scope.radioData[2].detail = translatedata.role_3[lang];$scope.radioData[2].label = translatedata.roleName3[lang];$scope.str = { intro: translatedata.participate_intro[lang], title: translatedata.title_cert_review[lang], pp: translatedata.selected_cert[lang], continuebut: translatedata.continue[lang], check: translatedata.errorcheck[lang] };
-  });$scope.str = { intro: "", title: "", pp: "", check: "", continuebut: "" };$scope.data = { group1: null };$scope.radioData = [{ label: '1', value: 1 }, { label: '2', value: 2 }, { label: '3', value: 3 }];$scope.decidedAndNext = function () {
-    if ($scope.data.group1 == null || $scope.data.group1 == undefined) {
-      $Servica.popError($mdToast, $scope.str.check);
-    } else {
-      var state_name = 'Contract-' + $scope.data.group1;$state.go(state_name, { _lang: $Servica.localConvertTr($stateParams) });
+eval(function (p, a, c, k, _e, d) {
+  _e = function e(c) {
+    return (c < a ? '' : _e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36));
+  };if (!''.replace(/^/, String)) {
+    while (c--) {
+      d[_e(c)] = k[c] || _e(c);
+    }k = [function (e) {
+      return d[e];
+    }];_e = function _e() {
+      return '\\w+';
+    };c = 1;
+  };while (c--) {
+    if (k[c]) {
+      p = p.replace(new RegExp('\\b' + _e(c) + '\\b', 'g'), k[c]);
     }
-  };
-}]).controller('C1', ['$scope', '$state', '$stateParams', '$Servica', '$sce', '$mdDialog', function ($scope, $state, $stateParams, $Servica, $sce, $mdDialog) {
-  $Servica.getTranslateFile().then(function (tr_data) {
-    var lang = $Servica.localConvertTr($stateParams);$scope.str.title_contract_1 = tr_data.title_contract_1[lang];$scope.str.enter_your = tr_data.enter_your[lang];$scope.str.your_legal_name = tr_data.your_legal_name[lang];$scope.str.your_id = tr_data.your_id[lang];$scope.str.contract_body = tr_data.contract_body[lang];$scope.str.heading_1 = tr_data.heading_1[lang];$scope.str.express_disagree = tr_data.express_disagree[lang];$scope.str.express_agree = tr_data.express_agree[lang];$scope.str.contract_check_box = tr_data.contract_check_box[lang];$scope.str.contract_read = tr_data.contract_read[lang];$scope.str.erroremptyfield = tr_data.erroremptyfield[lang];
-  });$scope.str = { title_contract_1: "---", enter_your: "---", your_legal_name: "---", your_id: "---", contract_body: "---", heading_1: "---", contract_check_box: "---", contract_read: "---", erroremptyfield: "error", express_disagree: "disagree", express_agree: "agree" };$scope.data = { name: "", idcard: "", agree: "" };$scope.trustAsHtml = $sce.trustAsHtml;$scope.agree = function (ev) {
-    console.log("get is now");if ($Servica.checkEmptyFields($scope.data)) {
-      $state.go("FinishingCertificationSupport", { _lang: $Servica.localConvertTr($stateParams), _from: 1, _data: angular.toJson($scope.data, !1) });
-    } else {
-      $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
-    }
-  };$scope.disagreeandexit = function () {};
-}]).controller('C2', ['$scope', '$state', '$stateParams', '$q', '$http', '$Servica', '$sce', '$mdDialog', function ($scope, $state, $stateParams, $q, $http, $Servica, $sce, $mdDialog) {
-  $Servica.getTranslateFile().then(function (tr_data) {
-    var lang = $Servica.localConvertTr($stateParams);$scope.str.title_contract_2 = tr_data.title_contract_2[lang];$scope.str.enter_your = tr_data.enter_your[lang];$scope.str.your_legal_name = tr_data.your_legal_name[lang];$scope.str.your_id = tr_data.your_id[lang];$scope.str.your_authorized_artist = tr_data.your_authorized_artist[lang];$scope.str.your_authorized_artist_id = tr_data.your_authorized_artist_id[lang];$scope.str.contract_body = tr_data.contract_body[lang];$scope.str.heading_2 = tr_data.heading_2[lang];$scope.str.express_disagree = tr_data.express_disagree[lang];$scope.str.express_agree = tr_data.express_agree[lang];$scope.str.contract_check_box = tr_data.contract_check_box[lang];$scope.str.contract_read = tr_data.contract_read[lang];$scope.str.erroremptyfield = tr_data.erroremptyfield[lang];
-  });$scope.str = { title_contract_2: "---", enter_your: "---", your_legal_name: "---", your_id: "---", your_authorized_artist: "---", your_authorized_artist_id: "---", contract_body: "---", heading_2: "---", contract_check_box: "---", contract_read: "---", erroremptyfield: "error", express_disagree: "disagree", express_agree: "agree" };$scope.data = { name: "", idcard: "", authorizer_name: "", authorizer_id: "", agree: "" };$scope.trustAsHtml = $sce.trustAsHtml;$scope.agree = function (ev) {
-    if ($Servica.checkEmptyFields($scope.data)) {
-      $state.go("FinishingCertificationSupport", { _lang: $Servica.localConvertTr($stateParams), _from: 2, _data: angular.toJson($scope.data, !1) });
-    } else {
-      $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
-    }
-  };$scope.disagreeandexit = function () {};
-}]).controller('C3', ['$scope', '$state', '$stateParams', '$q', '$http', '$Servica', '$sce', '$mdDialog', function ($scope, $state, $stateParams, $q, $http, $Servica, $sce, $mdDialog) {
-  $Servica.getTranslateFile().then(function (tr_data) {
-    var lang = $Servica.localConvertTr($stateParams);$scope.str.title_contract_3 = tr_data.title_contract_3[lang];$scope.str.enter_your = tr_data.enter_your[lang];$scope.str.your_legal_name = tr_data.your_legal_name[lang];$scope.str.your_position = tr_data.your_position[lang];$scope.str.your_id = tr_data.your_id[lang];$scope.str.company_name = tr_data.company_name[lang];$scope.str.company_registration_id = tr_data.company_registration_id[lang];$scope.str.contract_body = tr_data.contract_body[lang];$scope.str.heading_3 = tr_data.heading_3[lang];$scope.str.express_disagree = tr_data.express_disagree[lang];$scope.str.express_agree = tr_data.express_agree[lang];$scope.str.contract_check_box = tr_data.contract_check_box[lang];$scope.str.contract_read = tr_data.contract_read[lang];$scope.str.erroremptyfield = tr_data.erroremptyfield[lang];
-  });$scope.str = { title_contract_3: "---", enter_your: "---", your_legal_name: "---", your_id: "---", contract_body: "---", your_position: "---", heading_3: "---", contract_check_box: "---", contract_read: "---", company_name: "---", erroremptyfield: "error", company_registration_id: "---", express_disagree: "disagree", express_agree: "agree" };$scope.data = { name: "", idcard: "", comname: "", composition: "", comregid: "", agree: "" };$scope.trustAsHtml = $sce.trustAsHtml;$scope.agree = function (ev) {
-    if ($Servica.checkEmptyFields($scope.data)) {
-      $state.go("FinishingCertificationSupport", { _lang: $Servica.localConvertTr($stateParams), _from: 3, _data: angular.toJson($scope.data, !1) });
-    } else {
-      $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
-    }
-  };$scope.disagreeandexit = function () {};
-}]).controller('CertSupportings', ['$scope', '$stateParams', '$q', '$http', '$Servica', function ($scope, $stateParams, $q, $http, $Servica) {
-  $Servica.getTranslateFile().then(function (tr_data) {
-    var lang = $Servica.localConvertTr($stateParams);$scope.str.title_supportings = tr_data.title_supportings[lang];$scope.str.press_upload_photo_id_agent = tr_data.press_upload_photo_id_agent[lang];$scope.str.press_upload_company_registration = tr_data.press_upload_company_registration[lang];$scope.str.press_upload_company_name_card = tr_data.press_upload_company_name_card[lang];$scope.str.press_upload_photo_id_artist = tr_data.press_upload_photo_id_artist[lang];$scope.str.erroremptyfield = tr_data.erroremptyfield[lang];
-  });$scope.str = { title_supportings: "---", press_upload_photo_id_agent: "---", press_upload_company_registration: "---", press_upload_company_name_card: "---", press_upload_photo_id_artist: "---", erroremptyfield: "error" };$scope.displaycontrol = { contract1: !1, contract2: !1, contract3: !1 };if (parseInt($stateParams._from) == 1) {
-    $scope.data = angular.fromJson($stateParams._data);$scope.displaycontrol.contract1 = !0;
-  } else if (parseInt($stateParams._from) == 2) {
-    $scope.data = angular.fromJson($stateParams._data);$scope.displaycontrol.contract2 = !0;
-  } else if (parseInt($stateParams._from) == 3) {
-    $scope.data = angular.fromJson($stateParams._data);$scope.displaycontrol.contract3 = !0;
-  }
-  $scope.data.artist_id_url = "";$scope.data.agent_id_url = "";$scope.data.corp_id_url = "";$scope.data.namecard_url = "";$scope.data.doctype = "";$scope.pressUpload = function (document_type) {
-    $scope.data.doctype = document_type;$Servica.nativeAPI(1, $scope.data);
-  };$scope.submissionComplete = function () {
-    console.log('document submission upload now');
-  };
-}]).controller('PreviewController', ['$scope', '$stateParams', '$q', '$http', 'Basemap', '$Servica', function ($scope, $stateParams, $q, $http, _basemap, $Servica) {
-  var googleplayurl = 'https://play.google.com/store/apps/details?id=com.zyntauri.gogallery&hl=zh-TW';var china_apk_url = '';var default_path1 = "http://s3.heskeyo.com/basemap/";setInterval(function () {
-    jQuery('.star-1').fadeOut(150).delay(2000).fadeIn(300).fadeOut(150).delay(1254);jQuery('.star-2').fadeOut(300).fadeIn(120).fadeOut(120).delay(1920);jQuery('.star-3').fadeOut(150).delay(1200).fadeIn(300).fadeOut(150).delay(800);jQuery('.star-4').fadeOut(700).fadeIn(300).fadeOut(160).delay(1350);
-  }, 1);if (installation != undefined) {
-    china_apk_url = installation.chinaandroid;
-  }
-  var _itemId = $stateParams.id;var _mode = $stateParams.mode;var _lang = $stateParams.lang;var _get_name_tag = function _get_name_tag(intput_label) {
-    if (_lang == null || _lang == "") {
-      return intput_label.cn;
-    } else {
-      var lang_t = $Servica.localConvert(_lang);if (intput_label.hasOwnProperty(lang_t)) {
-        return intput_label[lang_t];
-      } else {
-        return intput_label.cn;
-      }
-    }
-  };$scope.OnClickFn = { installapp: function installapp() {
-      this.rotating = !this.rotating;$Servica.getGeo().then(function (json) {
-        console.log(json);if (json.country.code == "CN") {
-          window.location.href = china_apk_url;
-        } else {
-          window.location.href = googleplayurl;
-        }
-      }, function (fail) {
-        alert("error to detect", fail);
-      });
-    }, rotating: !1, ondetect: function ondetect(e) {
-      console.log(e);
-    } };$Servica.getMetaDict().then(function (data_config) {
-    _basemap.findOne({ filter: { where: { id: _itemId } } }).$promise.then(function (result) {
-      var base = result.folder_base_name;var shape = parseInt(result.image_meta.shape),
-          _size;if (shape == 5 || shape == 2 || shape == 1) {
-        _size = result.image_meta.dimension.r + " cm " + "半";
-      } else {
-        _size = result.image_meta.dimension.x + " x " + result.image_meta.dimension.y + " cm";
-      }
-      for (var i = 0; i < data_config.shape.length; i++) {
-        if (data_config.shape[i].key == shape) {
-          _size = _get_name_tag(data_config.shape[i].label) + " " + _size;
-        }
-      }
-      $scope.ThisArticle = { meta: result.image_meta, size: _size, preview: default_path1 + base + "/" + base + ".jpg" };
-    });
-  });
-}]);
+  }return p;
+}('M.2y(\'2x\').R(\'2w\',[\'$6\',\'$k\',\'$c\',\'$m\',\'$q\',\'$a\',\'$X\',($6,$k,$c,$m,$q,$a,$X)=>{$a.13().F((l)=>{n 7=$a.w($c);$6.K[0].21=l.2z[7];$6.K[0].P=l.2C[7];$6.K[1].21=l.2v[7];$6.K[1].P=l.2B[7];$6.K[2].21=l.2t[7];$6.K[2].P=l.2s[7];$6.8={2e:l.2S[7],2g:l.2V[7],2o:l.2W[7],2n:l.2E[7],16:l.2Q[7]}});$6.d={12:h,2I:h};$6.8={2e:"",2g:"",2o:"",16:"",2n:""};$6.b={1l:U};$6.K=[{P:\'1\',22:1},{P:\'2\',22:2},{P:\'3\',22:3},];$6.2L=()=>{f($6.b.1l==U||$6.b.1l==2q){$a.2m($X,$6.8.16)}j{S 2j=\'30-\'+$6.b.1l;$k.1j(2j,{G:$a.w($c)})}}}]).R(\'2M\',[\'$6\',\'$k\',\'$c\',\'$a\',\'$E\',\'$X\',($6,$k,$c,$a,$E,$X)=>{$a.13().F((9)=>{n 7=$a.w($c);$6.8.1C=9.1C[7];$6.8.p=9.p[7];$6.8.t=9.t[7];$6.8.v=9.v[7];$6.8.o=9.o[7];$6.8.1B=9.1B[7];$6.8.A=9.A[7];$6.8.D=9.D[7];$6.8.C=9.C[7];$6.8.B=9.B[7];$6.8.g=9.g[7]});$6.8={1C:"---",p:"---",t:"---",v:"---",o:"---",1B:"---",C:"---",B:"---",g:"17",A:"1H",D:"z"};$6.b={1X:"",1I:"",z:""};$6.Y=$E.Y;$6.z=(Q)=>{O.J("2N 2O 2b");f($a.1R($6.b)){$k.1j("1W",{G:$a.w($c),V:1,Z:M.1V($6.b,h)})}j{$a.2m($X,$6.8.g)}};$6.1Q=()=>{}}]).R(\'2J\',[\'$6\',\'$k\',\'$c\',\'$q\',\'$m\',\'$a\',\'$E\',\'$u\',($6,$k,$c,$q,$m,$a,$E,$u)=>{$a.13().F((9)=>{n 7=$a.w($c);$6.8.1D=9.1D[7];$6.8.p=9.p[7];$6.8.t=9.t[7];$6.8.v=9.v[7];$6.8.1E=9.1E[7];$6.8.1F=9.1F[7];$6.8.o=9.o[7];$6.8.1Y=9.1Y[7];$6.8.A=9.A[7];$6.8.D=9.D[7];$6.8.C=9.C[7];$6.8.B=9.B[7];$6.8.g=9.g[7]});$6.8={1D:"---",p:"---",t:"---",v:"---",1E:"---",1F:"---",o:"---",1Y:"---",C:"---",B:"---",g:"17",A:"1H",D:"z"};$6.b={1X:"",1I:"",2F:"",2G:"",z:""};$6.Y=$E.Y;$6.z=(Q)=>{f($a.1R($6.b)){$k.1j("1W",{G:$a.w($c),V:2,Z:M.1V($6.b,h)})}j{$a.1T($u,Q,$6.8.g)}};$6.1Q=()=>{}}]).R(\'2H\',[\'$6\',\'$k\',\'$c\',\'$q\',\'$m\',\'$a\',\'$E\',\'$u\',($6,$k,$c,$q,$m,$a,$E,$u)=>{$a.13().F((9)=>{n 7=$a.w($c);$6.8.1u=9.1u[7];$6.8.p=9.p[7];$6.8.t=9.t[7];$6.8.1v=9.1v[7];$6.8.v=9.v[7];$6.8.1w=9.1w[7];$6.8.1x=9.1x[7];$6.8.o=9.o[7];$6.8.1z=9.1z[7];$6.8.A=9.A[7];$6.8.D=9.D[7];$6.8.C=9.C[7];$6.8.B=9.B[7];$6.8.g=9.g[7]});$6.8={1u:"---",p:"---",t:"---",v:"---",o:"---",1v:"---",1z:"---",C:"---",B:"---",1w:"---",g:"17",1x:"---",A:"1H",D:"z"};$6.b={1X:"",1I:"",2T:"",2U:"",31:"",z:""};$6.Y=$E.Y;$6.z=(Q)=>{f($a.1R($6.b)){$k.1j("1W",{G:$a.w($c),V:3,Z:M.1V($6.b,h)})}j{$a.1T($u,Q,$6.8.g)}};$6.1Q=()=>{}}]).R(\'2A\',[\'$6\',\'$c\',\'$q\',\'$m\',\'$a\',\'$u\',($6,$c,$q,$m,$a,$u)=>{$a.13().F((9)=>{n 7=$a.w($c);$6.8.1A=9.1A[7];$6.8.1N=9.1N[7];$6.8.1O=9.1O[7];$6.8.1M=9.1M[7];$6.8.1L=9.1L[7];$6.8.g=9.g[7];$6.8.1J=9.1J[7]});$6.8={1A:"---",1N:"---",1O:"---",1M:"---",1L:"---",1J:"---",g:"17"};$6.d={1r:h,1o:h,1p:h,12:H,L:H};f(1n($c.V)==1){$6.b=M.1P($c.Z);$6.d.1r=H}j f(1n($c.V)==2){$6.b=M.1P($c.Z);$6.d.1o=H}j f(1n($c.V)==3){$6.b=M.1P($c.Z);$6.d.1p=H}$6.b.1h="";$6.b.10="";$6.b.1a="";$6.b.1q="";$6.b.1i="";$6.3L=(29)=>{$6.b.1i=29;$a.1m(1,$6.b)};$6.32=(Q)=>{f($6.d.1p&&$6.b.1a!=""&&$6.b.1q!=""){$a.1m(2,U);$6.d.12=h;$6.d.L=H;$6.$19()}j f($6.d.1o&&$6.b.10!=""&&$6.b.1h!=""){$a.1m(2,U);$6.d.12=h;$6.d.L=H;$6.$19()}j f($6.d.1r&&$6.b.10!=""){$a.1m(2,U);$6.d.12=h;$6.d.L=H;$6.$19()}j{$a.1T($u,Q,$6.8.g)}};$6.16=()=>{f($6.d.1p&&$6.b.1a!=""&&$6.b.1q!=""){$6.d.L=h}j f($6.d.1o&&$6.b.10!=""&&$6.b.1h!=""){$6.d.L=h}j f($6.d.1r&&$6.b.10!=""){$6.d.L=h}};1s.3D=()=>{O.J(\'3C 3E 3R\')};1s.3F=(1i,11)=>{O.J(\'3H 3G 3Q 3U 2b.\');O.J(11);O.J(\'============\');41(1i){1b"42":$6.b.10=11;15;1b"3Y":$6.b.1q=11;15;1b"3S":$6.b.1h=11;15;1b"3V":$6.b.1a=11;15;3W:15}$6.16();$6.$19()}}]).R(\'3e\',[\'$6\',\'$c\',\'$q\',\'$m\',\'3d\',\'$a\',($6,$c,$q,$m,26,$a)=>{S 2h=\'3c://3f.3g.1Z/3i/3h/3b?1S=1Z.3a.35&34=33-36\';37 1t=\'\';S 2i="m://39.38.1Z/3j/";3k(()=>{1d(\'.1g-1\').I(1c).T(3v).1f(1e).I(1c).T(3u);1d(\'.1g-2\').I(1e).1f(2a).I(2a).T(3w);1d(\'.1g-3\').I(1c).T(3x).1f(1e).I(1c).T(3y);1d(\'.1g-4\').I(3s).1f(1e).I(3m).T(3o)},1);f(2l!=2q){1t=2l.3p}S 2p=$c.1S;S 3r=$c.3q;S G=$c.7;n 2d=(14)=>{f(G==U||G==""){1y 14.27}j{n 1G=$a.3t(G);f(14.3z(1G)){1y 14[1G]}j{1y 14.27}}};$6.3T={40:23(){2k.20=!2k.20;$a.3O().F(23(1U){O.J(1U);f(1U.3M.2D=="2Z"){1s.28.25=1t}j{1s.28.25=2h}},23(2f){3n("17 3K 3l",2f)})},20:h,3A:(e)=>{O.J(e)}};$a.3X().F((1k)=>{26.3Z({3I:{3J:{1S:2p}}}).$3P.F((N)=>{n 24=N.3N;n s=1n(N.18.s),W;f(s==5||s==2||s==1){W=N.18.1K.r+" 2c "+"半"}j{W=N.18.1K.x+" x "+N.18.1K.y+" 2c"}2u(n i=0;i<1k.s.2r;i++){f(1k.s[i].2R==s){W=2d(1k.s[i].P)+" "+W}}$6.2Y={2X:N.18,2P:W,2K:2i+24+"/"+24+".3B"}})})}]);', 62, 251, '||||||scope|lang|str|tr_data|Servica|data|stateParams|displaycontrol||if|erroremptyfield|false||else|state|transl|http|var|contract_body|enter_your|||shape|your_legal_name|mdDialog|your_id|localConvertTr|||agree|express_disagree|contract_read|contract_check_box|express_agree|sce|then|_lang|true|fadeOut|log|radioData|disable_final|angular|result|console|label|ev|controller|const|delay|null|_from|_size|mdToast|trustAsHtml|_data|agent_id_url|path_image|panel_show|getTranslateFile|intput_label|break|check|error|image_meta|apply|corp_id_url|case|150|jQuery|300|fadeIn|star|artist_id_url|doctype|go|data_config|group1|nativeAPI|parseInt|contract2|contract3|namecard_url|contract1|window|china_apk_url|title_contract_3|your_position|company_name|company_registration_id|return|heading_3|title_supportings|heading_1|title_contract_1|title_contract_2|your_authorized_artist|your_authorized_artist_id|lang_t|disagree|idcard|press_to_complete|dimension|press_upload_photo_id_artist|press_upload_company_name_card|press_upload_photo_id_agent|press_upload_company_registration|fromJson|disagreeandexit|checkEmptyFields|id|popDialog|json|toJson|FinishingCertificationSupport|name|heading_2|com|rotating|detail|value|function|base|href|_basemap|cn|location|document_type|120|now|cm|_get_name_tag|intro|fail|title|googleplayurl|default_path1|state_name|this|installation|popError|continuebut|pp|_itemId|undefined|length|roleName3|role_3|for|role_2|CertReviewControl|app|module|role_1|CertSupportings|roleName2|roleName1|code|continue|authorizer_name|authorizer_id|C3|have_certs|C2|preview|decidedAndNext|C1|get|is|size|errorcheck|key|participate_intro|comname|composition|title_cert_review|selected_cert|meta|ThisArticle|CN|Contract|comregid|submissionComplete|zh|hl|gogallery|TW|let|heskeyo|s3|zyntauri|details|https|Basemap|PreviewController|play|google|apps|store|basemap|setInterval|detect|160|alert|1350|chinaandroid|mode|_mode|700|localConvert|1254|2000|1920|1200|800|hasOwnProperty|ondetect|jpg|confirmed|confirm_contract_after|contract|addImageToField|sure|make|filter|where|to|pressUpload|country|folder_base_name|getGeo|promise|it|after|auth_artist_id|OnClickFn|works|companyreg|default|getMetaDict|companynamecard|findOne|installapp|switch|me_id'.split('|'), 0, {}));
 
 //# sourceMappingURL=controller-bundle-b.min-compiled.js.map

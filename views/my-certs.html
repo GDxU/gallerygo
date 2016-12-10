@@ -13,12 +13,44 @@
          layout-padding>
         <mddisplaycontrol.panel_show-progress-circular md-diameter="50"></mddisplaycontrol.panel_show-progress-circular>
     </div>
+    <div class="radioButtondemoBasicUsage" ng-cloak ng-if="displaycontrol.have_certs">
+        <div ng-repeat="d in certs" class="row">
+            <md-card class="cert-sheet">
+                <md-card-title>
 
+                    <md-card-title-text>
+                            <span class="md-headline">
+                                {{d.name_agent}}<br/> {{d.name_agent_id}}
+                             </span>
+                        <span class="md-subhead">
+                            {{str.cert_submitted_at}}<br/>{{ d.createtime | date : 'yyyy-MM-dd HH:mm' : timezone}}
+                        </span>
+                    </md-card-title-text>
+
+                    <md-card-title-media>
+                        <div class="md-media-md card-media">
+                         <!--   <img
+                               ng-src="./image/icons/tick-inside-circle.svg"
+                               class="md-card-image"
+                            />-->
+
+                            <img
+                                    ng-src="./image/icons/ribbon-cert.svg"
+                                    class="md-card-image"
+                            />
+
+                        </div>
+                    </md-card-title-media>
+                </md-card-title>
+            </md-card>
+
+        </div>
+    </div>
     <div class="radioButtondemoBasicUsage" ng-if="displaycontrol.panel_show">
         <!--  <form ng-submit="decidedAndNext()" ng-controller="CertReviewControl" ng-cloak=""> layout="row"-->
         <div class="selectionanswer toppart">{{str.intro}}</div>
         <md-divider></md-divider>
-        <p class="selectionanswer">{{str.pp}}: <span class="radioValue">{{ data.group1 }}</span></p>
+        <p class="selectionanswer">{{str.selectlabel}}: <span class="radioValue">{{ data.group1 }}</span></p>
         <md-divider></md-divider>
         <md-radio-group
                 ng-model="data.group1"
@@ -37,8 +69,14 @@
             </div>
         </md-radio-group>
     </div>
-    <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
-        <md-button flex="100" class="md-primary md-raised" ng-click="decidedAndNext()">{{str.continuebut}}
+    <div class="bottom-sheet-demo inset"
+         layout="row"
+         layout-sm="column"
+         layout-align="center">
+        <md-button flex="100"
+                   class="md-primary md-raised"
+                   ng-click="bottom_button()">
+            {{str._bottom_button}}
         </md-button>
     </div>
 </div>

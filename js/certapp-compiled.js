@@ -5,7 +5,7 @@
  */
 angular.module('app', ['ui.router', 'lbServices', 'ng.deviceDetector', 'ngTouch', 'ngAnimate', 'ngMaterial', 'ngMessages', 'material.svgAssetsCache']).config(['$stateProvider', '$urlRouterProvider', '$mdThemingProvider', function ($stateProvider, $urlRouterProvider, $mdThemingProvider) {
   $stateProvider.state('CertView', {
-    url: '/certreview/{_lang}/{certid}',
+    url: '/certreview/{_lang}/{user_id}',
     templateUrl: 'views/my-certs.html',
     controller: 'CertReviewControl'
   }).state('Contract-1', {

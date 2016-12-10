@@ -92,6 +92,10 @@
     padding: 10px;
 }
 
+.cert-sheet {
+    background: #fff3c6;
+}
+
 .dash-border {
     height: 100%;
     width: 100%;

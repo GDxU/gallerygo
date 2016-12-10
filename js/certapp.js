@@ -8,7 +8,7 @@ angular
       $stateProvider
 
         .state('CertView', {
-          url: '/certreview/{_lang}/{certid}',
+          url: '/certreview/{_lang}/{user_id}',
           templateUrl: 'views/my-certs.html',
           controller: 'CertReviewControl'
         })

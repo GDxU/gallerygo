@@ -8,6 +8,38 @@
       "cn": "您已选择参与计划",
       "en": "Your have selected participation program"
     },
+    "cert_submitted_at": {
+      "cn": "证书提交时间：",
+      "en": "The cert is submitted at: "
+    },
+    "cert_register_at": {
+      "cn": "您已成功注册：",
+      "en": "You have successfully registered on:"
+    },
+    "status": {
+      "cn": "状态：",
+      "en": "Status:"
+    },
+    "status_pending": {
+      "cn": "待定",
+      "en": "pending:"
+    },
+    "status_approved": {
+      "cn": "批准",
+      "en": "approved:"
+    },
+    "status_rejected": {
+      "cn": "拒绝",
+      "en": "rejected:"
+    },
+    "status_revoked": {
+      "cn": "撤销",
+      "en": "revoked:"
+    },
+    "apply_new_program":{
+      "cn": "申请新参与计划",
+      "en": "Apply new program"
+    },
     "participate_intro": {
       "cn": "参加我们的活动，成为活跃的原创艺术家，活跃的原创艺术家授权代理，或绘画贸易组织。您将能够通过销售原创版权和原创作品获得收入。选择您感兴趣的最佳位置，然后点击“继续”。",
       "en": "To participate our program to become active original artist, active original artist authorized agent, or painting organization. You will able to earn income through sales of original works or sales of copyrights. Choose the best position you are interested in and hit continue."

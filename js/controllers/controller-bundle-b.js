@@ -3,24 +3,63 @@
  */
 angular.module('app')
 
-  .controller('CertReviewControl', ['$scope', '$state', '$stateParams', '$http', '$q', '$Servica', '$mdToast',
-    ($scope, $state, $stateParams, $http, $q, $Servica, $mdToast) => {
-      $Servica.getTranslateFile().then((transl)=> {
-        var lang = $Servica.localConvertTr($stateParams);
-        $scope.radioData[0].detail = transl.role_1[lang];
-        $scope.radioData[0].label = transl.roleName1[lang];
-        $scope.radioData[1].detail = transl.role_2[lang];
-        $scope.radioData[1].label = transl.roleName2[lang];
-        $scope.radioData[2].detail = transl.role_3[lang];
-        $scope.radioData[2].label = transl.roleName3[lang];
-        $scope.str = {
-          intro: transl.participate_intro[lang],
-          title: transl.title_cert_review[lang],
-          pp: transl.selected_cert[lang],
-          continuebut: transl.continue[lang],
-          check: transl.errorcheck[lang]
-        };
+  .controller('CertReviewControl', ['$scope', '$state', '$stateParams', '$http', '$q', '$Servica', '$mdToast', 'Contract',
+    ($scope, $state, $stateParams, $http, $q, $Servica, $mdToast, _contract) => {
+      let button_apply = (have_cert)=> {
+
+      }, label_1 = "", label_2 = "";
+      _contract.find(
+        {
+          filter: {
+            where: {
+              userId: $stateParams.user_id
+            }
+          }
+        }
+      ).$promise.then((result)=> {
+
+        if (result.length > 0) {
+          $scope.certs = result;
+          $scope.displaycontrol.have_certs = true;
+        } else {
+          $scope.displaycontrol.panel_show = true;
+        }
+
+
+        $Servica.getTranslateFile().then((_translation)=> {
+          var lang = $Servica.localConvertTr($stateParams);
+          $scope.radioData[0].detail = _translation.role_1[lang];
+          $scope.radioData[0].label = _translation.roleName1[lang];
+          $scope.radioData[1].detail = _translation.role_2[lang];
+          $scope.radioData[1].label = _translation.roleName2[lang];
+          $scope.radioData[2].detail = _translation.role_3[lang];
+          $scope.radioData[2].label = _translation.roleName3[lang];
+          $scope.str = {
+            intro: _translation.participate_intro[lang],
+            title: _translation.title_cert_review[lang],
+            _bottom_button: _translation.continue[lang],
+            cert_submitted_at: _translation.cert_submitted_at[lang],
+            status_pending: _translation.status_pending[lang],
+            status_approved: _translation.status_approved[lang],
+            status_rejected: _translation.status_rejected[lang],
+            status_revoked: _translation.status_revoked[lang],
+            selectlabel: _translation.selected_cert[lang],
+            check: _translation.errorcheck[lang]
+          };
+          label_1 = _translation.apply_new_program[lang];
+          label_2 = _translation.continue[lang];
+
+          if (!$scope.displaycontrol.panel_show) {
+            $scope.str._bottom_button = label_1;
+          } else {
+            $scope.str._bottom_button = label_2;
+          }
+
+        });
+
       });
+
+
       $scope.displaycontrol = {
         panel_show: false,
         have_certs: false
@@ -28,9 +67,15 @@ angular.module('app')
       $scope.str = {
         intro: "",
         title: "",
-        pp: "",
+        selectlabel: "",
+        cert_submitted_at: "",
+        cert_register_at: "",
+        status_pending: "",
+        status_approved: "",
+        status_rejected: "",
+        status_revoked: "",
         check: "",
-        continuebut: ""
+        _bottom_button: ""
       };
 
       $scope.data = {
@@ -43,13 +88,18 @@ angular.module('app')
         {label: '3', value: 3},
       ];
 
-
-      $scope.decidedAndNext = ()=> {
-        if ($scope.data.group1 == null || $scope.data.group1 == undefined) {
-          $Servica.popError($mdToast, $scope.str.check);
+      $scope.bottom_button = ()=> {
+        if ($scope.displaycontrol.have_certs) {
+          $scope.displaycontrol.have_certs = false;
+          $scope.displaycontrol.panel_show = true;
+          $scope.str._bottom_button = label_2;
         } else {
-          const state_name = 'Contract-' + $scope.data.group1;
-          $state.go(state_name, {_lang: $Servica.localConvertTr($stateParams)});
+          if ($scope.data.group1 == null || $scope.data.group1 == undefined) {
+            $Servica.popError($mdToast, $scope.str.check);
+          } else {
+            const state_name = 'Contract-' + $scope.data.group1;
+            $state.go(state_name, {_lang: $Servica.localConvertTr($stateParams)});
+          }
         }
       };
     }])

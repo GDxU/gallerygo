@@ -3,6 +3,9 @@
  */
 
 angular.module('app')
+  .config(['LoopBackResourceProvider', function (LoopBackResourceProvider) {
+    LoopBackResourceProvider.setUrlBase("http://localhost:3000/api");
+  }])
   .factory('$Servica', ($http, $q)=> {
     const googleplayurl = 'https://play.google.com/store/apps/details?id=com.zyntauri.gogallery&hl=zh-TW';
     const detectionuser = 'https://api.userinfo.io/userinfos';
@@ -10,6 +13,7 @@ angular.module('app')
     const conp2 = 'rawgit';
     const conp3 = 'https://cdn.' + conp2 + '.com/GDxU/';
     const Servica = {};
+
     Servica.getTranslateFile = ()=> {
       var deferred = $q.defer();
       $http.get('translate.json').then((response_good)=> {

@@ -4,13 +4,16 @@
  * Created by hesk on 16年12月6日.
  */
 
-angular.module('app').factory('$Servica', function ($http, $q) {
+angular.module('app').config(['LoopBackResourceProvider', function (LoopBackResourceProvider) {
+  LoopBackResourceProvider.setUrlBase("http://localhost:3000/api");
+}]).factory('$Servica', function ($http, $q) {
   var googleplayurl = 'https://play.google.com/store/apps/details?id=com.zyntauri.gogallery&hl=zh-TW';
   var detectionuser = 'https://api.userinfo.io/userinfos';
   var conp1 = 'gallerygo/master/configurations.json';
   var conp2 = 'rawgit';
   var conp3 = 'https://cdn.' + conp2 + '.com/GDxU/';
   var Servica = {};
+
   Servica.getTranslateFile = function () {
     var deferred = $q.defer();
     $http.get('translate.json').then(function (response_good) {
