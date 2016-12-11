@@ -5,7 +5,8 @@
  */
 
 angular.module('app').config(['LoopBackResourceProvider', function (LoopBackResourceProvider) {
-  // LoopBackResourceProvider.setUrlBase("http://localhost:3000/api");
+  //LoopBackResourceProvider.setUrlBase("http://localhost:3000/api");
+  LoopBackResourceProvider.setUrlBase("http://farm.heskeyo.com/api");
 }]).factory('$Servica', function ($http, $q) {
   var googleplayurl = 'https://play.google.com/store/apps/details?id=com.zyntauri.gogallery&hl=zh-TW';
   var detectionuser = 'https://api.userinfo.io/userinfos';
