@@ -1,75 +1,77 @@
-<md-content>
-    <md-toolbar>
-        <h2 class="md-toolbar-tools">
-            <span>{{str.title_contract_3}}</span>
-        </h2>
-    </md-toolbar>
-    <div id="content" ui-view flex>
+<md-toolbar>
+    <h2 class="md-toolbar-tools">
+        <span>{{str.title_contract_3}}</span>
+    </h2>
+</md-toolbar>
+<md-content flex md-scroll-y id="content">
 
+    <div layout-padding>
+        <p ng-bind-html="trustAsHtml(str.heading_3)"></p>
+        <p ng-bind-html="trustAsHtml(str.contract_body)"></p>
+    </div>
 
-        <div flex layout-gt-sm="row" layout-padding>
-            <p ng-bind-html="trustAsHtml(str.heading_3)"></p>
-            <p ng-bind-html="trustAsHtml(str.contract_body)"></p>
-        </div>
+    <md-divider></md-divider>
 
+    <div flex layout-gt-sm="row" layout-padding>
+        <span>{{str.enter_your}}</span>
+    </div>
 
-        <md-divider></md-divider>
+    <md-content layout-gt-sm="row" layout-padding>
 
-        <div flex layout-gt-sm="row" layout-padding>
-            <span>{{str.enter_your}}</span>
-        </div>
+        <md-input-container layout="row">
+            <label>{{str.company_name}}</label>
+            <input ng-model="data.comname">
+        </md-input-container>
 
-        <md-content layout-gt-sm="row" layout-padding>
+        <md-input-container layout="row">
+            <label>{{str.company_registration_id}}</label>
+            <input ng-model="data.comregid">
+        </md-input-container>
 
-            <md-input-container layout="row">
-                <label>{{str.company_name}}</label>
-                <input ng-model="data.comname">
-            </md-input-container>
+        <md-input-container layout="row">
+            <label>{{str.your_legal_name}}</label>
+            <input ng-model="data.name">
+        </md-input-container>
 
-            <md-input-container layout="row">
-                <label>{{str.company_registration_id}}</label>
-                <input ng-model="data.comregid">
-            </md-input-container>
+        <md-input-container layout="row">
+            <label>{{str.your_id}}</label>
+            <input ng-model="data.idcard">
+        </md-input-container>
 
-            <md-input-container layout="row">
-                <label>{{str.your_legal_name}}</label>
-                <input ng-model="data.name">
-            </md-input-container>
+        <md-input-container layout="row">
+            <label>{{str.your_position}}</label>
+            <input ng-model="data.composition">
+        </md-input-container>
 
-            <md-input-container layout="row">
-                <label>{{str.your_id}}</label>
-                <input ng-model="data.idcard">
-            </md-input-container>
+    </md-content>
 
-            <md-input-container layout="row">
-                <label>{{str.your_position}}</label>
-                <input ng-model="data.composition">
-            </md-input-container>
-
-        </md-content>
-
-        <md-checkbox
-                style="margin-left: 20px"
-                ng-model="data.agree"
-                aria-label="checker"
-                ng-true-value="'yup'"
-                ng-false-value="''"
-                class="md-warn md-align-top-left" flex>
-            {{str.contract_read}}<br/>
-            <span class="blockselectdetail">
+    <md-checkbox
+            style="margin-left: 20px"
+            ng-model="data.agree"
+            aria-label="checker"
+            ng-true-value="'yup'"
+            ng-false-value="''"
+            class="md-warn md-align-top-left" flex>
+        {{str.contract_read}}<br/>
+        <span class="blockselectdetail">
              {{ str.contract_check_box }}
             </span>
-        </md-checkbox>
+    </md-checkbox>
 
-        <md-divider></md-divider>
+    <md-divider></md-divider>
 
-        <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
-            <md-button flex="50" class="md-primary md-raised" ng-click="agree()">
-                {{str.express_agree}}
-            </md-button>
-            <md-button flex="50" class="md-primary md-raised" ng-click="disagreeandexit()">
-                {{str.express_disagree}}
-            </md-button>
-        </div>
-    </div>
 </md-content>
+
+<div class="footer"
+     layout="row"
+     layout-sm="column"
+     layout-align="center">
+    <md-button flex="50" class="md-primary md-raised" ng-click="agree()">
+        {{str.express_agree}}
+    </md-button>
+    <md-button flex="50" class="md-primary md-raised" ng-click="disagreeandexit()">
+        {{str.express_disagree}}
+    </md-button>
+</div>
+
+

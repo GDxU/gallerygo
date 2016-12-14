@@ -1,82 +1,85 @@
-<md-toolbar>
-    <h2 class="md-toolbar-tools">
+<md-toolbar class="md-medium-tall">
+    <div class="md-toolbar-tools">
         <span>{{str.title}}</span>
-    </h2>
-</md-toolbar>
-<div id="content" flex>
-
-    <div flex
-         layout="row"
-         ng-if="!displaycontrol.panel_show"
-         layout-sm="column"
-         layout-align="center center"
-         layout-padding>
-        <mddisplaycontrol.panel_show-progress-circular md-diameter="50"></mddisplaycontrol.panel_show-progress-circular>
     </div>
-    <div class="radioButtondemoBasicUsage" ng-cloak ng-if="displaycontrol.have_certs">
-        <div ng-repeat="d in certs" class="row">
-            <md-card class="cert-sheet">
-                <md-card-title>
+</md-toolbar>
+<md-content flex md-scroll-y id="content">
+        <div flex
+             layout="row"
+             ng-if="!displaycontrol.panel_show"
+             layout-sm="column"
+             layout-align="center center"
+             layout-padding>
+            <mddisplaycontrol.panel_show-progress-circular
+                    md-diameter="50"></mddisplaycontrol.panel_show-progress-circular>
+        </div>
+        <div class="radioButtondemoBasicUsage" ng-cloak ng-if="displaycontrol.have_certs">
+            <div ng-repeat="d in certs" class="row">
+                <md-card class="cert-sheet">
+                    <md-card-title>
 
-                    <md-card-title-text>
+                        <md-card-title-text>
                             <span class="md-headline">
                                 {{d.name_agent}}<br/> {{d.name_agent_id}}
                              </span>
-                        <span class="md-subhead">
+                            <span class="md-subhead">
                             {{str.cert_submitted_at}}<br/>{{ d.createtime | date : 'yyyy-MM-dd HH:mm' : timezone}}
                         </span>
-                    </md-card-title-text>
+                        </md-card-title-text>
 
-                    <md-card-title-media>
-                        <div class="md-media-md card-media">
-                         <!--   <img
-                               ng-src="./image/icons/tick-inside-circle.svg"
-                               class="md-card-image"
-                            />-->
+                        <md-card-title-media>
+                            <div class="md-media-md card-media">
+                                <!--   <img
+                                      ng-src="./image/icons/tick-inside-circle.svg"
+                                      class="md-card-image"
+                                   />-->
 
-                            <img
-                                    ng-src="./image/icons/ribbon-cert.svg"
-                                    class="md-card-image"
-                            />
+                                <img
+                                        ng-src="./image/icons/ribbon-cert.svg"
+                                        class="md-card-image"
+                                />
 
-                        </div>
-                    </md-card-title-media>
-                </md-card-title>
-            </md-card>
+                            </div>
+                        </md-card-title-media>
+                    </md-card-title>
+                </md-card>
 
+            </div>
         </div>
-    </div>
-    <div class="radioButtondemoBasicUsage" ng-if="displaycontrol.panel_show">
-        <!--  <form ng-submit="decidedAndNext()" ng-controller="CertReviewControl" ng-cloak=""> layout="row"-->
-        <div class="selectionanswer toppart">{{str.intro}}</div>
-        <md-divider></md-divider>
-        <p class="selectionanswer">{{str.selectlabel}}: <span class="radioValue">{{ data.group1 }}</span></p>
-        <md-divider></md-divider>
-        <md-radio-group
-                ng-model="data.group1"
-                class="md-primary">
-            <div ng-repeat="d in radioData" class="row">
-                <md-radio-button flex
-                                 ng-value="d.value"
-                                 ng-disabled="d.isDisabled">
+        <div class="radioButtondemoBasicUsage" ng-if="displaycontrol.panel_show">
+            <!--  <form ng-submit="decidedAndNext()" ng-controller="CertReviewControl" ng-cloak=""> layout="row"-->
+            <div class="selectionanswer toppart">{{str.intro}}</div>
+            <md-divider></md-divider>
+            <p class="selectionanswer">{{str.selectlabel}}: <span class="radioValue">{{ data.group1 }}</span></p>
+            <md-divider></md-divider>
+            <md-radio-group
+                    ng-model="data.group1"
+                    class="md-primary">
+                <div ng-repeat="d in radioData" class="row">
+                    <md-radio-button flex
+                                     ng-value="d.value"
+                                     ng-disabled="d.isDisabled">
 
-                    <span class="blocktitle">{{ d.label }}</span>
-                    <br>
-                    <span class="blockselectdetail">
+                        <span class="blocktitle">{{ d.label }}</span>
+                        <br>
+                        <span class="blockselectdetail">
                              {{ d.detail }}
                         </span>
-                </md-radio-button>
-            </div>
-        </md-radio-group>
-    </div>
-    <div class="bottom-sheet-demo inset"
-         layout="row"
-         layout-sm="column"
-         layout-align="center">
-        <md-button flex="100"
-                   class="md-primary md-raised"
-                   ng-click="bottom_button()">
-            {{str._bottom_button}}
-        </md-button>
-    </div>
+                    </md-radio-button>
+                </div>
+            </md-radio-group>
+        </div>
+
+</md-content>
+
+<div class="footer"
+     layout="row"
+     layout-sm="column"
+     layout-align="center">
+    <md-button flex="100"
+               class="md-primary md-raised"
+               ng-click="bottom_button()">
+        {{str._bottom_button}}
+    </md-button>
 </div>
+

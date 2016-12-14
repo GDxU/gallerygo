@@ -157,13 +157,13 @@ angular.module('app')
           }
         };
         $scope.disagreeandexit = ()=> {
-
+          $Servica.nativeAPI(3, null);
         };
       }])
 
   .controller('C2',
-    ['$scope', '$state', '$stateParams', '$q', '$http', '$Servica', '$sce', '$mdDialog',
-      ($scope, $state, $stateParams, $q, $http, $Servica, $sce, $mdDialog)=> {
+    ['$scope', '$state', '$stateParams', '$q', '$http', '$Servica', '$sce', '$mdToast',
+      ($scope, $state, $stateParams, $q, $http, $Servica, $sce, $mdToast)=> {
 
         $Servica.getTranslateFile().then((tr_data)=> {
           var lang = $Servica.localConvertTr($stateParams);
@@ -216,17 +216,17 @@ angular.module('app')
               _data: angular.toJson($scope.data, false)
             });
           } else {
-            $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
+            $Servica.popError($mdToast, $scope.str.erroremptyfield);
           }
         };
         $scope.disagreeandexit = ()=> {
-
+          $Servica.nativeAPI(3, null);
         };
       }])
 
   .controller('C3',
-    ['$scope', '$state', '$stateParams', '$q', '$http', '$Servica', '$sce', '$mdDialog',
-      ($scope, $state, $stateParams, $q, $http, $Servica, $sce, $mdDialog)=> {
+    ['$scope', '$state', '$stateParams', '$q', '$http', '$Servica', '$sce', '$mdToast',
+      ($scope, $state, $stateParams, $q, $http, $Servica, $sce, $mdToast)=> {
 
         $Servica.getTranslateFile().then((tr_data)=> {
           var lang = $Servica.localConvertTr($stateParams);
@@ -282,17 +282,17 @@ angular.module('app')
               _data: angular.toJson($scope.data, false)
             });
           } else {
-            $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
+            $Servica.popError($mdToast, $scope.str.erroremptyfield);
           }
         };
         $scope.disagreeandexit = ()=> {
-
+          $Servica.nativeAPI(3, null);
         };
       }])
 
   .controller('CertSupportings',
-    ['$scope', '$stateParams', '$q', '$http', '$Servica', '$mdDialog',
-      ($scope, $stateParams, $q, $http, $Servica, $mdDialog)=> {
+    ['$scope', '$stateParams', '$q', '$http', '$Servica', '$mdToast',
+      ($scope, $stateParams, $q, $http, $Servica, $mdToast)=> {
         // console.log($stateParams);
         $Servica.getTranslateFile().then((tr_data)=> {
           var lang = $Servica.localConvertTr($stateParams);
@@ -356,7 +356,7 @@ angular.module('app')
             $scope.displaycontrol.disable_final = true;
             $scope.$apply();
           } else {
-            $Servica.popDialog($mdDialog, ev, $scope.str.erroremptyfield);
+            $Servica.popError($mdToast, $scope.str.erroremptyfield);
           }
         };
         $scope.check = ()=> {

@@ -1,54 +1,45 @@
-<section>
-    <md-toolbar>
-        <h2 class="md-toolbar-tools">
-            <span>{{str.title_supportings}}</span>
-        </h2>
-    </md-toolbar>
-    <div id="content">
-        <md-content class="md-padding" layout-xs="column" layout="row" ng-if="displaycontrol.panel_show">
-            <div flex-xs flex-gt-xs="50" layout="column">
-                <md-card ng-cloak
-                         ng-if="displaycontrol.contract1 || displaycontrol.contract2|| displaycontrol.contract3">
+<md-toolbar>
+    <h2 class="md-toolbar-tools">
+        <span>{{str.title_supportings}}</span>
+    </h2>
+</md-toolbar>
+<md-content flex md-scroll-y id="content">
+    <div class="md-padding" layout-xs="column" layout="row"
+         ng-if="displaycontrol.panel_show">
+        <div flex-xs flex-gt-xs="50" layout="column">
+            <md-card ng-cloak
+                     ng-if="displaycontrol.contract1 || displaycontrol.contract2|| displaycontrol.contract3">
 
-                    <!--       <img ng-if="data.agent_id_url"
-                                ng-src="{{data.agent_id_url}}"
-                                class="md-card-image"
-                           />-->
-                    <md-card-title>
-                        <md-card-title-text>
+                <md-card-title>
+                    <md-card-title-text>
                             <span class="md-headline">
                                 {{data.name}}
                                 <br/>
                                 {{data.idcard}}
                             </span>
-                        </md-card-title-text>
-                        <md-card-title-media>
-                            <div class="md-media-md card-media">
-                                <img
-                                        ng-if="data.agent_id_url"
-                                        ng-src="./image/icons/tick-inside-circle.svg"
-                                        class="md-card-image"
-                                />
-                            </div>
-                        </md-card-title-media>
-                    </md-card-title>
-
-                    <md-card-content class="img-placeholder" ng-click="pressUpload('me_id')">
-                        <div class="dash-border">
-                            <p> {{str.press_upload_photo_id_agent }} </p>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-md card-media">
+                            <img
+                                    ng-if="data.agent_id_url"
+                                    ng-src="./image/icons/tick-inside-circle.svg"
+                                    class="md-card-image"
+                            />
                         </div>
-                    </md-card-content>
-                </md-card>
+                    </md-card-title-media>
+                </md-card-title>
 
-                <md-card ng-cloak ng-if="displaycontrol.contract3">
+                <md-card-content class="img-placeholder" ng-click="pressUpload('me_id')">
+                    <div class="dash-border">
+                        <p> {{str.press_upload_photo_id_agent }} </p>
+                    </div>
+                </md-card-content>
+            </md-card>
 
-                    <!--       <img ng-if="data.namecard_url"
-                                ng-src="{{data.namecard_url}}"
-                                class="md-card-image"
-                                alt="photo area"/>-->
+            <md-card ng-cloak ng-if="displaycontrol.contract3">
 
-                    <md-card-title>
-                        <md-card-title-text>
+                <md-card-title>
+                    <md-card-title-text>
                             <span class="md-headline">
                                 {{data.name}}
                                 <br/>
@@ -60,78 +51,73 @@
                                 <br/>
                                 {{data.comregid}}
                             </span>
-                        </md-card-title-text>
+                    </md-card-title-text>
 
-                        <md-card-title-media>
-                            <div class="md-media-md card-media">
-                                <img
-                                        ng-if="data.namecard_url"
-                                        ng-src="./image/icons/tick-inside-circle.svg"
-                                        class="md-card-image"
-                                />
-                            </div>
-                        </md-card-title-media>
-
-                    </md-card-title>
-                    <md-card-content class="img-placeholder" ng-click="pressUpload('companynamecard')">
-                        <div class="dash-border">
-                            <p>{{str.press_upload_company_name_card }}</p>
+                    <md-card-title-media>
+                        <div class="md-media-md card-media">
+                            <img
+                                    ng-if="data.namecard_url"
+                                    ng-src="./image/icons/tick-inside-circle.svg"
+                                    class="md-card-image"
+                            />
                         </div>
-                    </md-card-content>
-                </md-card>
+                    </md-card-title-media>
+
+                </md-card-title>
+                <md-card-content class="img-placeholder" ng-click="pressUpload('companynamecard')">
+                    <div class="dash-border">
+                        <p>{{str.press_upload_company_name_card }}</p>
+                    </div>
+                </md-card-content>
+            </md-card>
 
 
-            </div>
+        </div>
 
-            <div flex-xs flex-gt-xs="50" layout="column">
+        <div flex-xs flex-gt-xs="50" layout="column">
 
-                <md-card ng-cloak ng-if="displaycontrol.contract2">
+            <md-card ng-cloak ng-if="displaycontrol.contract2">
 
-                    <!--     <img ng-if="data.artist_id_url"
-                              ng-src="{{data.artist_id_url}}"
-                              class="md-card-image"
-                              alt="photo area"/>-->
-
-                    <md-card-title>
-                        <md-card-title-text>
+                <md-card-title>
+                    <md-card-title-text>
                             <span class="md-headline">
                                 {{data.authorizer_name}}
                                 <br/>
                                 {{data.authorizer_id}}
                             </span>
-                        </md-card-title-text>
+                    </md-card-title-text>
 
-                        <md-card-title-media>
-                            <div class="md-media-md card-media">
-                                <img
-                                        ng-if="data.artist_id_url"
-                                        ng-src="./image/icons/tick-inside-circle.svg"
-                                        class="md-card-image"
-                                />
-                            </div>
-                        </md-card-title-media>
-
-
-                    </md-card-title>
-
-                    <md-card-content class="img-placeholder" ng-click="pressUpload('auth_artist_id')">
-                        <div class="dash-border">
-                            <p> {{str.press_upload_photo_id_artist }} </p>
-                        </div>
-                    </md-card-content>
-
-                </md-card>
-
-
-                <md-card ng-cloak ng-if="displaycontrol.contract3">
-
-                    <!--           <img ng-if="data.corp_id_url"
-                                    ng-src="{{data.corp_id_url}}"
+                    <md-card-title-media>
+                        <div class="md-media-md card-media">
+                            <img
+                                    ng-if="data.artist_id_url"
+                                    ng-src="./image/icons/tick-inside-circle.svg"
                                     class="md-card-image"
-                                    alt="photo area"/>-->
+                            />
+                        </div>
+                    </md-card-title-media>
 
-                    <md-card-title>
-                        <md-card-title-text>
+
+                </md-card-title>
+
+                <md-card-content class="img-placeholder" ng-click="pressUpload('auth_artist_id')">
+                    <div class="dash-border">
+                        <p> {{str.press_upload_photo_id_artist }} </p>
+                    </div>
+                </md-card-content>
+
+            </md-card>
+
+
+            <md-card ng-cloak ng-if="displaycontrol.contract3">
+
+                <!--           <img ng-if="data.corp_id_url"
+                                ng-src="{{data.corp_id_url}}"
+                                class="md-card-image"
+                                alt="photo area"/>-->
+
+                <md-card-title>
+                    <md-card-title-text>
                             <span class="md-headline">
                                 {{data.name}}
                                 <br/>
@@ -143,46 +129,46 @@
                                 <br/>
                                 {{data.comregid}}
                             </span>
-                        </md-card-title-text>
+                    </md-card-title-text>
 
-                        <md-card-title-media>
-                            <div class="md-media-md card-media">
-                                <img
-                                        ng-if="data.corp_id_url"
-                                        ng-src="./image/icons/tick-inside-circle.svg"
-                                        class="md-card-image"
-                                />
-                            </div>
-                        </md-card-title-media>
-
-                    </md-card-title>
-                    <md-card-content class="img-placeholder" ng-click="pressUpload('companyreg')">
-                        <div class="dash-border">
-                            <p> {{str.press_upload_company_registration }}</p>
+                    <md-card-title-media>
+                        <div class="md-media-md card-media">
+                            <img
+                                    ng-if="data.corp_id_url"
+                                    ng-src="./image/icons/tick-inside-circle.svg"
+                                    class="md-card-image"
+                            />
                         </div>
-                    </md-card-content>
-                </md-card>
-            </div>
-        </md-content>
+                    </md-card-title-media>
 
-        <div layout="row" ng-if="!displaycontrol.panel_show"
-             layout-sm="column"
-             layout-align="center center"
-             layout-padding>
-            <md-progress-circular md-diameter="80"></md-progress-circular>
+                </md-card-title>
+                <md-card-content class="img-placeholder" ng-click="pressUpload('companyreg')">
+                    <div class="dash-border">
+                        <p> {{str.press_upload_company_registration }}</p>
+                    </div>
+                </md-card-content>
+            </md-card>
         </div>
-
-        <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
-
-            <md-button ng-disabled="displaycontrol.disable_final"
-                       flex="100"
-                       class="md-primary md-raised"
-                       ng-click="submissionComplete()">
-                {{str.press_to_complete}}
-            </md-button>
-
-        </div>
-
-
     </div>
-</section>
+</md-content>
+
+<div layout="row" ng-if="!displaycontrol.panel_show"
+     layout-sm="column"
+     layout-align="center center"
+     layout-padding>
+    <md-progress-circular md-diameter="80"></md-progress-circular>
+</div>
+
+<div class="footer"
+     layout="row"
+     layout-sm="column"
+     layout-align="center">
+
+    <md-button ng-disabled="displaycontrol.disable_final"
+               flex="100"
+               class="md-primary md-raised"
+               ng-click="submissionComplete()">
+        {{str.press_to_complete}}
+    </md-button>
+
+</div>

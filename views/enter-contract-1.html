@@ -3,17 +3,15 @@
         <span>{{str.title_contract_1}}</span>
     </h2>
 </md-toolbar>
-<div id="content" ui-view flex>
-    <div flex layout="row" style="height: -webkit-calc(100% - 76px)">
-        <md-content layout-padding class="contract-content" flex>
-            <p ng-bind-html="trustAsHtml(str.heading_1)" class="c1"></p>
-            <p ng-bind-html="trustAsHtml(str.contract_body)"></p>
-        </md-content>
+<md-content flex md-scroll-y id="content">
+
+    <div layout-padding>
+        <p ng-bind-html="trustAsHtml(str.heading_1)" class="c1"></p>
+        <p ng-bind-html="trustAsHtml(str.contract_body)"></p>
     </div>
 
     <md-divider></md-divider>
-
-    <div flex layout-gt-sm="row" layout-padding>
+    <div layout-gt-sm="row" layout-padding>
         <span>{{str.enter_your}}</span>
     </div>
     <div layout-gt-sm="row" layout-padding>
@@ -41,16 +39,17 @@
              {{ str.contract_check_box }}
             </span>
     </md-checkbox>
-
     <md-divider></md-divider>
+</md-content>
+<div class="footer"
+     layout="row"
+     layout-sm="column"
+     layout-align="center">
+    <md-button flex="50" class="md-primary md-raised" ng-click="agree()">
+        {{str.express_agree}}
+    </md-button>
 
-    <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
-        <md-button flex="50" class="md-primary md-raised" ng-click="agree()">
-            {{str.express_agree}}
-        </md-button>
-
-        <md-button flex="50" class="md-primary md-raised" ng-click="disagreeandexit()">
-            {{str.express_disagree}}
-        </md-button>
-    </div>
+    <md-button flex="50" class="md-primary md-raised" ng-click="disagreeandexit()">
+        {{str.express_disagree}}
+    </md-button>
 </div>

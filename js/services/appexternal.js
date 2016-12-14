@@ -3,9 +3,23 @@
  */
 
 angular.module('app')
-  .config(['LoopBackResourceProvider', function (LoopBackResourceProvider) {
-      //LoopBackResourceProvider.setUrlBase("http://localhost:3000/api");
-      LoopBackResourceProvider.setUrlBase("http://farm.heskeyo.com/api");
+  .config(['LoopBackResourceProvider', '$mdThemingProvider', function (LoopBackResourceProvider, $mdThemingProvider) {
+    LoopBackResourceProvider.setUrlBase("http://localhost:3000/api");
+    //LoopBackResourceProvider.setUrlBase("http://farm.heskeyo.com/api");
+
+    $mdThemingProvider.theme('default')
+      .primaryPalette('grey', {
+        'default': '400', // by default use shade 400 from the pink palette for primary intentions
+        'hue-1': '100', // use shade 100 for the <code>md-hue-1</code> class
+        'hue-2': '600', // use shade 600 for the <code>md-hue-2</code> class
+        'hue-3': 'A100' // use shade A100 for the <code>md-hue-3</code> class
+      })
+      // If you specify less than all of the keys, it will inherit from the
+      // default shades
+      .accentPalette('amber', {
+        'default': '200' // use shade 200 for default, and keep all other shades the same
+      });
+
   }])
   .factory('$Servica', ($http, $q)=> {
     const googleplayurl = 'https://play.google.com/store/apps/details?id=com.zyntauri.gogallery&hl=zh-TW';
@@ -93,7 +107,7 @@ angular.module('app')
       // $mdToast.show($mdToast.simple().textContent(message).position('bottom right').hideDelay(3000));
       $mdDialog.show(
         $mdDialog.alert()
-          .parent(angular.element(document.querySelector('#content')))
+          .parent(angular.element(document.querySelector('body')))
           .clickOutsideToClose(true)
           .title('Error')
           .textContent(message)
@@ -137,6 +151,16 @@ angular.module('app')
               window.confirm_contract_after();
             }
           }
+          break;
+        case 3:
+          if (typeof (window.AnJsApi) != 'undefined') {
+            //give up and exit
+            window.AnJsApi.give_up();
+          } else {
+            console.log("mock pass only");
+          }
+
+          break;
         default:
           break;
       }
