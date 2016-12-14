@@ -4,8 +4,8 @@
 
 angular.module('app')
   .config(['LoopBackResourceProvider', '$mdThemingProvider', function (LoopBackResourceProvider, $mdThemingProvider) {
-    LoopBackResourceProvider.setUrlBase("http://localhost:3000/api");
-    //LoopBackResourceProvider.setUrlBase("http://farm.heskeyo.com/api");
+    //LoopBackResourceProvider.setUrlBase("http://localhost:3000/api");
+    LoopBackResourceProvider.setUrlBase("http://farm.heskeyo.com/api");
 
     $mdThemingProvider.theme('default')
       .primaryPalette('grey', {

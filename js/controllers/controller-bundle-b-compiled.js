@@ -11,7 +11,8 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
     filter: {
       where: {
         userId: $stateParams.user_id
-      }
+      },
+      order: "createtime DESC"
     }
   }).$promise.then(function (result) {
 
@@ -39,6 +40,10 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
         status_approved: _translation.status_approved[lang],
         status_rejected: _translation.status_rejected[lang],
         status_revoked: _translation.status_revoked[lang],
+        status: _translation.status[lang],
+        title_contract_1: _translation.title_contract_1[lang],
+        title_contract_2: _translation.title_contract_2[lang],
+        title_contract_3: _translation.title_contract_3[lang],
         selectlabel: _translation.selected_cert[lang],
         check: _translation.errorcheck[lang]
       };
@@ -66,7 +71,10 @@ angular.module('app').controller('CertReviewControl', ['$scope', '$state', '$sta
     status_pending: "",
     status_approved: "",
     status_rejected: "",
-    status_revoked: "",
+    status: "",
+    title_contract_1: "",
+    title_contract_2: "",
+    title_contract_3: "",
     check: "",
     _bottom_button: ""
   };

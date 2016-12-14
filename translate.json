@@ -22,19 +22,19 @@
     },
     "status_pending": {
       "cn": "待定",
-      "en": "pending:"
+      "en": "pending"
     },
     "status_approved": {
       "cn": "批准",
-      "en": "approved:"
+      "en": "approved"
     },
     "status_rejected": {
       "cn": "拒绝",
-      "en": "rejected:"
+      "en": "rejected"
     },
     "status_revoked": {
       "cn": "撤销",
-      "en": "revoked:"
+      "en": "revoked"
     },
     "apply_new_program":{
       "cn": "申请新参与计划",
