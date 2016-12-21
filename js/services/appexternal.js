@@ -6,7 +6,6 @@ angular.module('app')
   .config(['LoopBackResourceProvider', '$mdThemingProvider', function (LoopBackResourceProvider, $mdThemingProvider) {
     //LoopBackResourceProvider.setUrlBase("http://localhost:3000/api");
     LoopBackResourceProvider.setUrlBase("http://farm.heskeyo.com/api");
-
     $mdThemingProvider.theme('default')
       .primaryPalette('grey', {
         'default': '400', // by default use shade 400 from the pink palette for primary intentions
@@ -19,7 +18,6 @@ angular.module('app')
       .accentPalette('amber', {
         'default': '200' // use shade 200 for default, and keep all other shades the same
       });
-
   }])
   .factory('$Servica', ($http, $q)=> {
     const googleplayurl = 'https://play.google.com/store/apps/details?id=com.zyntauri.gogallery&hl=zh-TW';

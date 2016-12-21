@@ -34,7 +34,7 @@
       "key": 4,
       "label": {
         "cn": "书法",
-        "zh": "書法",  
+        "zh": "書法",
         "jp": "書道",
         "kr": "달필",
         "fr": "calligraphie",
@@ -766,7 +766,7 @@
         "cn": "畫家"
       }
     },
-        {
+    {
       "role_id": 103,
       "label": {
         "en": "Authorized Artist Agent",
@@ -776,7 +776,6 @@
         "cn": "授权艺术家代理"
       }
     },
-
     {
       "role_id": 101,
       "label": {
@@ -882,10 +881,10 @@
       }
     }
   ],
-  "front_page_config":[
+  "front_page_config": [
     {
       "feature": "_title",
-      "name":{
+      "name": {
         "cn": "最近的页面",
         "jp": "ごく最近",
         "kr": "가장 최근에",
@@ -895,7 +894,7 @@
     },
     {
       "feature": "_events",
-      "name":{
+      "name": {
         "cn": "画廊最新动态",
         "jp": "最近の出来事",
         "kr": "최근 이벤트",
@@ -905,7 +904,7 @@
     },
     {
       "feature": "_personalcats",
-      "name":{
+      "name": {
         "cn": "猜你喜欢",
         "jp": "推薦する",
         "kr": "추천",
@@ -915,7 +914,7 @@
     },
     {
       "feature": "_profiles",
-      "name":{
+      "name": {
         "cn": "當紅畫家",
         "jp": "人気のあります画家",
         "kr": "인기 화가",
@@ -925,12 +924,170 @@
     },
     {
       "feature": "_justposted",
-      "name":{
+      "name": {
         "cn": "剛剛發布的画",
         "jp": "ちょうど公開絵画",
         "kr": "그냥 게시 된 그림",
         "fr": "Peintres populaires",
         "en": "Just Published Paintings"
+      }
+    }
+  ],
+  "product_config_fengshi": [
+    {
+      "key": 101,
+      "label": {
+        "cn": "富貴平安",
+        "zh": "富貴平安",
+        "jp": "富貴平安",
+        "kr": "富貴平安",
+        "fr": "富貴平安",
+        "en": "富貴平安"
+      }
+    },
+    {
+      "key": 102,
+      "label": {
+        "cn": "聚水生財",
+        "zh": "聚水生財",
+        "jp": "聚水生財",
+        "kr": "聚水生財",
+        "fr": "聚水生財",
+        "en": "聚水生財"
+      }
+    },
+    {
+      "key": 103,
+      "label": {
+        "cn": "鎮宅旺業",
+        "zh": "鎮宅旺業",
+        "jp": "鎮宅旺業",
+        "kr": "鎮宅旺業",
+        "fr": "鎮宅旺業",
+        "en": "鎮宅旺業"
+      }
+    },
+    {
+      "key": 104,
+      "label": {
+        "cn": "情緣篤定",
+        "zh": "情緣篤定",
+        "jp": "情緣篤定",
+        "kr": "情緣篤定",
+        "fr": "情緣篤定",
+        "en": "情緣篤定"
+      }
+    },
+    {
+      "key": 105,
+      "label": {
+        "cn": "多子多福",
+        "zh": "多子多福",
+        "jp": "多子多福",
+        "kr": "多子多福",
+        "fr": "多子多福",
+        "en": "多子多福"
+      }
+    },
+    {
+      "key": 106,
+      "label": {
+        "cn": "怡情養性",
+        "zh": "怡情養性",
+        "jp": "怡情養性",
+        "kr": "怡情養性",
+        "fr": "怡情養性",
+        "en": "怡情養性"
+      }
+    }
+  ],
+  "product_config_store_position": [
+    {
+      "key": 11,
+      "label": {
+        "cn": "客厅",
+        "zh": "客廳",
+        "jp": "パーラー",
+        "kr": "객실",
+        "fr": "Parloir",
+        "en": "Parlor"
+      }
+    },
+    {
+      "key": 12,
+      "label": {
+        "cn": "餐厅",
+        "zh": "餐廳",
+        "jp": "レストラン",
+        "kr": "레스토랑",
+        "fr": "Restaurant",
+        "en": "Restaurant"
+      }
+    },
+    {
+      "key": 13,
+      "label": {
+        "cn": "卧室",
+        "zh": "臥室",
+        "jp": "ベッドルーム",
+        "kr": "침실",
+        "fr": "Chambre",
+        "en": "Bedroom"
+      }
+    },
+    {
+      "key": 14,
+      "label": {
+        "cn": "书法",
+        "zh": "玄關",
+        "jp": "エントランス",
+        "kr": "입구",
+        "fr": "entrée",
+        "en": "Entrance"
+      }
+    },
+    {
+      "key": 15,
+      "label": {
+        "cn": "走廊",
+        "zh": "走廊",
+        "jp": "廊下",
+        "kr": "복도",
+        "fr": "couloir",
+        "en": "Corridor"
+      }
+    },
+    {
+      "key": 16,
+      "label": {
+        "cn": "儿童房",
+        "zh": "兒童房",
+        "jp": "キッズルーム",
+        "kr": "아이 방",
+        "fr": "Chambre d'enfant",
+        "en": "Children's room"
+      }
+    },
+    {
+      "key": 17,
+      "label": {
+        "cn": "办公室",
+        "zh": "辦公室",
+        "jp": "オフィス",
+        "kr": "사무실",
+        "fr": "bureau",
+        "en": "Office"
+      }
+    },
+    {
+      "key": 18,
+      "label": {
+        "cn": "大堂",
+        "zh": "大堂",
+        "jp": "ロビー",
+        "kr": "로비",
+        "fr": "bureau",
+        "en": "Lobby"
       }
     }
   ],
@@ -987,6 +1144,6 @@
       "en": "Come check out this %1$s."
     }
   ],
-  "flag_format":"https://cdn.rawgit.com/NLPPort/FlagKit/master/Images/{country_code}%403x.png",
+  "flag_format": "https://cdn.rawgit.com/NLPPort/FlagKit/master/Images/{country_code}%403x.png",
   "share_article_link": "http://farm.heskeyo.com/#/preview/{shared_article_id}/{preview_mode}/{language}"
 }

@@ -7,7 +7,6 @@
 angular.module('app').config(['LoopBackResourceProvider', '$mdThemingProvider', function (LoopBackResourceProvider, $mdThemingProvider) {
   //LoopBackResourceProvider.setUrlBase("http://localhost:3000/api");
   LoopBackResourceProvider.setUrlBase("http://farm.heskeyo.com/api");
-
   $mdThemingProvider.theme('default').primaryPalette('grey', {
     'default': '400', // by default use shade 400 from the pink palette for primary intentions
     'hue-1': '100', // use shade 100 for the <code>md-hue-1</code> class
