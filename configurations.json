@@ -893,6 +893,16 @@
       }
     },
     {
+      "feature": "_newitems",
+      "name": {
+        "cn": "最新上架",
+        "jp": "新着",
+        "kr": "새로운 도착",
+        "fr": "Nouveautés",
+        "en": "new arrival"
+      }
+    },
+    {
       "feature": "_events",
       "name": {
         "cn": "画廊最新动态",
@@ -923,13 +933,13 @@
       }
     },
     {
-      "feature": "_justposted",
+      "feature": "_fengshui",
       "name": {
-        "cn": "剛剛發布的画",
-        "jp": "ちょうど公開絵画",
-        "kr": "그냥 게시 된 그림",
-        "fr": "Peintres populaires",
-        "en": "Just Published Paintings"
+        "cn": "风水",
+        "jp": "風水",
+        "kr": "풍수",
+        "fr": "Feng Shui",
+        "en": "Feng Shui"
       }
     }
   ],
