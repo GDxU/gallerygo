@@ -883,13 +883,20 @@
   ],
   "front_page_config": [
     {
-      "feature": "_title",
+      "feature": "_collection",
       "name": {
-        "cn": "最近的页面",
-        "jp": "ごく最近",
-        "kr": "가장 최근에",
-        "fr": "Plus récemment",
-        "en": "History"
+        "cn": "我的收藏",
+        "jp": "私のコレクション",
+        "kr": "내 컬렉션",
+        "fr": "Mes collections",
+        "en": "My collections"
+      },
+      "subtitle": {
+        "cn": "品目",
+        "jp": "アイテム",
+        "kr": "항목",
+        "fr": "articles",
+        "en": "items"
       }
     },
     {
@@ -900,16 +907,13 @@
         "kr": "새로운 도착",
         "fr": "Nouveautés",
         "en": "new arrival"
-      }
-    },
-    {
-      "feature": "_events",
-      "name": {
-        "cn": "画廊最新动态",
-        "jp": "最近の出来事",
-        "kr": "최근 이벤트",
-        "fr": "Événements récents",
-        "en": "Recent Activities"
+      },
+      "subtitle": {
+        "cn": "风水",
+        "jp": "風水",
+        "kr": "풍수",
+        "fr": "Feng Shui",
+        "en": "Feng Shui"
       }
     },
     {
@@ -920,6 +924,13 @@
         "kr": "추천",
         "fr": "conseillé",
         "en": "Recommended"
+      },
+      "subtitle": {
+        "cn": "我们手工挑选最适合您的生活方式的建议",
+        "jp": "手はあなたのライフスタイルのための最良の推奨事項を選んだ",
+        "kr": "우리는 당신의 라이프 스타일에 가장 적합한 추천을 골랐습니다",
+        "fr": "Nous avons choisi les meilleures recommandations pour votre style de vie",
+        "en": "We hand picked the best recommendations for your lifestyle"
       }
     },
     {
@@ -930,6 +941,13 @@
         "kr": "인기 화가",
         "fr": "Peintres populaires",
         "en": "Popular Painters"
+      },
+      "subtitle": {
+        "cn": "采访最具影响力的作品创作者",
+        "jp": "最も影響力のある作品制作者にインタビューする",
+        "kr": "가장 영향력있는 작품 제작자 인터뷰",
+        "fr": "Entretien avec le créateur d'art le plus influent",
+        "en": "Interview the most influential artwork creator"
       }
     },
     {
@@ -940,6 +958,13 @@
         "kr": "풍수",
         "fr": "Feng Shui",
         "en": "Feng Shui"
+      },
+      "subtitle": {
+        "cn": "风水提供各种简单实用的提示，以改善你的生活",
+        "jp": "風水はあなたの人生を改善するための様々な簡単で実践的なヒントを提供しています",
+        "kr": "풍수는 인생을 개선하기 위해 쉽고 실용적인 다양한 팁을 제공합니다",
+        "fr": "Feng shui offre une variété de conseils simples et pratiques pour améliorer votre vie",
+        "en": "Feng shui offers a variety of easy and practical tips to improve your life"
       }
     }
   ],
