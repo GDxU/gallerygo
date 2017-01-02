@@ -881,6 +881,248 @@
       }
     }
   ],
+  "order_frame_materials": [
+    {
+      "name": {
+        "cn": "花梨木",
+        "jp": "ローズウッド",
+        "kr": "자단",
+        "fr": "palissandre",
+        "en": "Rosewood"
+      },
+      "price_add_unit": 0,
+      "price_add_base": 0,
+      "frame_min_width": 0,
+      "material_code": 1181,
+      "color": "",
+      "sample_mat": "",
+      "sample_img": ""
+    },
+    {
+      "name": {
+        "cn": "紫光檀",
+        "jp": "パープルタン",
+        "kr": "퍼플 탄",
+        "fr": "Violet Tan",
+        "en": "Purple Sanderwood"
+      },
+      "price_add_unit": 0,
+      "price_add_base": 0,
+      "frame_min_width": 0,
+      "material_code": 1182,
+      "color": "",
+      "sample_mat": "",
+      "sample_img": ""
+    },
+    {
+      "name": {
+        "cn": "金丝楠",
+        "jp": "ゴールドナン",
+        "kr": "골드 앤",
+        "fr": "Or Nan",
+        "en": "Gold Nan"
+      },
+      "price_add_unit": 0,
+      "price_add_base": 0,
+      "frame_min_width": 0,
+      "material_code": 1183,
+      "color": "",
+      "sample_mat": "",
+      "sample_img": ""
+    },
+    {
+      "name": {
+        "cn": "樟木",
+        "jp": "樟木鎮",
+        "kr": "계피",
+        "fr": "Cinnamomum longepaniculatum (Gamble) N. Chao",
+        "en": "Cinnamomum longepaniculatum (Gamble) N. Chao"
+      },
+      "price_add_unit": 0,
+      "price_add_base": 0,
+      "frame_min_width": 0,
+      "material_code": 1184,
+      "color": "仿古/花梨/红木色",
+      "sample_mat": "",
+      "sample_img": ""
+    },
+    {
+      "name": {
+        "cn": "复古杉木",
+        "jp": "レトロ私のコレクション",
+        "kr": "레트로 중국어 전나무",
+        "fr": "Cunninghamia lanceolata",
+        "en": "Cunninghamia lanceolata"
+      },
+      "price_add_unit": 0,
+      "price_add_base": 0,
+      "frame_min_width": 0,
+      "material_code": 1185,
+      "color": "仿古/花梨/红木色",
+      "sample_mat": "",
+      "sample_img": ""
+    },
+    {
+      "name": {
+        "cn": "樟子松",
+        "jp": "アカマツシルベスト",
+        "kr": "내 컬렉션",
+        "fr": "Pinus sylvestris L. var. mongholica Litv.",
+        "en": "Pinus sylvestris L. var. mongholica Litv."
+      },
+      "price_add_unit": 0,
+      "price_add_base": 0,
+      "frame_min_width": 0,
+      "material_code": 1186,
+      "color": "仿古/花梨/红木色",
+      "sample_mat": "",
+      "sample_img": ""
+    },
+    {
+      "name": {
+        "cn": "瘿木",
+        "jp": "ガルの木",
+        "kr": "담즙 나무",
+        "fr": "Gall wood",
+        "en": "Gall wood"
+      },
+      "price_add_unit": 0,
+      "price_add_base": 0,
+      "frame_min_width": 0,
+      "material_code": 1187,
+      "color": "",
+      "sample_mat": "",
+      "sample_img": ""
+    },
+    {
+      "name": {
+        "cn": "蛇纹木",
+        "jp": "サーペンタイン・木材",
+        "kr": "구불 구불 한 나무",
+        "fr": "Bois Serpentine",
+        "en": "Serpentine wood"
+      },
+      "price_add_unit": 0,
+      "price_add_base": 0,
+      "frame_min_width": 0,
+      "material_code": 1188,
+      "color": "",
+      "sample_mat": "",
+      "sample_img": ""
+    },
+    {
+      "name": {
+        "cn": "胡桃木",
+        "jp": "ウォールナット",
+        "kr": "호두 나무",
+        "fr": "noyer",
+        "en": "Walnut wood"
+      },
+      "price_add_unit": 0,
+      "price_add_base": 0,
+      "frame_min_width": 0,
+      "material_code": 1189,
+      "color": "",
+      "sample_mat": "",
+      "sample_img": ""
+    },
+    {
+      "name": {
+        "cn": "橡木",
+        "jp": "オーク",
+        "kr": "오크 나무",
+        "fr": "chêne",
+        "en": "Oak wood"
+      },
+      "price_add_unit": 0,
+      "price_add_base": 0,
+      "frame_min_width": 0,
+      "material_code": 1190,
+      "color": "",
+      "sample_mat": "",
+      "sample_img": ""
+    },
+    {
+      "name": {
+        "cn": "红酸枝木",
+        "jp": "ローズウッド",
+        "kr": "자단",
+        "fr": "palissandre",
+        "en": "Dalbergia cochinchinensis Pierre"
+      },
+      "price_add_unit": 0,
+      "price_add_base": 0,
+      "frame_min_width": 0,
+      "material_code": 1191,
+      "color": "",
+      "sample_mat": "",
+      "sample_img": ""
+    },
+    {
+      "name": {
+        "cn": "枫木",
+        "jp": "メープル",
+        "kr": "단풍 나무",
+        "fr": "érable",
+        "en": "maple"
+      },
+      "price_add_unit": 0,
+      "price_add_base": 0,
+      "frame_min_width": 0,
+      "material_code": 1193,
+      "color": "",
+      "sample_mat": "",
+      "sample_img": ""
+    },
+    {
+      "name": {
+        "cn": "金刚柚木",
+        "jp": "ダイヤモンドチーク",
+        "kr": "다이아몬드 티크",
+        "fr": "diamant Teak",
+        "en": "King Kong teak"
+      },
+      "price_add_unit": 0,
+      "price_add_base": 0,
+      "frame_min_width": 0,
+      "material_code": 1192,
+      "color": "",
+      "sample_mat": "",
+      "sample_img": ""
+    },
+    {
+      "name": {
+        "cn": "榆木",
+        "jp": "エルム",
+        "kr": "느릅 나무",
+        "fr": "orme",
+        "en": "Elm"
+      },
+      "price_add_unit": 0,
+      "price_add_base": 0,
+      "frame_min_width": 0,
+      "material_code": 1194,
+      "color": "",
+      "sample_mat": "",
+      "sample_img": ""
+    },
+    {
+      "name": {
+        "cn": "白蜡木",
+        "jp": "アッシュ",
+        "kr": "애쉬 나무",
+        "fr": "cendre",
+        "en": "Ash wood"
+      },
+      "price_add_unit": 0,
+      "price_add_base": 0,
+      "frame_min_width": 0,
+      "material_code": 1195,
+      "color": "",
+      "sample_mat": "",
+      "sample_img": ""
+    }
+  ],
   "front_page_config": [
     {
       "feature": "_collection",
