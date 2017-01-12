@@ -1123,7 +1123,7 @@
       "sample_img": ""
     }
   ],
-  "app_banner": [
+  "front_page_config": [
     {
       "name": {
         "en": "Hand-painted Heritage",
@@ -1167,9 +1167,7 @@
       },
       "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
       "small": "https://s3.heskeyo.com/banner/banne_42.jpg"
-    }
-  ],
-  "front_page_config": [
+    },
     {
       "feature": "_collection",
       "name": {
