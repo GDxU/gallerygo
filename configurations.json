@@ -1123,7 +1123,7 @@
       "sample_img": ""
     }
   ],
- "app_banner":[
+  "app_banner": [
     {
       "name": {
         "en": "Hand-painted Heritage",
@@ -1186,7 +1186,7 @@
         "fr": "articles",
         "en": "items"
       },
-       "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
+      "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
       "small": "https://s3.heskeyo.com/banner/banne_42.jpg"
     },
     {
@@ -1204,7 +1204,8 @@
         "kr": "풍수",
         "fr": "Feng Shui",
         "en": "Feng Shui"
-      }, "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
+      },
+      "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
       "small": "https://s3.heskeyo.com/banner/banne_42.jpg"
     },
     {
@@ -1223,7 +1224,7 @@
         "fr": "Nous avons choisi les meilleures recommandations pour votre style de vie",
         "en": "We hand picked the best recommendations for your lifestyle"
       },
-       "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
+      "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
       "small": "https://s3.heskeyo.com/banner/banne_42.jpg"
     },
     {
@@ -1242,7 +1243,7 @@
         "fr": "Entretien avec le créateur d'art le plus influent",
         "en": "Interview the most influential artwork creator"
       },
-       "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
+      "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
       "small": "https://s3.heskeyo.com/banner/banne_42.jpg"
     },
     {
@@ -1261,7 +1262,7 @@
         "fr": "Feng shui offre une variété de conseils simples et pratiques pour améliorer votre vie",
         "en": "Feng shui offers a variety of easy and practical tips to improve your life"
       },
-       "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
+      "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
       "small": "https://s3.heskeyo.com/banner/banne_42.jpg"
     }
   ],
