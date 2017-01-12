@@ -1123,6 +1123,52 @@
       "sample_img": ""
     }
   ],
+ "app_banner":[
+    {
+      "name": {
+        "en": "Hand-painted Heritage",
+        "fr": "patrimoine peint à la main",
+        "jp": "手描きの遺産",
+        "kr": "손으로 그린 유산",
+        "cn": "手繪傳承"
+      },
+      "big": "https://s3.heskeyo.com/banner/banne_32.jpg",
+      "small": "https://s3.heskeyo.com/banner/banne_31.jpg"
+    },
+    {
+      "name": {
+        "en": "Wealth and safety",
+        "fr": "La richesse et la sécurité",
+        "jp": "富と安全",
+        "kr": "부와 안전",
+        "cn": "富贵平安"
+      },
+      "big": "https://s3.heskeyo.com/banner/banne_51.jpg",
+      "small": "https://s3.heskeyo.com/banner/banne_52.jpg"
+    },
+    {
+      "name": {
+        "en": "Custom Build",
+        "fr": "La richesse et la sécurité",
+        "jp": "カスタムメイド",
+        "kr": "개인 맞춤 빌드",
+        "cn": "私人定制"
+      },
+      "big": "https://s3.heskeyo.com/banner/banne_61.jpg",
+      "small": "https://s3.heskeyo.com/banner/banne_62.jpg"
+    },
+    {
+      "name": {
+        "en": "Poetic Perspective",
+        "fr": "Perspective poétique",
+        "jp": "詩的な視点",
+        "kr": "시적인 전망",
+        "cn": "如诗如画"
+      },
+      "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
+      "small": "https://s3.heskeyo.com/banner/banne_42.jpg"
+    }
+  ],
   "front_page_config": [
     {
       "feature": "_collection",
@@ -1139,7 +1185,9 @@
         "kr": "항목",
         "fr": "articles",
         "en": "items"
-      }
+      },
+       "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
+      "small": "https://s3.heskeyo.com/banner/banne_42.jpg"
     },
     {
       "feature": "_newitems",
@@ -1156,7 +1204,8 @@
         "kr": "풍수",
         "fr": "Feng Shui",
         "en": "Feng Shui"
-      }
+      }, "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
+      "small": "https://s3.heskeyo.com/banner/banne_42.jpg"
     },
     {
       "feature": "_personalcats",
@@ -1173,7 +1222,9 @@
         "kr": "우리는 당신의 라이프 스타일에 가장 적합한 추천을 골랐습니다",
         "fr": "Nous avons choisi les meilleures recommandations pour votre style de vie",
         "en": "We hand picked the best recommendations for your lifestyle"
-      }
+      },
+       "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
+      "small": "https://s3.heskeyo.com/banner/banne_42.jpg"
     },
     {
       "feature": "_profiles",
@@ -1190,7 +1241,9 @@
         "kr": "가장 영향력있는 작품 제작자 인터뷰",
         "fr": "Entretien avec le créateur d'art le plus influent",
         "en": "Interview the most influential artwork creator"
-      }
+      },
+       "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
+      "small": "https://s3.heskeyo.com/banner/banne_42.jpg"
     },
     {
       "feature": "_fengshui",
@@ -1207,7 +1260,9 @@
         "kr": "풍수는 인생을 개선하기 위해 쉽고 실용적인 다양한 팁을 제공합니다",
         "fr": "Feng shui offre une variété de conseils simples et pratiques pour améliorer votre vie",
         "en": "Feng shui offers a variety of easy and practical tips to improve your life"
-      }
+      },
+       "big": "https://s3.heskeyo.com/banner/banne_41.jpg",
+      "small": "https://s3.heskeyo.com/banner/banne_42.jpg"
     }
   ],
   "product_config_fengshi": [
