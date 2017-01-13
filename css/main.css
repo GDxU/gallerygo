@@ -158,9 +158,11 @@ body > section,
 .upperlevel2 {
     z-index: 100;
 }
+
 .upperlevel1 {
     z-index: 0;
 }
+
 .download-from-playstore {
     background-size: cover;
     background-image: url(img/google-play-mono.png);
@@ -501,13 +503,24 @@ body > section,
 ==========================================*/
 
 #facts {
-    background-image: url("../img/parallax/dream_545ebfbab8.jpg");
+    background-image: url("../img/parallax/dream_bs1.jpg");
     background-color: rgba(6, 32, 51, .5);
     background-attachment: fixed !important;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
+}
+
+#work_framing {
+    background-image: url("../img/parallax/fram43oc.jpg");
+    background-color: rgba(250, 254, 245, 0.78);
+    background-attachment: fixed !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    height: 500px;
 }
 
 .facts .devider:before,

@@ -11,7 +11,7 @@ var installation = {
   gkey: "AIzaSyAmXtBaDUPvKAe_ZKYVkg2sSTGHAWgLK6I",
   FB: "135624513168400",
   KAO: "dcbeabcda78df18100c882cea12bc31c",
-  baseapi: "http://farm.heskeyo.com/api/",
+  baseapi: "https://farm.heskeyo.com/api/",
   script_cn: {
     head: "用您最優秀的繪畫作品，推向市場并介紹給您的粉絲！",
     create: "利用AR技术在世界任何地方，把艺术创作的心路历程以及艺术作品上传到您的个人收藏。",
@@ -43,8 +43,11 @@ var installation = {
       listeditem: "列出的作品",
       dsearch: "每日搜索"
     },
+    fmat: {
+      title: "材料使用"
+    },
     works: {
-      title: "POOL OF PAINTINGS",
+      title: "绘画集合",
       subtitle: "我们从人群中选择最好的一块，我们还在计数",
       all: "所有",
       k1: "中国水墨",
@@ -58,7 +61,7 @@ var installation = {
     },
     slider: {
       s16: "迎接",
-      s17: "掌心画廊Go!",
+      s17: "掌心画廊GO",
       s18: "你每天的艺术绘画目的地",
       s20: "迎接",
       s21: "团队",
@@ -107,8 +110,11 @@ var installation = {
       listeditem: "LISTED ARTWORKS",
       dsearch: "DAILY SEARCH"
     },
+    fmat: {
+      title: "Use of Materials"
+    },
     works: {
-      title: "POOL OF PAINTINGS",
+      title: "Collection of Artworks",
       subtitle: "We select the best piece from the crowd and we are still counting",
       all: "ALL",
       k1: "Chinese Ink",
@@ -122,7 +128,7 @@ var installation = {
     },
     slider: {
       s16: "Meet",
-      s17: " Gallery Go!",
+      s17: " GalleryGO",
       s18: "Your Every Day Art Painting Destination",
       s20: "Meet",
       s21: " the team!",
