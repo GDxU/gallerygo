@@ -737,3 +737,8 @@ label.error {
     right: 25px;
     z-index: 9;
 }
+
+.downloadlist li {
+    display: block;
+    margin: 3px;
+}

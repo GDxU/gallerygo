@@ -9,7 +9,7 @@ var installation = {
   gkey: "AIzaSyAmXtBaDUPvKAe_ZKYVkg2sSTGHAWgLK6I",
   FB: "135624513168400",
   KAO: "dcbeabcda78df18100c882cea12bc31c",
-  baseapi:"https://farm.heskeyo.com/api/",
+  baseapi: "https://farm.heskeyo.com/api/",
   script_cn: {
     head: "用您最優秀的繪畫作品，推向市場并介紹給您的粉絲！",
     create: "利用AR技术在世界任何地方，把艺术创作的心路历程以及艺术作品上传到您的个人收藏。",
@@ -41,8 +41,8 @@ var installation = {
       listeditem: "列出的作品",
       dsearch: "每日搜索"
     },
-    fmat:{
-      title:"材料使用"
+    fmat: {
+      title: "材料使用"
     },
     works: {
       title: "绘画集合",
@@ -74,7 +74,8 @@ var installation = {
     contact: {},
     footer: {
       about: "Zyntauri是一家技术公司. 我们的使命是为世界交流提供最好的艺术目的地。",
-      license: "Corp CI: 2438814"
+      license: "Corp CI: 2438814",
+      getit: "立即获取APP"
     }
   },
   script_en: {
@@ -108,8 +109,8 @@ var installation = {
       listeditem: "LISTED ARTWORKS",
       dsearch: "DAILY SEARCH"
     },
-    fmat:{
-      title:"Use of Materials"
+    fmat: {
+      title: "Use of Materials"
     },
     works: {
       title: "Collection of Artworks",
@@ -141,7 +142,8 @@ var installation = {
     contact: {},
     footer: {
       about: "Zyntauri is a technology company. We are missioned to make provide the best art destination for worldwide exchange.",
-      license: "Corp CI: 2438814"
+      license: "Corp CI: 2438814",
+      getit: "GET IT NOW"
     }
   }
 };
