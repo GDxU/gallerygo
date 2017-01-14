@@ -54,8 +54,10 @@ var installation = {
       k4: "花卉",
       k5: "山水",
       k6: "人",
-      k7: "人",
-      k8: "人"
+      k7: "視覺抽象",
+      k8: "信息抽象",
+      k9: "書法",
+      k10: "Melti"
     },
     slider: {
       s16: "迎接",
@@ -123,7 +125,9 @@ var installation = {
       k5: "Landscape",
       k6: "People",
       k7: "Vision Abstract",
-      k8: "Info Abstract"
+      k8: "Info Abstract",
+      k9: "Calligraphy",
+      k10: "Melti"
     },
     slider: {
       s16: "Meet",
