@@ -75,10 +75,11 @@ var installation = {
     },
     contact: {},
     footer: {
-      about: "Zyntauri是一家技术公司. 我们的使命是为世界交流提供最好的艺术目的地。",
+      about: "Zyntauri是一家技术公司。 我们的使命是为世界交流提供最好的艺术目的地。",
       license: "Corp CI: 2438814",
       getit: "立即获取APP",
-      terms: "條款和條件"
+      terms: "條款和條件",
+      support: "支持"
     }
   },
   script_en: {
@@ -149,7 +150,8 @@ var installation = {
       about: "Zyntauri is a technology company. We are missioned to make provide the best art destination for worldwide exchange.",
       license: "Corp CI: 2438814",
       getit: "GET IT NOW",
-      terms:"Terms and Condition"
+      terms: "Terms and Condition",
+      support: "Supports"
     }
   }
 };
