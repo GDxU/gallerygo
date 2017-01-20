@@ -46,11 +46,13 @@ h4, h5, h6 {
     font-weight: normal;
     margin: 0;
 }
-h1#logo img{
-  height:51px;
-  width:auto;
-  display:block;
+
+h1#logo img {
+    height: 51px;
+    width: auto;
+    display: block;
 }
+
 .clear:before,
 .clear:after {
     content: " ";
@@ -67,6 +69,10 @@ h1#logo img{
 
 span.color {
     color: #0feb9e;
+}
+
+.darktx {
+    color: #251a14;
 }
 
 body > section,
