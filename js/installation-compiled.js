@@ -25,7 +25,7 @@ var installation = {
       feature: "产品特点",
       work: "工作",
       contact: "联系",
-      language: "EN / Chinese"
+      language: "English / 中文"
     },
     features: {
       title: "产品特点",
@@ -97,7 +97,7 @@ var installation = {
       feature: "Features",
       work: "Work",
       contact: "Contact",
-      language: "EN / Chinese"
+      language: "English / 中文"
     },
     features: {
       title: "Features",
