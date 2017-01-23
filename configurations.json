@@ -1132,8 +1132,8 @@
         "kr": "손으로 그린 유산",
         "cn": "手繪傳承"
       },
-      "big": "https://s3.heskeyo.com/banners/banne_32.jpg",
-      "small": "https://s3.heskeyo.com/banners/banne_31.jpg"
+      "small": "https://s3.heskeyo.com/banners/banne_31.jpg",
+      "big": "https://s3.heskeyo.com/banners/banne_32.jpg"
     },
     {
       "name": {
@@ -1144,7 +1144,7 @@
         "cn": "富贵平安"
       },
       "big": "https://s3.heskeyo.com/banners/banne_52.jpg",
-      "small": "https://s3.heskeyo.com/banners/banne_52.jpg"
+      "small": "https://s3.heskeyo.com/banners/banne_51.jpg"
     },
     {
       "name": {
@@ -1171,18 +1171,18 @@
     {
       "feature": "_collection",
       "name": {
-        "cn": "我的收藏",
+        "cn": "我的值得收藏",
         "jp": "私のコレクション",
         "kr": "내 컬렉션",
         "fr": "Mes collections",
         "en": "My collections"
       },
       "subtitle": {
-        "cn": "品目",
-        "jp": "アイテム",
-        "kr": "항목",
-        "fr": "articles",
-        "en": "items"
+        "cn": "賀大年 · 簡介賀大年出身書香門第，自幼愛好丹青，畢業於中國書畫函授大學，現為陝西省美協會員。他擅長速寫，人物寫生筆精意周，頗能抓住動態。",
+        "jp": "それダン階・はじめに彼ダン階の文学家族、子供の頃の愛ダンは、中国の絵画と書道の対応大学を卒業生まれ、今陝西省の米国協会の会員です。彼は、文字スケッチペン上質なイタリアウィーク、ダイナミックな可能性の高いキャッチ、スケッチを専門としています。",
+        "kr": "그것은 Danian · 소개 그는 Danian 문학 가족, 어린 시절 사랑 단, 중국어 회화와 서예 통신 대학을 졸업 태어나, 지금 서안의 미국 협회의 회원입니다. 그는 문자 스케치 펜 고급 이탈리아 주, 동적 가능성 캐치, 스케치 전문.",
+        "fr": "Il Danian · Présentation Il Danian né la famille littéraire, amour d'enfance Dan, diplômé de la peinture chinoise et la calligraphie correspondance université, est maintenant un membre de l'Association de la province du Shaanxi États-Unis. Il se spécialise dans les esquisses, croquis caractère fine plume de la Semaine italienne, prise probable dynamique.",
+        "en": "Danian originated scholarly, since childhood love Danqing, graduated from the Chinese painting and calligraphy correspondence university, is now the Shaanxi Province Artists Association. He is good at sketching, character sketch pencil weeks, quite able to seize the dynamic."
       },
       "big": "https://s3.heskeyo.com/banners/banne_81.jpg",
       "small": "https://s3.heskeyo.com/banners/banne_82.jpg"
@@ -1197,14 +1197,14 @@
         "en": "new arrival"
       },
       "subtitle": {
-        "cn": "风水",
-        "jp": "風水",
-        "kr": "풍수",
-        "fr": "Feng Shui",
-        "en": "Feng Shui"
+        "cn": "最新海选书画精品，让我们爱上这些创作产品",
+        "jp": "最新のオーディション細かい絵画は、私たちはこれらの作品と恋に落ちるしましょう",
+        "kr": "최근 오디션 좋은 그림은, 우리가 이러한 창조와 사랑에 빠지게 할 수",
+        "fr": "Les dernières auditions de belles peintures, laissez-nous tomber amoureux de ces créations",
+        "en": "Discover new designer and fall in love with the latest collections of creations, paintings and drawings."
       },
-      "big": "https://s3.heskeyo.com/banners/banne_81.jpg",
-      "small": "https://s3.heskeyo.com/banners/banne_82.jpg"
+      "small": "https://s3.heskeyo.com/banners/banne_81.jpg",
+      "big": "https://s3.heskeyo.com/banners/banne_82.jpg"
     },
     {
       "feature": "_personalcats",
@@ -1222,8 +1222,8 @@
         "fr": "Nous avons choisi les meilleures recommandations pour votre style de vie",
         "en": "We hand picked the best recommendations for your lifestyle"
       },
-      "big": "https://s3.heskeyo.com/banners/banne_41.jpg",
-      "small": "https://s3.heskeyo.com/banners/banne_42.jpg"
+      "small": "https://s3.heskeyo.com/banners/banne_41.jpg",
+      "big": "https://s3.heskeyo.com/banners/banne_42.jpg"
     },
     {
       "feature": "_profiles",
@@ -1241,8 +1241,8 @@
         "fr": "Entretien avec le créateur d'art le plus influent",
         "en": "Interview the most influential artwork creator"
       },
-      "big": "https://s3.heskeyo.com/banners/banne_81.jpg",
-      "small": "https://s3.heskeyo.com/banners/banne_82.jpg"
+      "small": "https://s3.heskeyo.com/banners/banne_81.jpg",
+      "big": "https://s3.heskeyo.com/banners/banne_82.jpg"
     },
     {
       "feature": "_fengshui",
@@ -1254,14 +1254,14 @@
         "en": "Feng Shui"
       },
       "subtitle": {
-        "cn": "风水提供各种简单实用的提示，以改善你的生活",
-        "jp": "風水はあなたの人生を改善するための様々な簡単で実践的なヒントを提供しています",
-        "kr": "풍수는 인생을 개선하기 위해 쉽고 실용적인 다양한 팁을 제공합니다",
-        "fr": "Feng shui offre une variété de conseils simples et pratiques pour améliorer votre vie",
-        "en": "Feng shui offers a variety of easy and practical tips to improve your life"
+        "cn": "一幅聚財、旺福、平安幸福的吉祥字畫掛在家中玄關、走廊、過道等處，可以為家人帶來好運，調節家居風水，為家裡招財納福。尤其是家中住著老人、兒童的家居環境，更需要在家裡掛幾幅吉祥字畫。",
+        "jp": "濃縮、ウォン大福、平和と幸福縁起の良い絵は家の入り口、廊下、廊下などにハングアップする、家庭ラッキーハナフォードのホーム風水を規制、家族のために幸運をもたらすことができます。特に家庭での高齢者のための家、子どもの家庭環境が、より多くの家庭で縁起の良い書道の作品をぶら下げ。",
+        "kr": "농축은, 웡 푹은 평화와 행복 경사스러운 그림 집 럭키 Hannaford에서 집 풍수 조절, 가족을 위해 행운을 가져올 수있는 등 홈 입구, 복도, 복도에 걸어. 특히 경사스러운 서예 조각 걸려 집에서, 노인 아동의 가정 환경,하지만 더 가정의 집에서.",
+        "fr": "Un enrichissement, Wong Fook, la paix et le bonheur des peintures de bon augure accrocher dans l'entrée de la maison, les couloirs, les couloirs, etc., peuvent apporter la bonne chance pour la famille, la régulation de la maison feng shui pour la maison de Lucky Hannaford. Surtout à la maison d'accueil pour les personnes âgées, l'environnement familial des enfants, mais plus à la maison des morceaux de calligraphie bon augure pendaison.",
+        "en": "Feng shui offers a variety of easy and practical tips to improve your life. Black Koi Carp Feng shui symbol of Abundance and Prosperity"
       },
-      "big": "https://s3.heskeyo.com/banners/banne_81.jpg",
-      "small": "https://s3.heskeyo.com/banners/banne_82.jpg"
+      "small": "https://s3.heskeyo.com/banners/banne_101.jpg",
+      "big": "https://s3.heskeyo.com/banners/banne_102.jpg"
     }
   ],
   "product_config_fengshi": [
