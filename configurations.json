@@ -1184,8 +1184,8 @@
         "fr": "Il Danian · Présentation Il Danian né la famille littéraire, amour d'enfance Dan, diplômé de la peinture chinoise et la calligraphie correspondance université, est maintenant un membre de l'Association de la province du Shaanxi États-Unis. Il se spécialise dans les esquisses, croquis caractère fine plume de la Semaine italienne, prise probable dynamique.",
         "en": "Danian originated scholarly, since childhood love Danqing, graduated from the Chinese painting and calligraphy correspondence university, is now the Shaanxi Province Artists Association. He is good at sketching, character sketch pencil weeks, quite able to seize the dynamic."
       },
-      "big": "https://s3.heskeyo.com/banners/banne_81.jpg",
-      "small": "https://s3.heskeyo.com/banners/banne_82.jpg"
+      "big": "https://s3.heskeyo.com/banners/banne_112.jpg",
+      "small": "https://s3.heskeyo.com/banners/banne_111.jpg"
     },
     {
       "feature": "_newitems",
@@ -1203,8 +1203,8 @@
         "fr": "Les dernières auditions de belles peintures, laissez-nous tomber amoureux de ces créations",
         "en": "Discover new designer and fall in love with the latest collections of creations, paintings and drawings."
       },
-      "small": "https://s3.heskeyo.com/banners/banne_81.jpg",
-      "big": "https://s3.heskeyo.com/banners/banne_82.jpg"
+      "big": "https://s3.heskeyo.com/banners/banne_122.jpg",
+	  "small": "https://s3.heskeyo.com/banners/banne_121.jpg"
     },
     {
       "feature": "_personalcats",
@@ -1270,10 +1270,10 @@
       "label": {
         "cn": "富貴平安",
         "zh": "富貴平安",
-        "jp": "富貴平安",
-        "kr": "富貴平安",
-        "fr": "富貴平安",
-        "en": "富貴平安"
+        "jp": "平和繁栄",
+        "kr": "평화 번영",
+        "fr": "la paix prospérité",
+        "en": "Peace and Prosperity"
       }
     },
     {
@@ -1281,10 +1281,10 @@
       "label": {
         "cn": "聚水生財",
         "zh": "聚水生財",
-        "jp": "聚水生財",
-        "kr": "聚水生財",
-        "fr": "聚水生財",
-        "en": "聚水生財"
+        "jp": "お金を稼ぐポリ水",
+        "kr": "돈을 버는 폴리 물",
+        "fr": "acqua Poly fare soldi",
+        "en": "Poly water making money"
       }
     },
     {
@@ -1292,10 +1292,10 @@
       "label": {
         "cn": "鎮宅旺業",
         "zh": "鎮宅旺業",
-        "jp": "鎮宅旺業",
-        "kr": "鎮宅旺業",
-        "fr": "鎮宅旺業",
-        "en": "鎮宅旺業"
+        "jp": "王業界のタウンハウス",
+        "kr": "왕 산업 타운 하우스",
+        "fr": "Wang casa industria di città",
+        "en": "Prosper industry and rich home"
       }
     },
     {
@@ -1303,10 +1303,10 @@
       "label": {
         "cn": "情緣篤定",
         "zh": "情緣篤定",
-        "jp": "情緣篤定",
-        "kr": "情緣篤定",
-        "fr": "情緣篤定",
-        "en": "情緣篤定"
+        "jp": "ラブ保証",
+        "kr": "확실한 사랑",
+        "fr": "Amore assicurato",
+        "en": "Love assured"
       }
     },
     {
@@ -1314,10 +1314,10 @@
       "label": {
         "cn": "多子多福",
         "zh": "多子多福",
-        "jp": "多子多福",
-        "kr": "多子多福",
-        "fr": "多子多福",
-        "en": "多子多福"
+        "jp": "多くの人の息子",
+        "kr": "많은 아들",
+        "fr": "De nombreux fils",
+        "en": "Many offspring"
       }
     },
     {
@@ -1325,10 +1325,10 @@
       "label": {
         "cn": "怡情養性",
         "zh": "怡情養性",
-        "jp": "怡情養性",
-        "kr": "怡情養性",
-        "fr": "怡情養性",
-        "en": "怡情養性"
+        "jp": "文字を構築します",
+        "kr": "문자를 구축",
+        "fr": "construit caractère",
+        "en": "Builds character"
       }
     }
   ],
