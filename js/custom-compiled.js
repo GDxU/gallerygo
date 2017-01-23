@@ -1,3 +1,5 @@
+"use strict";
+
 /* ========================================================================= */
 /*	Preloader
  /* ========================================================================= */
@@ -18,10 +20,10 @@ $(document).ready(function () {
     currentClass: 'current',
     easing: 'easeInOutExpo',
     updateHash: true,
-    beforeStart: function () {
+    beforeStart: function beforeStart() {
       console.log('begin scrolling');
     },
-    onComplete: function () {
+    onComplete: function onComplete() {
       console.log('done scrolling');
     }
   });
@@ -39,8 +41,7 @@ $(document).ready(function () {
   var slideHeight = $(window).height();
   $('#slider, .carousel.slide, .carousel-inner, .carousel-inner .item').css('height', slideHeight);
   $(window).resize(function () {
-    'use strict',
-      $('#slider, .carousel.slide, .carousel-inner, .carousel-inner .item').css('height', slideHeight);
+    'use strict', $('#slider, .carousel.slide, .carousel-inner, .carousel-inner .item').css('height', slideHeight);
   });
   /* ========================================================================= */
   /*	Portfolio Filtering
@@ -93,8 +94,8 @@ $(document).ready(function () {
         to: e,
         speed: 3e3,
         refreshInterval: 50
-      })
-    })
+      });
+    });
   });
 
   /* ========================================================================= */
@@ -102,19 +103,17 @@ $(document).ready(function () {
    /* ========================================================================= */
   $(window).scroll(function () {
     if ($(window).scrollTop() > 400) {
-      $("#back-top").fadeIn(200)
+      $("#back-top").fadeIn(200);
     } else {
-      $("#back-top").fadeOut(200)
+      $("#back-top").fadeOut(200);
     }
   });
   $("#back-top").click(function () {
     $("html, body").stop().animate({
       scrollTop: 0
-    }, 1500, "easeInOutExpo")
+    }, 1500, "easeInOutExpo");
   });
-
 });
-
 
 // ==========  START GOOGLE MAP ========== //
 function initialize() {
@@ -146,10 +145,10 @@ function initialize() {
 /* Start of LiveChat (www.livechatinc.com) code */
 window.__lc = window.__lc || {};
 window.__lc.license = 8476872;
-(function() {
-  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+(function () {
+  var lc = document.createElement('script');lc.type = 'text/javascript';lc.async = true;
   lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+  var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(lc, s);
 })();
 /*End of LiveChat code */
 $(function () {
@@ -184,12 +183,12 @@ $(function () {
         minlength: "thats all? really?"
       }
     },
-    submitHandler: function (form) {
+    submitHandler: function submitHandler(form) {
       $(form).ajaxSubmit({
         type: "POST",
         data: $(form).serialize(),
         url: "process.php",
-        success: function () {
+        success: function success() {
           $('#contact-form :input').attr('disabled', 'disabled');
           $('#contact-form').fadeTo("slow", 0.15, function () {
             $(this).find(':input').attr('disabled', 'disabled');
@@ -197,7 +196,7 @@ $(function () {
             $('#success').fadeIn();
           });
         },
-        error: function () {
+        error: function error() {
           $('#contact-form').fadeTo("slow", 0.15, function () {
             $('#error').fadeIn();
           });
@@ -207,6 +206,7 @@ $(function () {
   });
 });
 
-
 //google.maps.event.addDomListener(window, "load", initialize);
 // ========== END GOOGLE MAP ========== //
+
+//# sourceMappingURL=custom-compiled.js.map

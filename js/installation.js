@@ -5,6 +5,7 @@ var installation = {
   chinaandroid: "http://fir.im/smdc",
   android: "http://fir.im/smdc",
   playstore: "https://play.google.com/store/apps/details?id=com.zyntauri.gogallery",
+  coolapk: "http://www.coolapk.com/apk/129221",
   UA: "UA-61080213-1",
   gkey: "AIzaSyAmXtBaDUPvKAe_ZKYVkg2sSTGHAWgLK6I",
   FB: "135624513168400",
@@ -23,6 +24,7 @@ var installation = {
       feature: "产品特点",
       work: "工作",
       contact: "联系",
+      download: "安装",
       language: "English / 中文"
     },
     features: {
@@ -95,6 +97,7 @@ var installation = {
       feature: "Features",
       work: "Work",
       contact: "Contact",
+      download: "Install",
       language: "English / 中文"
     },
     features: {
