@@ -1204,7 +1204,7 @@
         "en": "Discover new designer and fall in love with the latest collections of creations, paintings and drawings."
       },
       "big": "https://s3.heskeyo.com/banners/banne_122.jpg",
-	  "small": "https://s3.heskeyo.com/banners/banne_121.jpg"
+      "small": "https://s3.heskeyo.com/banners/banne_121.jpg"
     },
     {
       "feature": "_personalcats",
@@ -1475,6 +1475,7 @@
       "en": "Come check out this %1$s."
     }
   ],
+  "transaction_livemode": true,
   "flag_format": "https://cdn.rawgit.com/NLPPort/FlagKit/master/Images/{country_code}%403x.png",
   "share_article_link": "http://farm.heskeyo.com/#/preview/{shared_article_id}/{preview_mode}/{language}"
 }
