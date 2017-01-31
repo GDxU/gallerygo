@@ -1158,12 +1158,13 @@
       "small": "https://s3.heskeyo.com/banners/banne_62.jpg"
     },
     {
+      "feature": "_myinventories",
       "name": {
-        "en": "Poetic Perspective",
-        "fr": "Perspective poétique",
-        "jp": "詩的な視点",
+        "en": "My Inventory",
+        "fr": "Mon Inventaire",
+        "jp": "マイインベントリ",
         "kr": "시적인 전망",
-        "cn": "如诗如画"
+        "cn": "我的庫存"
       },
       "big": "https://s3.heskeyo.com/banners/banne_41.jpg",
       "small": "https://s3.heskeyo.com/banners/banne_42.jpg"
@@ -1209,11 +1210,11 @@
     {
       "feature": "_personalcats",
       "name": {
-        "cn": "猜你喜欢",
-        "jp": "推薦する",
-        "kr": "추천",
-        "fr": "conseillé",
-        "en": "Recommended"
+        "cn": "只为你而设",
+        "jp": "貴方のために",
+        "kr": "그냥 당신을 위해",
+        "fr": "Juste pour toi",
+        "en": "Just For You"
       },
       "subtitle": {
         "cn": "我们手工挑选最适合您的生活方式的建议",
