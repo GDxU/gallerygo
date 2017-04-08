@@ -60,15 +60,15 @@ Fixed Navigation
 -->
 <header id="navigation" class="navbar-fixed-top navbar">
     <div class="container">
-	
-	      <!-- logo -->
-            <a class="navbar-brand" href="#body">
-                <h1 id="logo">
-                    <img src="img/product_logo12.png" alt="GalleryGO">
-                </h1>
-            </a>
-            <!-- /logo -->
-			
+
+        <!-- logo -->
+        <a class="navbar-brand" href="#body">
+            <h1 id="logo">
+                <img src="img/product_logo12.png" alt="GalleryGO">
+            </h1>
+        </a>
+        <!-- /logo -->
+
         <div class="navbar-header">
             <!-- responsive nav button -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -76,7 +76,7 @@ Fixed Navigation
                 <i class="fa fa-bars fa-2x"></i>
             </button>
             <!-- /responsive nav button -->
-           
+
         </div>
         <!-- main nav -->
         <nav class="collapse navbar-collapse navbar-right" role="navigation">
@@ -134,7 +134,8 @@ Fixed Navigation
                     <h3 data-wow-duration="500ms" class="wow slideInLeft animated darktx">
                         <span class="color">{{slider.s22}}</span>{{slider.s23}}
                     </h3>
-                    <p data-wow-duration="500ms" class="wow slideInRight animated"><span class="darktx">{{slider.s24}}</span></p>
+                    <p data-wow-duration="500ms" class="wow slideInRight animated"><span
+                            class="darktx">{{slider.s24}}</span></p>
                     <ul class="social-links text-center">
                         <li><a href="#"><i class="fa fa-behance fa-2x"></i></a></li>
                         <li><a href="https://twitter.com/Gallery_Go"><i class="fa fa-twitter fa-2x"></i></a></li>
@@ -401,7 +402,7 @@ Our Works
             </figcaption>
         </figure>
 
-   <figure class="mix work-item calli">
+        <figure class="mix work-item calli">
             <img src="img/works/item-17.jpg" alt="">
             <figcaption class="overlay">
                 <a class="fancybox" rel="works" href="img/works/item-17.jpg"><i class="fa fa-eye fa-lg"></i></a>
@@ -691,10 +692,15 @@ End Contact Us
                 <div class="footer-single downloadlist">
                     <h6>{{footer.getit}}</h6>
                     <ul>
-                        <li id="testing-link"><a href="#"><img height="50px" src="./image/common/fir.png"></a></li>
-                        <li id="coolapk-link"><a href="#"><img height="50px" src="./image/common/coolapk.png"></a></li>
-                        <li id="playstore-link"><a href="#"><img height="50px" src="./image/common/google-play-mono.png"></a></li>
-                        <li id="appstore-link"><a href="#"><img height="50px" src="./image/common/app-store.png"></a></li>
+                        <!--<li id="testing-link"><a href="#"><img height="50px" src="./image/common/fir.png"></a></li>-->
+                        <!-- <li id="coolapk-link"><a href="#"><img height="50px" src="./image/common/coolapk.png"></a></li>-->
+                        <li id="coolapk-link"><a target="_blank"
+                                                 href="http://apk-downloaders.com/?id=com.zyntauri.gogallery">{{footer.getit}}</a>
+                        </li>
+                        <li id="playstore-link"><a href="#"><img height="50px"
+                                                                 src="./image/common/google-play-mono.png"></a></li>
+                        <li id="appstore-link"><a href="#"><img height="50px" src="./image/common/app-store.png"></a>
+                        </li>
                     </ul>
                 </div>
                 <!-- <div class="download-from-playstore">a</div>-->
@@ -708,7 +714,9 @@ End Contact Us
                         <li><a href="#">Contact Us</a></li>
                         <li><a href="#">Market Blog</a></li>
                         <li><a href="#">Help Center</a></li>
-                        <li><a href="https://docs.google.com/document/d/1cUHW2ZdDaNoCRLwbmyaDGOMp06YjSSDriJBlYMUcOEY/pub">{{footer.terms}}</a></li>
+                        <li>
+                            <a href="https://docs.google.com/document/d/1cUHW2ZdDaNoCRLwbmyaDGOMp06YjSSDriJBlYMUcOEY/pub">{{footer.terms}}</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -764,12 +772,12 @@ End Contact Us
 <script src="js/wow.min.js"></script>
 <script>
     var wow = new WOW({
-                boxClass: 'wow',      // animated element css class (default is wow)
-                animateClass: 'animated', // animation css class (default is animated)
-                offset: 120,          // distance to the element when triggering the animation (default is 0)
-                mobile: false,       // trigger animations on mobile devices (default is true)
-                live: true        // act on asynchronously loaded content (default is true)
-            }
+            boxClass: 'wow',      // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset: 120,          // distance to the element when triggering the animation (default is 0)
+            mobile: false,       // trigger animations on mobile devices (default is true)
+            live: true        // act on asynchronously loaded content (default is true)
+        }
     );
     wow.init();
 </script>

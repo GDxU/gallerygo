@@ -79,7 +79,7 @@ var installation = {
     footer: {
       about: "Zyntauri是一家技术公司。 我们的使命是为世界交流提供最好的艺术目的地。",
       license: "Corp CI: 2438814",
-      getit: "立即获取APP",
+      getit: "立即下载应用程序",
       terms: "條款和條件",
       support: "支持"
     }
