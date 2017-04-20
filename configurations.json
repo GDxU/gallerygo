@@ -1479,5 +1479,5 @@
   "transaction_livemode": true,
   "flag_format": "https://cdn.rawgit.com/NLPPort/FlagKit/master/Images/{country_code}%403x.png",
   "share_article_link": "http://farm.heskeyo.com/#/preview/{shared_article_id}/{preview_mode}/{language}",
-  "shared_apk":"http://www.heskeyo.com/install/GALLERYGO-b311.apk"
+  "shared_apk":"https://github.com/GDxU/gallerygo/releases/download/1.4.147/GALLERYGO-b311.apk"
 }
