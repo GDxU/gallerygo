@@ -5,7 +5,7 @@ var installation = {
   chinaandroid: "http://fir.im/smdc",
   android: "http://fir.im/smdc",
   playstore: "https://play.google.com/store/apps/details?id=com.zyntauri.gogallery",
-  coolapk: "http://www.coolapk.com/apk/129221",
+  coolapk: "http://www.heskeyo.com/install/GALLERYGO-b311.apk",
   UA: "UA-61080213-1",
   gkey: "AIzaSyAmXtBaDUPvKAe_ZKYVkg2sSTGHAWgLK6I",
   FB: "135624513168400",
