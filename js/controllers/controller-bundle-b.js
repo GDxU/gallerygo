@@ -33,8 +33,8 @@ angular.module('app')
           $scope.radioData[0].label = _translation.roleName1[lang];
           $scope.radioData[1].detail = _translation.role_2[lang];
           $scope.radioData[1].label = _translation.roleName2[lang];
-          $scope.radioData[2].detail = _translation.role_3[lang];
-          $scope.radioData[2].label = _translation.roleName3[lang];
+         // $scope.radioData[2].detail = _translation.role_3[lang];
+        //  $scope.radioData[2].label = _translation.roleName3[lang];
           $scope.str = {
             intro: _translation.participate_intro[lang],
             title: _translation.title_cert_review[lang],
