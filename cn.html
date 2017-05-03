@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <!-- meta charec set -->
+    <meta charset="utf-8">
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Page Title -->
+    <title>GalleryGO by Z</title>
+    <!-- Meta Description -->
+    <meta name="description" content="Everywhere You Go with The Gallery on Your Hand">
+    <meta name="keywords"
+          content="画廊, 去卖买, 业务, 交流, 国际, 艺术, 画廊, 工具, 销售渠道, gallery, go, sell, buy, business, exchange, international, art, gallery, exhitbition, tool, selling channel, involve">
+    <meta name="author" content="Muhammad Morshed">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="GalleryGo">
+    <meta property="og:site_name" content="GalleryGo">
+    <meta property="og:url" content="https://www.heskeyo.com">
+    <meta property="og:description" content="Declare your artworks to the world!">
+    <meta property="og:image" content="https://www.heskeyo.com/images/logo-coo.png">
+    <meta property="fb:app_id" content="135624513168400">
+    <meta property="og:type" content="website">
+    <script src="js/installation.js"></script>
+
+    <!-- CSS
+    ================================================== -->
+    <!-- Fontawesome Icon font -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Twitter Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jquery.fancybox  -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- media-queries -->
+    <link rel="stylesheet" href="css/media-queries.css">
+    <!-- Modernizer Script for old Browsers -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+</head>
+<body id="body">
+<!-- preloader -->
+<div id="preloader">
+    <img src="img/preloader.gif" alt="Preloader">
+</div>
+<!-- end preloader -->
+<!--
+Fixed Navigation
+-->
+<header id="navigation" class="navbar-fixed-top navbar">
+    <div class="container">
+
+        <!-- logo -->
+        <a class="navbar-brand" href="#body">
+            <h1 id="logo">
+                <img src="img/product_logo12.png" alt="GalleryGO">
+            </h1>
+        </a>
+        <!-- /logo -->
+
+        <div class="navbar-header">
+            <!-- responsive nav button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars fa-2x"></i>
+            </button>
+            <!-- /responsive nav button -->
+
+        </div>
+        <!-- main nav -->
+        <nav class="collapse navbar-collapse navbar-right" role="navigation">
+            <ul id="nav" class="nav navbar-nav">
+                <li class="current"><a href="#body">{{ menu.home }}</a></li>
+                <li><a href="#features">{{ menu.feature }}</a></li>
+                <li><a href="#works">{{ menu.work }}</a></li>
+                <!--   <li><a href="#team">Team</a></li>-->
+                <li><a href="#contact">{{ menu.contact }}</a></li>
+                <li><a href="#footer">{{ menu.download }}</a></li>
+                <li><a href="#p" @click="switchLanguage">{{ menu.language }}</a></li>
+            </ul>
+        </nav>
+        <!-- /main nav -->
+    </div>
+</header>
+<!-- End Fixed Navigation
+==================================== -->
+<!-- Home Slider
+==================================== -->
+<section id="slider">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators bullet -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
+        </ol>
+        <!-- End Indicators bullet -->
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" style="background-color: black">
+                <div class="carousel-caption">
+                    <h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">
+                        {{slider.s16}}<span>{{slider.s17}}</span>!
+                    </h2>
+                    <h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">/sell</span> and
+                        leavage.</h3>
+                    <p data-wow-duration="1000ms" class="wow slideInRight animated">{{slider.s18}}</p>
+                    <ul class="social-links text-center">
+                        <li><a href="https://pan.baidu.com/s/1bpy7gHh">apk安卓</a></li>
+                        <li><a href="#">Apple App Store</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img/parallax/jt54464162272.jpg);">
+                <div class="carousel-caption">
+                    <h2 data-wow-duration="500ms" data-wow-delay="500ms" class="wow bounceInDown animated darktx">
+                        {{slider.s20}}<span>{{slider.s21}}</span>!
+                    </h2>
+                    <h3 data-wow-duration="500ms" class="wow slideInLeft animated darktx">
+                        <span class="color">{{slider.s22}}</span>{{slider.s23}}
+                    </h3>
+                    <p data-wow-duration="500ms" class="wow slideInRight animated"><span
+                            class="darktx">{{slider.s24}}</span></p>
+                    <ul class="social-links text-center">
+                        <li><a href="https://github.com/GDxU/gallerygo/releases/download/1.4.147/GALLERYGO-b311.apk"><i class="fa fa-android fa-2x"></i></a></li>
+                        <li><a href="https://twitter.com/Gallery_Go"><i class="fa fa-twitter fa-2x"></i></a></li>
+                        <li><a href="https://www.facebook.com/zyntauri"><i class="fa fa-facebook fa-2x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url(img/wall_2.jpg);">
+                <div class="carousel-caption">
+                    <div style="background-image: url(img/scanhand.webp);" id="scan_hand_image"
+                         data-wow-duration="1000ms" class="upperlevel1 wow slideInRight animated"></div>
+                    <h2 data-wow-duration="500ms" data-wow-delay="500ms" class="upperlevel2 wow bounceInDown animated">
+                        <span>{{slider.s30}}</span>{{slider.s31}}
+                    </h2>
+                    <h3 data-wow-duration="1000ms" class="upperlevel2 wow slideInLeft animated">
+                        <span class="color">{{slider.s32}}</span> {{slider.s33}}
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <!-- End Wrapper for slides -->
+    </div>
+</section>
+<!--
+End Home SliderEnd
+==================================== -->
+<!--
+Features
+==================================== -->
+<section id="features" class="features">
+    <div class="container">
+        <div class="row">
+
+            <div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
+                <h2>{{features.title}}</h2>
+                <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+            </div>
+
+            <!-- service item -->
+            <div class="col-md-4 wow fadeInLeft" data-wow-duration="500ms">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fa fa-github fa-2x"></i>
+                    </div>
+
+                    <div class="service-desc">
+                        <h3>{{features.c1}}</h3>
+                        <p>{{features.c1b}}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end service item -->
+
+            <!-- service item -->
+            <div class="col-md-4 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fa fa-pencil fa-2x"></i>
+                    </div>
+
+                    <div class="service-desc">
+                        <h3>{{features.c2}}</h3>
+                        <p>{{features.c2b}}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end service item -->
+            <!-- service item -->
+            <div class="col-md-4 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="900ms">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fa fa-bullhorn fa-2x"></i>
+                    </div>
+                    <div class="service-desc">
+                        <h3>{{features.c3}}</h3>
+                        <p>{{features.c3b}}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end service item -->
+
+        </div>
+    </div>
+</section>
+<!--
+Some fun facts
+==================================== -->
+<section id="facts" class="facts">
+    <div class="parallax-overlay">
+        <div class="container">
+            <div class="row number-counters">
+                <div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
+                    <h2>{{facts.funfact}}</h2>
+                    <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+                </div>
+                <!-- first count item -->
+                <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms">
+                    <div class="counters-item">
+                        <i class="fa fa-university  fa-3x"></i>
+                        <strong data-to="5012">0</strong>
+                        <!-- Set Your Number here. i,e. data-to="56" -->
+                        <p>{{facts.numworks}}</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms"
+                     data-wow-delay="300ms">
+                    <div class="counters-item">
+                        <i class="fa fa-users fa-3x"></i>
+                        <strong data-to="120">0</strong>
+                        <!-- Set Your Number here. i,e. data-to="56" -->
+                        <p>{{facts.vip}}</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms"
+                     data-wow-delay="600ms">
+                    <div class="counters-item">
+                        <i class="fa fa-tags fa-3x"></i>
+                        <strong data-to="1360">0</strong>
+                        <!-- Set Your Number here. i,e. data-to="56" -->
+                        <p>{{facts.listeditem}}</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms"
+                     data-wow-delay="900ms">
+                    <div class="counters-item">
+                        <i class="fa fa-search fa-3x"></i>
+                        <strong data-to="10454">0</strong>
+                        <!-- Set Your Number here. i,e. data-to="56" -->
+                        <p>{{facts.dsearch}}</p>
+                    </div>
+                </div>
+                <!-- end first count item -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--
+End Some fun facts
+==================================== -->
+
+
+<!--
+Contact Us
+==================================== -->
+
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="row mb50">
+
+            <div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
+                <h2>Let’s Discuss</h2>
+                <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+            </div>
+
+            <div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
+                <p>Find the artist around you and make them famous.</p>
+            </div>
+
+            <!-- contact address -->
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeInLeft animated" data-wow-duration="500ms">
+                <div class="contact-address">
+                    <h3>Office</h3>
+                    <p>Room 1205 12/F</p>
+                    <p>Fat Lee Ind. Bldg</p>
+                    <p>Hung To Road, Kwun Tong, KLN, Hong Kong.</p>
+                </div>
+            </div>
+            <!-- end contact address -->
+
+            <!-- contact form -->
+            <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms"
+                 data-wow-delay="300ms">
+                <div class="contact-form">
+                    <h3>Say hello!</h3>
+                    <form action="#" id="contact-form">
+                        <div class="input-group name-email">
+                            <div class="input-field">
+                                <input type="text" name="name" id="name" placeholder="Name" class="form-control">
+                            </div>
+                            <div class="input-field">
+                                <input type="email" name="email" id="email" placeholder="Email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <textarea name="message" id="message" placeholder="Message" class="form-control"></textarea>
+                        </div>
+                        <div class="input-group">
+                            <input type="submit" id="form-submit" class="pull-right" value="Send message">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- end contact form -->
+
+            <!-- footer social links -->
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 wow fadeInRight animated" data-wow-duration="500ms"
+                 data-wow-delay="600ms">
+                <ul class="footer-social">
+                    <li><a href="#"><i class="fa fa-behance fa-2x"></i></a></li>
+                    <li><a href="https://twitter.com/Gallery_Go"><i class="fa fa-twitter fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble fa-2x"></i></a></li>
+                    <li><a href="https://www.facebook.com/zyntauri"><i class="fa fa-facebook fa-2x"></i></a></li>
+                </ul>
+            </div>
+            <!-- end footer social links -->
+
+        </div>
+    </div>
+    <!-- Google map -->
+    <div id="map_canvas" class="wow bounceInDown animated" data-wow-duration="500ms"></div>
+    <!-- End Google map -->
+</section>
+<!--
+End Contact Us
+==================================== -->
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms">
+                <div class="footer-single">
+                    <img src="img/logo-cowhite.webp" alt="">
+                    <p>{{footer.about}}</p>
+                    <p>{{footer.license}}</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms"
+                 data-wow-delay="300ms">
+                <div class="footer-single">
+                    <h6>Subscribe </h6>
+                    <form action="#" class="subscribe">
+                        <input type="text" name="subscribe" id="subscribe">
+                        <input type="submit" value="&#8594;" id="subs">
+                    </form>
+                    <p>Subscribe email to learn more.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms"
+                 data-wow-delay="600ms">
+                <div class="footer-single downloadlist">
+                    <h6>{{footer.getit}}</h6>
+                    <ul>
+                        <!--<li id="testing-link"><a href="#"><img height="50px" src="./image/common/fir.png"></a></li>-->
+                        <!-- <li id="coolapk-link"><a href="#"><img height="50px" src="./image/common/coolapk.png"></a></li>-->
+                        <li id="apk-link">
+                            <a target="_blank"  href="https://github.com/GDxU/gallerygo/releases/download/1.4.147/GALLERYGO-b311.apk">{{footer.getit}}</a>
+                        </li>
+                        <li id="playstore-link"><a href="#">
+                            <img height="50px"
+                                                                 src="./image/common/google-play-mono.png"></a></li>
+                        <li id="appstore-link"><a href="#"><img height="50px" src="./image/common/app-store.png"></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="download-from-playstore">a</div>-->
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms"
+                 data-wow-delay="900ms">
+                <div class="footer-single">
+                    <h6>{{footer.support}}</h6>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Market Blog</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li>
+                            <a href="https://docs.google.com/document/d/1cUHW2ZdDaNoCRLwbmyaDGOMp06YjSSDriJBlYMUcOEY/pub">{{footer.terms}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="copyright text-center">
+                    Copyright © 2015 ZYNTAURI. All rights reserved. Designed &
+                    developed by ZYN Craftsmanship. GalleryGO is a ZYNTAURI Company
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="javascript:void(0);" id="back-top"><i class="fa fa-angle-up fa-3x"></i></a>
+<!--
+<script id="facebook-jssdk" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&amp;version=v2.3"></script>
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js" type="text/javascript"></script>
+<script async src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script type="text/javascript" src="http://media.line.me/js/line-button.js?v=20140411"></script>
+<script id="twitter-wjs" async src="https://platform.twitter.com/widgets.js" charset="utf-8" type="text/javascript"></script>
+-->
+<!-- Essential jQuery Plugins
+================================================== -->
+<!-- Main jQuery -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- Single Page Nav -->
+<script src="js/jquery.singlePageNav.min.js"></script>
+<!-- Twitter Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- jquery.fancybox.pack -->
+<script src="js/jquery.fancybox.pack.js"></script>
+<!-- jquery.mixitup.min -->
+<script src="js/jquery.mixitup.min.js"></script>
+<!-- jquery.parallax -->
+<script src="js/jquery.parallax-1.1.3.js"></script>
+<!-- jquery.countTo -->
+<script src="js/jquery-countTo.js"></script>
+<!-- jquery.appear -->
+<script src="js/jquery.appear.js"></script>
+<!-- Contact form validation -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+<!-- Google Map -->
+<script type="text/javascript" async defer
+        src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyAmXtBaDUPvKAe_ZKYVkg2sSTGHAWgLK6I&callback=initialize"></script>
+<!-- jquery easing -->
+<script src="js/jquery.easing.min.js"></script>
+<!-- jquery easing -->
+<script src="js/wow.min.js"></script>
+<script>
+    var wow = new WOW({
+            boxClass: 'wow',      // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset: 120,          // distance to the element when triggering the animation (default is 0)
+            mobile: false,       // trigger animations on mobile devices (default is true)
+            live: true        // act on asynchronously loaded content (default is true)
+        }
+    );
+    wow.init();
+</script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- Custom Functions -->
+<script src="js/custom.js"></script>
+<script src="js/vueimpl.js"></script>
+</body>
+</html>
