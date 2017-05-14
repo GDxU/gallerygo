@@ -30,10 +30,13 @@
     <meta property="og:image" content="https://www.heskeyo.com/images/logo-coo.png">
     <meta property="fb:app_id" content="135624513168400">
     <meta property="og:type" content="website">
+    <meta name="google-play-app" content="app-id=com.zyntauri.gogallery">
     <script src="js/installation.js"></script>
-
+    <link rel="apple-touch-icon" href="http://www.heskeyo.com/image/common/icon60.png">
     <!-- CSS
     ================================================== -->
+    <meta name="apple-itunes-app" content="app-id=1218334195">
+    <link rel="stylesheet" href="css/smartbanner.css" type="text/css" media="screen">
     <!-- Fontawesome Icon font -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Twitter Bootstrap css -->
@@ -47,6 +50,7 @@
     <!-- media-queries -->
     <link rel="stylesheet" href="css/media-queries.css">
     <!-- Modernizer Script for old Browsers -->
+    <!--  <script src="js/jquery.js"></script>-->
     <script src="js/modernizr-2.6.2.min.js"></script>
 </head>
 <body id="body">
@@ -134,7 +138,8 @@ Fixed Navigation
                     <p data-wow-duration="500ms" class="wow slideInRight animated"><span
                             class="darktx">{{slider.s24}}</span></p>
                     <ul class="social-links text-center">
-                        <li><a href="https://github.com/GDxU/gallerygo/releases/download/1.4.147/GALLERYGO-b311.apk"><i class="fa fa-android fa-2x"></i></a></li>
+                        <li><a href="https://github.com/GDxU/gallerygo/releases/download/1.4.147/GALLERYGO-b311.apk"><i
+                                class="fa fa-android fa-2x"></i></a></li>
                         <li><a href="https://twitter.com/Gallery_Go"><i class="fa fa-twitter fa-2x"></i></a></li>
                         <li><a href="https://www.facebook.com/zyntauri"><i class="fa fa-facebook fa-2x"></i></a></li>
                     </ul>
@@ -382,11 +387,12 @@ End Contact Us
                         <!--<li id="testing-link"><a href="#"><img height="50px" src="./image/common/fir.png"></a></li>-->
                         <!-- <li id="coolapk-link"><a href="#"><img height="50px" src="./image/common/coolapk.png"></a></li>-->
                         <li id="apk-link">
-                            <a target="_blank"  href="https://github.com/GDxU/gallerygo/releases/download/1.4.147/GALLERYGO-b311.apk">{{footer.getit}}</a>
+                            <a target="_blank"
+                               href="https://github.com/GDxU/gallerygo/releases/download/1.4.147/GALLERYGO-b311.apk">{{footer.getit}}</a>
                         </li>
                         <li id="playstore-link"><a href="#">
                             <img height="50px"
-                                                                 src="./image/common/google-play-mono.png"></a></li>
+                                 src="./image/common/google-play-mono.png"></a></li>
                         <li id="appstore-link"><a href="#"><img height="50px" src="./image/common/app-store.png"></a>
                         </li>
                     </ul>
@@ -449,8 +455,7 @@ End Contact Us
 <!-- jquery.appear -->
 <script src="js/jquery.appear.js"></script>
 <!-- Contact form validation -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+<script src="js/jform.js"></script>
 <!-- Google Map -->
 <script type="text/javascript" async defer
         src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyAmXtBaDUPvKAe_ZKYVkg2sSTGHAWgLK6I&callback=initialize"></script>
@@ -458,6 +463,7 @@ End Contact Us
 <script src="js/jquery.easing.min.js"></script>
 <!-- jquery easing -->
 <script src="js/wow.min.js"></script>
+<script src="js/smartbanner.js"></script>
 <script>
     var wow = new WOW({
             boxClass: 'wow',      // animated element css class (default is wow)
@@ -468,6 +474,21 @@ End Contact Us
         }
     );
     wow.init();
+</script>
+<script>
+    var user_agent = navigator.userAgent;
+    var samsung = /Galaxy.*Tab|SAMSUNG.*Tablet|Galaxy.*Tab|Android.*GT-/i;
+    // if statement checking samsung regex against user agent
+    //if (samsung.test(user_agent)) {
+    // This is a samsung mobile device
+    $.smartbanner({
+        title: '掌心畫廊GO',
+        icon: 'http://www.heskeyo.com/image/common/icon60.png',
+        author: 'Zyntauri Limited',
+        price: '免費',
+        button: '立即下載'
+    });
+    //}
 </script>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <!-- Custom Functions -->
