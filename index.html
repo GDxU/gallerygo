@@ -30,8 +30,10 @@
     <meta property="og:image" content="https://www.heskeyo.com/images/logo-coo.png">
     <meta property="fb:app_id" content="135624513168400">
     <meta property="og:type" content="website">
+    <meta name="google-play-app" content="app-id=com.zyntauri.gogallery">
+    <meta name="apple-itunes-app" content="app-id=1218334195">
+    <link rel="apple-touch-icon" href="http://www.heskeyo.com/image/common/icon60.png">
     <script src="js/installation.js"></script>
-
     <!-- CSS
     ================================================== -->
     <!-- Fontawesome Icon font -->
@@ -118,10 +120,10 @@ Fixed Navigation
                         leavage.</h3>
                     <p data-wow-duration="1000ms" class="wow slideInRight animated">{{slider.s18}}</p>
                     <ul class="social-links text-center">
-                        <li><a href="#"><i class="fa fa-behance fa-2x"></i></a></li>
                         <li><a href="https://twitter.com/Gallery_Go"><i class="fa fa-twitter fa-2x"></i></a></li>
-                        <li><a href="#"><i class="fa fa-dribbble fa-2x"></i></a></li>
                         <li><a href="https://www.facebook.com/zyntauri"><i class="fa fa-facebook fa-2x"></i></a></li>
+                        <li><h3><a href="https://play.google.com/store/apps/details?id=com.zyntauri.gogallery">Android</a></h3></li>
+                        <li><h3><a href="https://itunes.apple.com/us/app/gallerygo/id1218334195?ls=1&mt=8">Apple</a></h3></li>
                     </ul>
                 </div>
             </div>
@@ -137,7 +139,8 @@ Fixed Navigation
                     <p data-wow-duration="500ms" class="wow slideInRight animated"><span
                             class="darktx">{{slider.s24}}</span></p>
                     <ul class="social-links text-center">
-                        <li><a href="https://github.com/GDxU/gallerygo/releases/download/1.4.147/GALLERYGO-b311.apk"><i class="fa fa-android fa-2x"></i></a></li>
+                        <li><a href="https://github.com/GDxU/gallerygo/releases/download/1.4.147/GALLERYGO-b311.apk"><i
+                                class="fa fa-android fa-2x"></i></a></li>
                         <li><a href="https://twitter.com/Gallery_Go"><i class="fa fa-twitter fa-2x"></i></a></li>
                         <li><a href="https://www.facebook.com/zyntauri"><i class="fa fa-facebook fa-2x"></i></a></li>
                     </ul>
@@ -611,7 +614,7 @@ Contact Us
                     <h3>Office</h3>
                     <p>Room 1205 12/F</p>
                     <p>Fat Lee Ind. Bldg</p>
-                    <p>Hung To Road, Kwun Tong, KLN, Hong Kong.</p>
+                    <p>Hung To Road</p>
                 </div>
             </div>
             <!-- end contact address -->
@@ -694,12 +697,13 @@ End Contact Us
                         <!--<li id="testing-link"><a href="#"><img height="50px" src="./image/common/fir.png"></a></li>-->
                         <!-- <li id="coolapk-link"><a href="#"><img height="50px" src="./image/common/coolapk.png"></a></li>-->
                         <li id="apk-link">
-                            <a target="_blank"  href="https://github.com/GDxU/gallerygo/releases/download/1.4.147/GALLERYGO-b311.apk">{{footer.getit}}</a>
+                            <a target="_blank" href="https://pan.baidu.com/s/1pKD2cY3">{{footer.getit}}</a>
                         </li>
-                        <li id="playstore-link"><a href="#">
-                            <img height="50px"
+                        <li id="playstore-link"><a href="https://play.google.com/store/apps/details?id=com.zyntauri.gogallery&hl=zh-TW"><img height="50px"
                                                                  src="./image/common/google-play-mono.png"></a></li>
-                        <li id="appstore-link"><a href="#"><img height="50px" src="./image/common/app-store.png"></a>
+                        <li id="appstore-link"><a
+                                href="https://itunes.apple.com/us/app/gallerygo/id1218334195?ls=1&mt=8"><img
+                                height="50px" src="./image/common/app-store.png"></a>
                         </li>
                     </ul>
                 </div>
@@ -715,7 +719,7 @@ End Contact Us
                         <li><a href="#">Market Blog</a></li>
                         <li><a href="#">Help Center</a></li>
                         <li>
-                            <a href="https://docs.google.com/document/d/1cUHW2ZdDaNoCRLwbmyaDGOMp06YjSSDriJBlYMUcOEY/pub">{{footer.terms}}</a>
+                            <a href="">{{footer.terms}}</a>
                         </li>
                     </ul>
                 </div>
@@ -761,8 +765,7 @@ End Contact Us
 <!-- jquery.appear -->
 <script src="js/jquery.appear.js"></script>
 <!-- Contact form validation -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+<script src="js/jform.js"></script>
 <!-- Google Map -->
 <script type="text/javascript" async defer
         src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyAmXtBaDUPvKAe_ZKYVkg2sSTGHAWgLK6I&callback=initialize"></script>
@@ -770,6 +773,7 @@ End Contact Us
 <script src="js/jquery.easing.min.js"></script>
 <!-- jquery easing -->
 <script src="js/wow.min.js"></script>
+<script src="js/smartbanner.js"></script>
 <script>
     var wow = new WOW({
             boxClass: 'wow',      // animated element css class (default is wow)
@@ -826,7 +830,6 @@ End Contact Us
         });
     }
 </script>-->
-
 <script src="js/vueimpl.js"></script>
 </body>
 </html>
