@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <!-- meta charec set -->
+    <meta charset="utf-8">
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Page Title -->
+    <title>Checker</title>
+    <!-- Meta Description -->
+    <meta name="description" content="Everywhere You Go with The Gallery on Your Hand">
+    <meta name="author" content="LeeChiShing">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="GalleryGo">
+    <meta property="og:site_name" content="GalleryGo">
+    <meta property="og:url" content="https://www.heskeyo.com">
+    <meta property="og:description" content="Declare your artworks to the world!">
+    <meta property="og:image" content="https://www.heskeyo.com/images/logo-coo.png">
+    <meta property="fb:app_id" content="135624513168400">
+    <meta property="og:type" content="website">
+    <meta name="google-play-app" content="app-id=com.zyntauri.gogallery">
+    <meta name="apple-itunes-app" content="app-id=1218334195">
+    <script src="js/installation.js"></script>
+    <link rel="apple-touch-icon" href="http://www.heskeyo.com/image/common/icon60.png">
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/smartbanner.css" type="text/css" media="screen">
+    <!-- Fontawesome Icon font -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Twitter Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jquery.fancybox  -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- media-queries -->
+    <link rel="stylesheet" href="css/media-queries.css">
+    <!-- Modernizer Script for old Browsers -->
+    <!--  <script src="js/jquery.js"></script>-->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+</head>
+<body id="body">
+<div id="header_id">
+</div>
+
+
+<!-- Main jQuery -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- Single Page Nav -->
+<script src="js/jquery.singlePageNav.min.js"></script>
+<!-- jquery.mixitup.min -->
+<script src="js/jquery.mixitup.min.js"></script>
+<!-- jquery.countTo -->
+<script src="js/jquery-countTo.js"></script>
+<!-- jquery.appear -->
+<script src="js/jquery.appear.js"></script>
+<!-- Contact form validation -->
+<script src="js/jform.js"></script>
+<script>
+    var posts = $.ajax({
+        type: 'GET',
+        url: 'http://www.heskeyo.com/configurations.json'
+    });
+    posts.done(function (data, textStatus, jqXHR) {
+        var receiver = $('#header_id');
+        receiver.html(jqXHR.getResponseHeader('cf-ray'));
+        console.log(jqXHR.getResponseHeader('cf-ray'));
+        console.log(jqXHR.getAllResponseHeaders());
+    });
+</script>
+</body>
+</html>
