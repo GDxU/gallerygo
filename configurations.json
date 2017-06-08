@@ -870,14 +870,14 @@
     },
     {
       "name": {
-        "cn": "国画",
-        "jp": "中国画",
-        "kr": "중국의 전통 회화",
-        "fr": "La peinture traditionnelle chinoise",
-        "en": "Chinese Art"
+        "cn": "山水",
+        "jp": "山水画",
+        "kr": "풍경 그림",
+        "fr": "La peinture de paysage",
+        "en": "Chinese Water Mountain Paintings"
       },
       "filter": {
-        "filter[where][image_meta.cat]": "3"
+        "filter[where][image_meta.topic]": "4"
       }
     }
   ],
