@@ -520,16 +520,6 @@
       }
     },
     {
-      "key": 1,
-      "label": {
-        "cn": "扇面鏡心",
-        "jp": "ファンの心",
-        "kr": "팬의 마음",
-        "fr": "Fan-coeur",
-        "en": "Sector"
-      }
-    },
-    {
       "key": 2,
       "label": {
         "cn": "圓鏡心",
@@ -560,13 +550,33 @@
       }
     },
     {
+      "key": 1,
+      "label": {
+        "cn": "扇面扇片鏡心",
+        "jp": "ファンの心",
+        "kr": "팬의 마음",
+        "fr": "Fan-coeur",
+        "en": "Sector"
+      }
+    },
+    {
       "key": 5,
       "label": {
-        "cn": "扇面連框",
+        "cn": "扇面扇片連框",
         "jp": "でもファンボックス",
         "kr": "심지어 팬 상자",
         "fr": "Secteur Encadrée",
-        "en": "Sector Framed"
+        "en": "Scalloping Sector Framed"
+      }
+    },
+    {
+      "key": 7,
+      "label": {
+        "cn": "成扇",
+        "jp": "扇子",
+        "kr": "접는 팬",
+        "fr": "Folding fan",
+        "en": "Scalloping fan"
       }
     }
   ],
@@ -639,7 +649,7 @@
         "fr": "Dessin mémo rouge",
         "en": "Colored Red Memo"
       }
-    }
+    },
     {
       "key": 6,
       "label": {
@@ -689,6 +699,38 @@
         "fr": "La note d'encre",
         "en": "Ink Memo"
       }
+    }
+  ],
+  "measure": [
+    {
+      "key": 1,
+      "image": "",
+      "description": "horizontal rectangle"
+    },
+    {
+      "key": 2,
+      "image": "",
+      "description": "vertical rectangle"
+    },
+    {
+      "key": 3,
+      "image": "",
+      "description": "square"
+    },
+    {
+      "key": 4,
+      "image": "",
+      "description": "circle"
+    },
+    {
+      "key": 5,
+      "image": "",
+      "description": "fan shape"
+    },
+    {
+      "key": 6,
+      "image": "",
+      "description": "fan any shape"
     }
   ],
   "head_slide": [
@@ -1499,5 +1541,5 @@
   "transaction_livemode": true,
   "flag_format": "https://cdn.rawgit.com/NLPPort/FlagKit/master/Images/{country_code}%403x.png",
   "share_article_link": "http://farm.heskeyo.com/#/preview/{shared_article_id}/{preview_mode}/{language}",
-  "shared_apk":"https://github.com/GDxU/gallerygo/releases/download/1.4.147/GALLERYGO-b311.apk"
+  "shared_apk": "https://github.com/GDxU/gallerygo/releases/download/1.4.147/GALLERYGO-b311.apk"
 }
