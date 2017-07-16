@@ -671,16 +671,6 @@
       }
     },
     {
-      "key": 10,
-      "label": {
-        "cn": "油畫布",
-        "jp": "キャンバス",
-        "kr": "캔버스",
-        "fr": "toile",
-        "en": "Canvas Cloth"
-      }
-    },
-    {
       "key": 8,
       "label": {
         "cn": "水墨金箋",
@@ -698,6 +688,16 @@
         "kr": "잉크 메모",
         "fr": "La note d'encre",
         "en": "Ink Memo"
+      }
+    },
+    {
+      "key": 10,
+      "label": {
+        "cn": "油畫布",
+        "jp": "キャンバス",
+        "kr": "캔버스",
+        "fr": "toile",
+        "en": "Canvas Cloth"
       }
     }
   ],
